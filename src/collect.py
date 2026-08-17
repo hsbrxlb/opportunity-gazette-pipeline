@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import math
 import os
 import re
 import sys
@@ -23,7 +24,7 @@ from zoneinfo import ZoneInfo
 TIMEZONE = ZoneInfo("Asia/Shanghai")
 ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "OpportunityGazettePipeline/1.0 (+https://github.com/hsbrxlb/opportunity-gazette-pipeline)"
-MAX_CANDIDATES = 180
+MAX_CANDIDATES = 150
 RELEVANCE = {
     "ai", "agent", "automation", "workflow", "developer", "tool", "saas",
     "productivity", "plugin", "browser", "local", "privacy", "monitoring",
@@ -304,11 +305,33 @@ class Collector:
 
     def score(self, candidate: dict[str, Any]) -> tuple[float, str]:
         metrics = candidate.get("metrics", {})
-        value = sum(float(metrics.get(key, 0) or 0) for key in ("comments", "replies", "answers", "points", "score", "ratings"))
+        text = f"{candidate.get('title', '')} {candidate.get('excerpt', '')}".casefold()
+        pain_markers = (
+            "bug", "fail", "broken", "error", "duplicate", "waste", "cost", "billing",
+            "privacy", "security", "over budget", "cannot", "can't", "need help", "problem",
+            "故障", "失败", "重复", "浪费", "成本", "隐私", "安全", "求助", "问题",
+        )
+        value = 12.0 * sum(marker in text for marker in pain_markers)
+        for key in ("comments", "replies", "answers", "points", "score", "ratings", "views"):
+            value += math.log1p(float(metrics.get(key, 0) or 0))
+        if any(marker in text for marker in ("[control]", "worker registry", "coordination ledger", "hourly controller")):
+            value -= 18
         return value, candidate.get("publishedAt", "")
 
     def payload(self) -> dict[str, Any]:
-        candidates = sorted(self.candidates, key=self.score, reverse=True)[:MAX_CANDIDATES]
+        ranked = sorted(self.candidates, key=self.score, reverse=True)
+        caps = {"GitHub": 65, "Hacker News": 45, "DEV.to": 25, "App Store": 15, "other": 20}
+        counts: dict[str, int] = {key: 0 for key in caps}
+        candidates: list[dict[str, Any]] = []
+        for item in ranked:
+            source = item.get("source", "")
+            group = next((name for name in ("GitHub", "Hacker News", "DEV.to", "App Store") if source.startswith(name)), "other")
+            if counts[group] >= caps[group]:
+                continue
+            counts[group] += 1
+            candidates.append(item)
+            if len(candidates) >= MAX_CANDIDATES:
+                break
         generated = dt.datetime.now(TIMEZONE).isoformat()
         return {
             "schemaVersion": 1,

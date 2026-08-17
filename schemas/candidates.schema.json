@@ -7,6 +7,6 @@
     "schemaVersion": {"const": 1},
     "targetDate": {"type": "string", "format": "date"},
     "status": {"const": "ready_for_review"},
-    "candidates": {"type": "array", "maxItems": 180}
+    "candidates": {"type": "array", "maxItems": 150}
   }
 }
