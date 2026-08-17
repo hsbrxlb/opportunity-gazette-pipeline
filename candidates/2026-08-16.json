@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "targetDate": "2026-08-16",
-  "generatedAt": "2026-08-17T20:15:19.233635+08:00",
+  "generatedAt": "2026-08-17T20:54:16.375501+08:00",
   "status": "ready_for_review",
   "counts": {
-    "observed": 681,
+    "observed": 679,
     "candidates": 142,
-    "mechanicallyRejectedOrDeduplicated": 539,
+    "mechanicallyRejectedOrDeduplicated": 537,
     "sourceFailures": 5
   },
   "sources": [
@@ -20,8 +20,8 @@
     {
       "source": "GitHub Issues",
       "status": "ok",
-      "count": 207,
-      "detail": "observed=300; added_after_dedupe=207",
+      "count": 208,
+      "detail": "observed=300; added_after_dedupe=208",
       "sourceType": "public"
     },
     {
@@ -35,7 +35,7 @@
       "source": "V2EX",
       "status": "ok",
       "count": 0,
-      "detail": "observed=43; added_after_dedupe=0",
+      "detail": "observed=37; added_after_dedupe=0",
       "sourceType": "public"
     },
     {
@@ -279,7 +279,7 @@
       "publishedAt": "2026-08-16T06:33:45Z",
       "excerpt": "## Objective Launch a pilot program to validate and demonstrate the capabilities of autonomous AI agents within our core IT operations. ## Scope - Develop a reusable framework for autonomous agent deployment - Integrate with existing CI/CD pipelines - Run a 4-week pilot with measurable KPIs (efficiency gains, error reduction, cost savings) - Prepare a go-to-market brief for potential enterprise clients ## Success Criteria - Prototype functional in staging environment within 6 weeks - Demonstrable improvements in operational metrics - Clear go-to-market brief ready for client outreach ## Technical Approach (Proposed) - **Language & Orchestrati",
       "metrics": {
-        "comments": 223,
+        "comments": 229,
         "score": 1.0
       },
       "topics": [
@@ -439,7 +439,7 @@
       "publishedAt": "2026-08-16T12:10:30Z",
       "excerpt": "## Objective Start **M0 / Phase 2 — GCP bootstrap** by establishing the minimum control-plane foundation required for later Git-driven Terraform operation, while preserving the repository governance, security and cost boundaries already proven in M0 Slices 1–2. Current authoritative `main` is `f49bc5a5fc39a26d74355dc9a7b64df6fe1150d1`. Post-merge repository validation run `31945758716` succeeded, and the active `main-governance` ruleset remains the protected PR-driven change boundary. This issue is governed by current `AGENTS.md`, `docs/roadmap.md`, `docs/architecture.md`, `docs/engineering-model.md`, `docs/security-and-private-state.md`, `do",
       "metrics": {
-        "comments": 46,
+        "comments": 48,
         "score": 1.0
       },
       "topics": [
@@ -710,6 +710,26 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
+      "id": "candidate-f8211adeeea6",
+      "targetDate": "2026-08-16",
+      "source": "GitHub Issue — jeremymatthewwerner/claude-software-factory-template",
+      "sourceType": "production_or_user_issue",
+      "title": "[Canary] Factory Pipeline Test - canary-20260816-120639",
+      "url": "https://github.com/jeremymatthewwerner/claude-software-factory-template/issues/499",
+      "publishedAt": "2026-08-16T12:06:39Z",
+      "excerpt": "## Canary Test Issue This is an automated canary test to verify the factory pipeline is working correctly. **Test ID:** canary-20260816-120639 **Expected behavior:** 1. Triage Agent should add `bug` or `enhancement` label within 5 minutes 2. Factory Manager should detect no `@code` trigger and add one within 15 minutes 3. Code Agent should respond (or the factory-meta label should prevent trigger) **Success criteria:** - Issue gets triaged (labels added) - `@code` trigger is added (or factory-meta prevents it) - No silent failures in any step This issue will be auto-closed by the canary verification step. --- _Automated canary test by Factory",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
       "id": "candidate-8785c6c268f4",
       "targetDate": "2026-08-16",
       "source": "GitHub Issue — natarajanganapathi/GHAW",
@@ -770,16 +790,16 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
-      "id": "candidate-f8211adeeea6",
+      "id": "candidate-543929df202d",
       "targetDate": "2026-08-16",
-      "source": "GitHub Issue — jeremymatthewwerner/claude-software-factory-template",
+      "source": "GitHub Issue — keeptxred/TexasDefined",
       "sourceType": "production_or_user_issue",
-      "title": "[Canary] Factory Pipeline Test - canary-20260816-120639",
-      "url": "https://github.com/jeremymatthewwerner/claude-software-factory-template/issues/499",
-      "publishedAt": "2026-08-16T12:06:39Z",
-      "excerpt": "## Canary Test Issue This is an automated canary test to verify the factory pipeline is working correctly. **Test ID:** canary-20260816-120639 **Expected behavior:** 1. Triage Agent should add `bug` or `enhancement` label within 5 minutes 2. Factory Manager should detect no `@code` trigger and add one within 15 minutes 3. Code Agent should respond (or the factory-meta label should prevent trigger) **Success criteria:** - Issue gets triaged (labels added) - `@code` trigger is added (or factory-meta prevents it) - No silent failures in any step This issue will be auto-closed by the canary verification step. --- _Automated canary test by Factory",
+      "title": "[Site Quality] TexasDefined watchdog failures",
+      "url": "https://github.com/keeptxred/TexasDefined/issues/98",
+      "publishedAt": "2026-08-16T19:11:35Z",
+      "excerpt": "The recurring TexasDefined site-quality watchdog found one or more failures. Latest run: https://github.com/keeptxred/TexasDefined/actions/runs/31968613622 # TexasDefined Site Quality Watch - Started: 2026-08-16T19:47:35.050Z - Finished: 2026-08-16T19:47:35.785Z - Checks: 15 - Passed: 14 - Failed: 1 ## Summary | Check | Result | Duration | |---|---:|---:| | Thin, empty and generated-content quality | PASS | 0.0s | | Required content fields and data integrity | PASS | 0.0s | | Repetitive and duplicate content | PASS | 0.1s | | Freshness and stale-statistic signals | PASS | 0.0s | | Internal-link discovery and orphan risk | PASS | 0.0s | | Lega",
       "metrics": {
-        "comments": 21,
+        "comments": 20,
         "score": 1.0
       },
       "topics": [
@@ -790,14 +810,14 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
-      "id": "candidate-543929df202d",
+      "id": "candidate-49dd2fe78fa4",
       "targetDate": "2026-08-16",
-      "source": "GitHub Issue — keeptxred/TexasDefined",
+      "source": "GitHub Issue — githubnext/goal",
       "sourceType": "production_or_user_issue",
-      "title": "[Site Quality] TexasDefined watchdog failures",
-      "url": "https://github.com/keeptxred/TexasDefined/issues/98",
-      "publishedAt": "2026-08-16T19:11:35Z",
-      "excerpt": "The recurring TexasDefined site-quality watchdog found one or more failures. Latest run: https://github.com/keeptxred/TexasDefined/actions/runs/31968613622 # TexasDefined Site Quality Watch - Started: 2026-08-16T19:47:35.050Z - Finished: 2026-08-16T19:47:35.785Z - Checks: 15 - Passed: 14 - Failed: 1 ## Summary | Check | Result | Duration | |---|---:|---:| | Thin, empty and generated-content quality | PASS | 0.0s | | Required content fields and data integrity | PASS | 0.0s | | Repetitive and duplicate content | PASS | 0.1s | | Freshness and stale-statistic signals | PASS | 0.0s | | Internal-link discovery and orphan risk | PASS | 0.0s | | Lega",
+      "title": "[aw] Goal failed",
+      "url": "https://github.com/githubnext/goal/issues/63",
+      "publishedAt": "2026-08-16T16:37:04Z",
+      "excerpt": "### Workflow Failure **Workflow:** [Goal](#) **Branch:** main **Run:** https://github.com/githubnext/goal/actions/runs/31958983776 > [!WARNING] > **Engine Failure**: The `copilot` engine terminated unexpectedly. **Last agent output:** ``` Authentication failed with provider at http://172.30.0.30:10002 (HTTP 401). Check your COPILOT_PROVIDER_API_KEY or COPILOT_PROVIDER_BEARER_TOKEN. Changes +0 -0 Duration 0s ``` ### Action Required **Assign this issue to an agent** to debug and fix the issue. <details> <summary>Debug with any coding agent</summary> Use this prompt with any coding agent (GitHub Copilot, Claude, Gemini, etc.): ```` Debug the age",
       "metrics": {
         "comments": 20,
         "score": 1.0
@@ -939,7 +959,7 @@
       "publishedAt": "2026-08-16T12:22:20Z",
       "excerpt": "",
       "metrics": {
-        "points": 408,
+        "points": 409,
         "comments": 144
       },
       "topics": [
@@ -1110,6 +1130,26 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
+      "id": "candidate-6eda61889d09",
+      "targetDate": "2026-08-16",
+      "source": "GitHub Issue — Zoreia85/AEVRIX",
+      "sourceType": "production_or_user_issue",
+      "title": "[AVA] Production homologation evidence blockers",
+      "url": "https://github.com/Zoreia85/AEVRIX/issues/197",
+      "publishedAt": "2026-08-16T03:42:11Z",
+      "excerpt": "Canonical reconciliation at `308f4a7e5de2269df0cbe5e203a5b35c62d49636` (2026-08-16). Current automated evidence: - authoritative public-source audit: PASS in the canonical promotion path - canonical commits are produced by `github-actions[bot]` / noreply - exact-candidate native Windows isolation/job-object/AppContainer/network evidence remains established by .NET core run `31924849369`: Remote Orchestration/Judge 301/301 PASS, 0 skipped, 0 failed for its recorded candidate - authenticated `AEVRIX.EngineHost` executable is now physically present on `main` as of commit `308f4a7e5de2269df0cbe5e203a5b35c62d49636`; promotion workflow `31944687138",
+      "metrics": {
+        "comments": 74,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
       "id": "candidate-c0ed5925f479",
       "targetDate": "2026-08-16",
       "source": "GitHub Issue — infoworks-jp/subasa-new-official",
@@ -1259,27 +1299,7 @@
       "publishedAt": "2026-08-16T07:50:54Z",
       "excerpt": "A Pinpoint candidate branch could not be closed automatically. Branch: `pinpoint/candidate/2026-08-16-pinpoint-answer-838` SHA: `16cd0e7dafa5ae2f2a987fbb14c0aef86a8514cb` Reason: Lint, Typecheck, Guardrails concluded failure; automatic rerun is disabled because deterministic failures need a code or data fix; age=45m Close condition: - candidate payload is on `main` - public fetch audit passes - candidate branch is deleted - candidate branch count returns to 0",
       "metrics": {
-        "comments": 47,
-        "score": 1.0
-      },
-      "topics": [
-        "github",
-        "automation"
-      ],
-      "accessStatus": "public",
-      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
-    },
-    {
-      "id": "candidate-6eda61889d09",
-      "targetDate": "2026-08-16",
-      "source": "GitHub Issue — Zoreia85/AEVRIX",
-      "sourceType": "production_or_user_issue",
-      "title": "[AVA] Production homologation evidence blockers",
-      "url": "https://github.com/Zoreia85/AEVRIX/issues/197",
-      "publishedAt": "2026-08-16T03:42:11Z",
-      "excerpt": "Canonical reconciliation at `308f4a7e5de2269df0cbe5e203a5b35c62d49636` (2026-08-16). Current automated evidence: - authoritative public-source audit: PASS in the canonical promotion path - canonical commits are produced by `github-actions[bot]` / noreply - exact-candidate native Windows isolation/job-object/AppContainer/network evidence remains established by .NET core run `31924849369`: Remote Orchestration/Judge 301/301 PASS, 0 skipped, 0 failed for its recorded candidate - authenticated `AEVRIX.EngineHost` executable is now physically present on `main` as of commit `308f4a7e5de2269df0cbe5e203a5b35c62d49636`; promotion workflow `31944687138",
-      "metrics": {
-        "comments": 47,
+        "comments": 48,
         "score": 1.0
       },
       "topics": [
@@ -1510,14 +1530,14 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
-      "id": "candidate-9c1f3fb65b4f",
+      "id": "candidate-6f4a1a872803",
       "targetDate": "2026-08-16",
-      "source": "GitHub Issue — JoshCLWren/comic-pile",
+      "source": "GitHub Issue — Zoreia85/AEVRIX",
       "sourceType": "production_or_user_issue",
-      "title": "E2E: should delete thread",
-      "url": "https://github.com/JoshCLWren/comic-pile/issues/1293",
-      "publishedAt": "2026-08-16T10:06:02Z",
-      "excerpt": "<!-- chromium-discovery-failure:a3ccbb9a57b4e27f --> Scheduled Chromium discovery reproduced a product-facing failure after Playwright retries. Treat this as normal executable factory work. Diagnose the product behavior, fix it, and keep or strengthen the focused regression coverage that proves the corrected behavior. Run: https://github.com/JoshCLWren/comic-pile/actions/runs/31939949005 Artifact: `chromium-discovery-shard-6-31939949005-1` Run attempt: `1` Commit: `37d36e76fec07547d04d79b7d24a82866913a147` Spec: `threads.spec.ts` Project: `chromium` Test: threads.spec.ts › Thread Management › should delete thread Failure: ```text \u001b[31mTest ti",
+      "title": "[INSTALLER][AVA] Prove MSI lifecycle on exact Windows candidate",
+      "url": "https://github.com/Zoreia85/AEVRIX/issues/315",
+      "publishedAt": "2026-08-16T15:14:30Z",
+      "excerpt": "## Homologation blocker AEVRIX cannot be declared ready for general Windows use until the exact release candidate has a real installer lifecycle audit. Core/EngineHost CI does not satisfy this gate. ## Implementation handoff This belongs to the Windows Product/Packaging stream. Materialize the already-approved Windows installer/bootstrapper architecture and return one exact candidate to QA. Minimum implementation required before QA handback: - MSI or approved Windows installation package produced from the exact source candidate; - deterministic/repeatable packaging inputs and version identity; - clean-machine install path; - mandatory terms/f",
       "metrics": {
         "comments": 30,
         "score": 1.0
@@ -1530,36 +1550,16 @@
       "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
     },
     {
-      "id": "candidate-6f4a1a872803",
-      "targetDate": "2026-08-16",
-      "source": "GitHub Issue — Zoreia85/AEVRIX",
-      "sourceType": "production_or_user_issue",
-      "title": "[INSTALLER][AVA] Prove MSI lifecycle on exact Windows candidate",
-      "url": "https://github.com/Zoreia85/AEVRIX/issues/315",
-      "publishedAt": "2026-08-16T15:14:30Z",
-      "excerpt": "## Homologation blocker AEVRIX cannot be declared ready for general Windows use until the exact release candidate has a real installer lifecycle audit. Core/EngineHost CI does not satisfy this gate. ## Implementation handoff This belongs to the Windows Product/Packaging stream. Materialize the already-approved Windows installer/bootstrapper architecture and return one exact candidate to QA. Minimum implementation required before QA handback: - MSI or approved Windows installation package produced from the exact source candidate; - deterministic/repeatable packaging inputs and version identity; - clean-machine install path; - mandatory terms/f",
-      "metrics": {
-        "comments": 29,
-        "score": 1.0
-      },
-      "topics": [
-        "github",
-        "automation"
-      ],
-      "accessStatus": "public",
-      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
-    },
-    {
-      "id": "candidate-730da4c97192",
+      "id": "candidate-9c1f3fb65b4f",
       "targetDate": "2026-08-16",
       "source": "GitHub Issue — JoshCLWren/comic-pile",
       "sourceType": "production_or_user_issue",
-      "title": "E2E: Escape dismisses only the topmost thread dialog over the rating panel",
-      "url": "https://github.com/JoshCLWren/comic-pile/issues/1322",
-      "publishedAt": "2026-08-16T10:06:29Z",
-      "excerpt": "<!-- chromium-discovery-failure:bdb8684d76fc2a1c --> Scheduled Chromium discovery reproduced a product-facing failure after Playwright retries. Treat this as normal executable factory work. Diagnose the product behavior, fix it, and keep or strengthen the focused regression coverage that proves the corrected behavior. Run: https://github.com/JoshCLWren/comic-pile/actions/runs/31939949005 Artifact: `chromium-discovery-shard-3-31939949005-1` Run attempt: `1` Commit: `37d36e76fec07547d04d79b7d24a82866913a147` Spec: `issue-688-modal-stacking.spec.ts` Project: `chromium` Test: issue-688-modal-stacking.spec.ts › Issue #688: Roll rating modal stacki",
+      "title": "E2E: should delete thread",
+      "url": "https://github.com/JoshCLWren/comic-pile/issues/1293",
+      "publishedAt": "2026-08-16T10:06:02Z",
+      "excerpt": "<!-- chromium-discovery-failure:a3ccbb9a57b4e27f --> Scheduled Chromium discovery reproduced a product-facing failure after Playwright retries. Treat this as normal executable factory work. Diagnose the product behavior, fix it, and keep or strengthen the focused regression coverage that proves the corrected behavior. Run: https://github.com/JoshCLWren/comic-pile/actions/runs/31939949005 Artifact: `chromium-discovery-shard-6-31939949005-1` Run attempt: `1` Commit: `37d36e76fec07547d04d79b7d24a82866913a147` Spec: `threads.spec.ts` Project: `chromium` Test: threads.spec.ts › Thread Management › should delete thread Failure: ```text \u001b[31mTest ti",
       "metrics": {
-        "comments": 29,
+        "comments": 30,
         "score": 1.0
       },
       "topics": [
@@ -1819,8 +1819,8 @@
       "publishedAt": "2026-08-16T14:44:55Z",
       "excerpt": "",
       "metrics": {
-        "points": 301,
-        "comments": 121
+        "points": 303,
+        "comments": 123
       },
       "topics": [
         "public-web",
@@ -1860,7 +1860,7 @@
       "excerpt": "",
       "metrics": {
         "points": 75,
-        "comments": 66
+        "comments": 67
       },
       "topics": [
         "public-web",
@@ -1899,8 +1899,8 @@
       "publishedAt": "2026-08-16T10:31:36Z",
       "excerpt": "",
       "metrics": {
-        "points": 88,
-        "comments": 53
+        "points": 89,
+        "comments": 54
       },
       "topics": [
         "public-web",
@@ -2310,6 +2310,26 @@
       "boundary": "Public source signal; requires editorial verification before publication."
     },
     {
+      "id": "candidate-478020bd6c37",
+      "targetDate": "2026-08-16",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: PageSieve, a web scraping browser extension",
+      "url": "https://julius383.github.io/PageSieve",
+      "publishedAt": "2026-08-16T13:45:27Z",
+      "excerpt": "PageSieve[1] is a browser extension for scraping data from different websites from within your browser. Currently it&#x27;s Firefox only but I am open to porting it to other browsers if that&#x27;s something people want.<p>My original motivation for this started with a desire to improve the capabilities of the selectorgadget[2] bookmarklet to support extracting as well as finding selectors.<p>The ideal use case is when some data you need is useful but you don&#x27;t want to spend the effort of writing a one-off script to extract it especially nowadays when a lot of websites need an entire JavaScript environment to load correctly which complic",
+      "metrics": {
+        "points": 15,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
       "id": "candidate-349a3f2c56ce",
       "targetDate": "2026-08-16",
       "source": "Hacker News",
@@ -2321,26 +2341,6 @@
       "metrics": {
         "points": 7,
         "comments": 1
-      },
-      "topics": [
-        "public-web",
-        "developer-tools"
-      ],
-      "accessStatus": "public",
-      "boundary": "Public source signal; requires editorial verification before publication."
-    },
-    {
-      "id": "candidate-478020bd6c37",
-      "targetDate": "2026-08-16",
-      "source": "Hacker News",
-      "sourceType": "community_discussion",
-      "title": "Show HN: PageSieve, a web scraping browser extension",
-      "url": "https://julius383.github.io/PageSieve",
-      "publishedAt": "2026-08-16T13:45:27Z",
-      "excerpt": "PageSieve[1] is a browser extension for scraping data from different websites from within your browser. Currently it&#x27;s Firefox only but I am open to porting it to other browsers if that&#x27;s something people want.<p>My original motivation for this started with a desire to improve the capabilities of the selectorgadget[2] bookmarklet to support extracting as well as finding selectors.<p>The ideal use case is when some data you need is useful but you don&#x27;t want to spend the effort of writing a one-off script to extract it especially nowadays when a lot of websites need an entire JavaScript environment to load correctly which complic",
-      "metrics": {
-        "points": 13,
-        "comments": 0
       },
       "topics": [
         "public-web",
