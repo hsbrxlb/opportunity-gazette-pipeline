@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-08-16",
+  "generatedAt": "2026-08-17T20:38:05+08:00",
+  "status": "ready_for_publish",
+  "counts": {
+    "collected": 79,
+    "candidates": 4,
+    "published": 2,
+    "features": 1,
+    "editorial": 1,
+    "rejected": 77
+  },
+  "failedSources": [
+    {
+      "source": "Stack Exchange",
+      "status": "tool_access_limited",
+      "detail": "目标日没有取得可精审条目；未要求登录、凭据或绕过。"
+    },
+    {
+      "source": "DEV.to / Forem",
+      "status": "tool_access_limited",
+      "detail": "公开搜索可用，但当次网页任务没有取得可确认属于目标日的高质量条目。"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "detail": "没有取得可安全核验的目标日公开帖子。"
+    },
+    {
+      "source": "微博",
+      "status": "robots_blocked",
+      "detail": "公开访问受 robots 限制；没有尝试绕过。"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "detail": "没有取得可安全核验的目标日公开帖子。"
+    },
+    {
+      "source": "Product Hunt",
+      "status": "empty_or_not_verifiable",
+      "detail": "没有取得可确认属于目标日的公开结果。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-234cad63bf30",
+      "seriesId": "series-7bc62fe9199b",
+      "kind": "case",
+      "quality": "feature",
+      "title": "GitHub Actions 抓取成功却永远落不了库：受保护分支把自动化最后一步卡死",
+      "plain": "一个定时数据任务已经成功抓完数据、生成 JSON，最后一步却用 git push 直接写受保护分支，被 GitHub 的必须走 PR 规则拒绝。表面上抓取成功，实际结果一直没有真正保存。",
+      "audience": "用 GitHub Actions 定时生成数据、报告、AI 研究结果并回写仓库的开发者和自动化团队。",
+      "pain": "核心计算和 API 抓取都花完时间与额度后，最后的持久化失败；仪表盘继续读旧数据，重复刷新还会继续浪费 API 和 Actions 时间。",
+      "why": "它直接命中联网研究、结构化数据、GitHub 发布这类自动化最容易忽略的一环：任务完成或文件已生成，都不等于结果已经持久保存。以后把审核结果接入 GitHub 时，必须把最终文件是否真的落到目标分支作为成功条件。",
+      "validation": "一天内在开启 PR-only 保护规则的测试分支跑最小工作流：先生成一个 JSON 并尝试直接 push，确认失败；再改成临时分支加 PR 路径，工作流结束后重新读取目标分支并确认 JSON 真实存在。",
+      "risk": "目前证据只来自一个仓库；具体修法取决于分支保护策略。给 Actions 身份开 bypass 虽省事，但会扩大绕过审查的权限风险。",
+      "topics": [
+        "GitHub Actions",
+        "自动化",
+        "数据持久化",
+        "AI 工作流",
+        "可靠性"
+      ],
+      "evidence": [
+        {
+          "source": "GitHub Issue — dkblinux98/nyxGPT #3815",
+          "sourceType": "生产故障记录",
+          "originalTitle": "bug: retrospective dump workflows cannot push — v3.0.0 ruleset requires pull requests",
+          "url": "https://github.com/dkblinux98/nyxGPT/issues/3815",
+          "observedAt": "2026-08-16",
+          "metrics": {
+            "comments": 26,
+            "run_id": 31941019009,
+            "candidate_issues": 279,
+            "issues_in_snapshot": 290,
+            "native_blocks_edges": 25,
+            "affected_dump_workflows": 5,
+            "merge_path_also_affected": true,
+            "failure_code": "GH013"
+          },
+          "strength": "强",
+          "boundary": "能证明该仓库的定时数据抓取已成功生成文件，但因 PR-only 分支规则拒绝直接 push，导致结果无法落库且多条刷新链路失效；不能证明这是普遍市场需求，也不能证明用户愿意付费。"
+        }
+      ]
+    },
+    {
+      "id": "entry-1bdb2d2265a2",
+      "seriesId": "series-4c2209ac3042",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "AI 自动化重复派单会直接烧掉付费额度：状态机漏了一道终止判断",
+      "plain": "一个生产自动化里，第一次 Copilot 已经完成并进入 PR promotion 阶段，同一个 Issue 却又被精确触发了第二次 Copilot。系统后来识别成重复任务时，第二次付费请求和 Actions 时间已经开始消耗。",
+      "audience": "同时编排多个付费 AI Agent、GitHub Actions、PR 和发布状态的开发者工具团队与重度自动化用户。",
+      "pain": "任务进入后半程后，如果状态机没有把 promotion、已有 PR、待合并等状态当成禁止再次派单，会重复调用付费模型、浪费额度，还可能产生两份互相冲突的实现。",
+      "why": "Agent 自动化越长，真正烧钱的往往是重复执行和错误重试。给每个任务建立唯一租约、终止状态和已有 PR 检查，可以直接变成一层成本保险。",
+      "validation": "一天内做一个回归夹具：预置 PROMOTION_DISPATCHED 加已有 PR 状态，再触发一次 selector；成功标准是第二次模型调用数为 0。随后连续观察至少 2 个真实 production sample，确认 promotion 开始后 duplicate dispatch 仍为 0。",
+      "risk": "目前只有一个项目的生产事故；来源确认浪费了 Premium request 和 Actions 时间，但没有给出具体美元金额，也不能推断其他 Agent 系统的重复率。",
+      "topics": [
+        "AI Agent",
+        "任务编排",
+        "额度控制",
+        "GitHub Actions",
+        "可靠性"
+      ],
+      "evidence": [
+        {
+          "source": "GitHub Issue — sadouninc/Sado-Investment-Lab #668",
+          "sourceType": "生产故障记录",
+          "originalTitle": "⚡ AI Production duplicate redispatch — PROMOTION_DISPATCHED後に同一Issueへ再度Copilotが起動する",
+          "url": "https://github.com/sadouninc/Sado-Investment-Lab/issues/668",
+          "observedAt": "2026-08-16",
+          "metrics": {
+            "comments": 12,
+            "first_copilot_run": 31934841349,
+            "duplicate_copilot_run": 31934980391,
+            "priority": "P1",
+            "premium_request_waste_confirmed": true,
+            "actions_time_waste_confirmed": true
+          },
+          "strength": "强",
+          "boundary": "能证明该生产自动化在 PROMOTION_DISPATCHED 后对同一 Issue 再次启动 Copilot，额外消耗 Premium request 与 Actions 时间；不能证明跨产品的发生频率，也没有来源支持具体货币损失金额。"
+        }
+      ]
+    }
+  ]
+}
