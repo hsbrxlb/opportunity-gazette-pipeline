@@ -9,7 +9,7 @@ Public, credential-free collection and reviewed-data handoff for [Opportunity Ga
 3. The task writes only publication-safe output to `reviewed/YYYY-MM-DD.json`.
 4. The website repository validates and merges reviewed entries before deploying GitHub Pages.
 
-The collector uses public APIs and pages only. It does not use browser sessions, local files, private messages, passwords, cookies, or long-lived credentials. Login-gated sources remain explicit failures or manual supplements.
+The collector uses public APIs and pages only. It does not use browser sessions, local files, private messages, passwords, cookies, or long-lived credentials. Login-gated sources remain explicit failures for later human review.
 
 ## Local checks
 
