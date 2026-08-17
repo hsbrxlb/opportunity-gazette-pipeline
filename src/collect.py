@@ -378,8 +378,17 @@ def main() -> int:
     collector.add_source("X public search", "needs_manual_supplement", 0, "No stable credential-free date-bounded endpoint.", "manual")
     collector.add_source("微博", "needs_manual_supplement", 0, "Remote collector does not use browser sessions or cookies.", "manual")
     collector.add_source("小红书", "needs_manual_supplement", 0, "Remote collector does not use browser sessions or cookies.", "manual")
-    payload = collector.payload()
     output = Path(args.output) if args.output else ROOT / "candidates" / f"{target}.json"
+    payload = collector.payload()
+    if output.exists():
+        try:
+            existing = json.loads(output.read_text(encoding="utf-8"))
+            previous = {key: value for key, value in existing.items() if key != "generatedAt"}
+            current = {key: value for key, value in payload.items() if key != "generatedAt"}
+            if previous == current and existing.get("generatedAt"):
+                payload["generatedAt"] = existing["generatedAt"]
+        except (OSError, json.JSONDecodeError):
+            pass
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     latest = ROOT / "status" / "latest.json"

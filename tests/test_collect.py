@@ -38,6 +38,15 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(payload["status"], "ready_for_review")
         json.dumps(payload)
 
+    def test_same_payload_can_preserve_generation_time(self):
+        run = collector.Collector("2026-08-16")
+        run.add(source="x", source_type="public", title="AI automation failure report", url="https://example.com/one", published_at="2026-08-16")
+        first = run.payload()
+        second = run.payload()
+        previous = {key: value for key, value in first.items() if key != "generatedAt"}
+        current = {key: value for key, value in second.items() if key != "generatedAt"}
+        self.assertEqual(previous, current)
+
 
 if __name__ == "__main__":
     unittest.main()
