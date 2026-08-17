@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-08-16",
+  "generatedAt": "2026-08-17T20:07:55.489106+08:00",
+  "status": "ready_for_review",
+  "counts": {
+    "observed": 81,
+    "candidates": 39,
+    "mechanicallyRejectedOrDeduplicated": 42,
+    "sourceFailures": 7
+  },
+  "sources": [
+    {
+      "source": "Hacker News",
+      "status": "failed",
+      "count": 0,
+      "detail": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+      "sourceType": "public"
+    },
+    {
+      "source": "GitHub Issues",
+      "status": "failed",
+      "count": 0,
+      "detail": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+      "sourceType": "public"
+    },
+    {
+      "source": "DEV.to",
+      "status": "ok",
+      "count": 32,
+      "detail": "observed=400; added_after_dedupe=32",
+      "sourceType": "public"
+    },
+    {
+      "source": "V2EX",
+      "status": "ok",
+      "count": 0,
+      "detail": "observed=44; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty",
+      "count": 0,
+      "detail": "observed=0; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "App Store Search",
+      "status": "ok",
+      "count": 7,
+      "detail": "observed=462; added_after_dedupe=7",
+      "sourceType": "runtime_visible_public_api"
+    },
+    {
+      "source": "Reddit",
+      "status": "rate_limited_or_blocked",
+      "count": 0,
+      "detail": "HTTP 403",
+      "sourceType": "public"
+    },
+    {
+      "source": "Product Hunt",
+      "status": "not_configured",
+      "count": 0,
+      "detail": "Official API credential is not configured; skipped.",
+      "sourceType": "credential_required"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "No stable credential-free date-bounded endpoint.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "微博",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-3830550f5c1e",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "IFTTT - Automate work and home",
+      "url": "https://apps.apple.com/us/app/ifttt-automate-work-and-home/id660944635?uo=4",
+      "publishedAt": "2026-08-16T14:04:29Z",
+      "excerpt": "Automation for business and home Save time at work and at home with IFTTT (aka IF This Then That). Join a community of almost 30 million consumers, creators and smart home enthusiasts that use IFTTT to save multiple hours out of a typical day. IFTTT’s simple no-code interface, combined with 1000+ of today's most popular apps, allows you to quickly create sophisticated automations. Discover the power of automation while on the go with location based features, notifications and widgets. Download the app today. We offer a free plan, as well as a fully featured trial. Here are a few ideas to get you started: • Write once then cross post to multip",
+      "metrics": {
+        "ratings": 59570,
+        "rating": 4.60703
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-d3bc1fa11ebb",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Kimi - Kimi K3 is Live",
+      "url": "https://apps.apple.com/us/app/kimi-kimi-k3-is-live/id6474233312?uo=4",
+      "publishedAt": "2026-08-16T06:08:12Z",
+      "excerpt": "# Key Features: - Kimi K3: 2.8T parameters. 1M context. It leads the field in coding, agentic tasks, long-horizon reasoning, visual understanding, and agent swarm capabilities. - Visual Agentic Slides: Upload your visual references, and Kimi will customize the exact visual style you need. Generate professionally formatted, highly personalized presentations with just one click. - Game Generation: One prompt in, an AAA multiplayer 3D game out. It can build the world, characters, levels, and combat on its own — playtesting and polishing until the visuals stun and every hit lands. - Agent Swarm: Whether it's massive literature reviews, wide resea",
+      "metrics": {
+        "ratings": 5038,
+        "rating": 4.76757
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-72c2783ea784",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Workiz Field Service Software",
+      "url": "https://apps.apple.com/us/app/workiz-field-service-software/id1469769810?uo=4",
+      "publishedAt": "2026-08-16T21:59:31Z",
+      "excerpt": "Manage jobs from the field and keep track of your business no matter where you are with our easy-to-use mobile app Control your business from the road You can manage communications between techs and customers, review daily jobs, and handle administration wherever you are. Fully align with your team With the fully synchronized app and platform, your techs and dispatchers all get updated about new jobs and schedule changes in real-time. On-the-go job management Streamline your processes and keep your teams organized so they get their jobs done faster and keep your customers happy. Download the Workiz app today!",
+      "metrics": {
+        "ratings": 2120,
+        "rating": 4.57406
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-9213953b997e",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Otherhalf AI",
+      "url": "https://apps.apple.com/us/app/otherhalf-ai/id6470370773?uo=4",
+      "publishedAt": "2026-08-16T12:56:26Z",
+      "excerpt": "Imagine an AI companion that’s more than just text—one that sees, hears, and responds in real-time. With lifelike 3D characters, expressive emotions, and natural voice interactions, Otherhalf makes AI feel truly alive. Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ Privacy Policy: https://otherhalf.ai/policy",
+      "metrics": {
+        "ratings": 877,
+        "rating": 4.40935
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-2b0a16e2e733",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "录音机，语音备忘录",
+      "url": "https://apps.apple.com/cn/app/%E5%BD%95%E9%9F%B3%E6%9C%BA-%E8%AF%AD%E9%9F%B3%E5%A4%87%E5%BF%98%E5%BD%95/id609030412?uo=4",
+      "publishedAt": "2026-08-16T01:59:18Z",
+      "excerpt": "语音录音机，语音备忘录®，一款功能强大的 Apple 设备语音录制应用，现已支持空间音频录制、Apple 智能技术和完全本地化的 AI。您可以录制沉浸式空间音频，为每条备忘录添加智能标题和自动标签，无需网络连接即可将语音转录为文本，并将所有内容安全备份到 iCloud。您的录音将在您的设备上进行处理——隐私至上。 空间音频录制 • 使用全麦克风阵列捕捉沉浸式空间音频 • 录制来自各个方向的声音，而非单一方向 • 非常适合采访、会议、音乐会和环境音效 Apple 智能 • 智能标题：录音名称基于录音内容，而非时间戳 • 自动标签：每条备忘录都会自动添加主题标签，并显示在您的历史记录列表中 • 按标签、标题或文字稿搜索录音 • 100% 设备端智能——即使离线也能工作，无需发送任何数据到服务器 AI 转录和语音 • 设备端语音转文本——即使离线也能私密地转录录音 • 播放时逐字高亮显示实时转录文本 • 自动转录新录音 • 使用最新 AI 技术实现高级降噪 • 将语音录音转换为支持的语言的文本 核心录音功能 • 一键录音、一键停止和保存 • 无限音频录制（不包含在套餐内）免费版） • 立体声和单声道录音 • 支持录音棚麦克风和外接麦克风 • 支持播客录制和后台录音 • 录音计时器、播放计数器和自动文件命名 • 重命名、重新命名和移动音频文件 • 显示音频文件大小和时间戳 音频格式（兼容 Apple 设备） • MP3、AAC、WAV、M4A 、CAF 音频编辑和播放 • 使用内置编辑器",
+      "metrics": {
+        "ratings": 213,
+        "rating": 4.60093
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-35809aeb9ed0",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "智在记录 - 录音转文字AI会议纪要",
+      "url": "https://apps.apple.com/cn/app/%E6%99%BA%E5%9C%A8%E8%AE%B0%E5%BD%95-%E5%BD%95%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97ai%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/id6752853090?uo=4",
+      "publishedAt": "2026-08-16T03:11:27Z",
+      "excerpt": "智在记录，您的 AI 全能笔记助手！ 专业录音转文字工具，AI 一键生成会议纪要，高效记录，轻松办公！ 新用户下载即享每月 300 分钟免费转写时长，解锁 AI 转写、智能总结全功能，免费体验！ ***核心功能*** 【录音转文字】会议、课堂、访谈实时转写，支持离线音频导入，高清降噪，精准识别。 【AI 智能梳理】自动区分发言人，抓取关键信息，生成结构化总结，一键提取核心观点。 【多端协同】手机、平板、电脑数据实时同步，设备无缝切换，记录不间断。 【团队协作】笔记权限管理、多格式分享，对接企业通讯录，提升协作效率。 【在线编辑】文本实时修改批注，完善内容细节，一键导出规范文稿。 【智能洞察】深度分析笔记逻辑，挖掘内容价值，提供专业建议，打造专属 AI 外脑。 【趣味体验】笔记生成知识卡片，学习更精准；一键生成创意漫画，让知识更生动。 ***核心场景*** - 办公会议：线上线下实时记录，AI 生成带待办的会议纪要，决策可追溯，执行可督办。 - 销售拜访：全程收录沟通内容，AI 提取客户需求，自动生成复盘与跟进方案。 - 课堂学习：课程内容同步转写，AI 提炼知识点与易错点，快速生成复习提纲。 - 亲子教育：记录亲子沟通全程，AI 分析对话内容与情绪表达，优化亲子沟通方式。 - 灵感记录：实时捕捉创作灵感，AI 整理结构化笔记，支持标签分类与快速检索。 ***安全保障*** 所有数据云端加密传输与存储，严格权限管控，全方位守护个人隐私与信息安全。 立即下载智在记录，开启高效智能记录",
+      "metrics": {
+        "ratings": 110,
+        "rating": 4.89091
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-cee0a636ae7f",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Shipping Assumptions: A Reliability Stack for AI-Generated Code",
+      "url": "https://dev.to/copyleftdev/shipping-assumptions-a-reliability-stack-for-ai-generated-code-3p9f",
+      "publishedAt": "2026-08-16T22:56:25Z",
+      "excerpt": "AI can generate implementation faster than we can understand the resulting system. Older modeling disciplines offer a way to make its assumptions visible.",
+      "metrics": {
+        "comments": 3,
+        "reactions": 3
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-879d856f97e9",
+      "targetDate": "2026-08-16",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "AI 会议记录 - 语音转文字·模板·摘要",
+      "url": "https://apps.apple.com/cn/app/ai-%E4%BC%9A%E8%AE%AE%E8%AE%B0%E5%BD%95-%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97-%E6%A8%A1%E6%9D%BF-%E6%91%98%E8%A6%81/id6745157520?uo=4",
+      "publishedAt": "2026-08-16T01:53:26Z",
+      "excerpt": "AI 会议记录 APP 除了语音转文字之外，能自动识别说话者，快速生成逐字稿，并根据不同情境产出对应的摘要与行动建议。你还可以自定专属模板，让记录内容更贴近工作流程与个人需求。 无论是工作会议、课堂笔记、用户访谈或头脑风暴，我们都能用最适合的方式帮你整理每一场对话，为你节省时间，提升效率！ 【核心特色】 ＊一键录音或上传音档，支持中英文双语识别 ＊自动识别多位说话者，逐字稿清楚标示与分段 ＊10+种情境摘要模板，适用各式录音需求 ＊AI 生成摘要与行动建议，快速对焦重点 ＊可自定 Prompt 模板，摘要逻辑更符合你的需求 立即下载 AI 会议记录，让录音不再只是备份，而是推动行动的开始！",
+      "metrics": {
+        "ratings": 3,
+        "rating": 5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-2c48ed41d056",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Unpopular Opinion: Why I’m an AI Skeptic",
+      "url": "https://dev.to/aws-builders/unpopular-opinion-why-im-an-ai-skeptic-35cf",
+      "publishedAt": "2026-08-16T15:21:52Z",
+      "excerpt": "With all the hype in the past several years around AI (or more specifically GenAI), I'm not afraid to...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 3
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-1d5557416e05",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Arquitectura de 10 agentes, 1k users, presupuesto: dos pizzas al mes",
+      "url": "https://dev.to/aws-builders/arquitectura-de-10-agentes-1k-users-presupuesto-dos-pizzas-al-mes-gjg",
+      "publishedAt": "2026-08-16T23:36:58Z",
+      "excerpt": "...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2b0a897c8e9a",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "What Actually Happens When You UPDATE a Row in PostgreSQL?",
+      "url": "https://dev.to/ujjwal_011/what-actually-happens-when-you-update-a-row-in-postgresql-2nbk",
+      "publishedAt": "2026-08-16T23:15:49Z",
+      "excerpt": "Most developers think of a PostgreSQL table like this: users id | age 1 |...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-cac5cff79cb0",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "AI Can Find the Failure. Who Decides What the Fix Should Be?",
+      "url": "https://dev.to/praiztech/ai-can-find-the-failure-who-decides-what-the-fix-should-be-18o5",
+      "publishedAt": "2026-08-16T23:14:58Z",
+      "excerpt": "AI can detect WCAG failures, explain them, and increasingly write the fix. But detection is not the same as deciding the fix. A real remediation example shows where the gap is, and why expertise and lived experience have to stay in the loop.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-975597ee5a4c",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Designing an Honest “Unlimited” Generative AI Product: Credits, Queues, and Fair Use",
+      "url": "https://dev.to/abrahamaragon91/designing-an-honest-unlimited-generative-ai-product-credits-queues-and-fair-use-15li",
+      "publishedAt": "2026-08-16T22:50:54Z",
+      "excerpt": "Disclosure: I am building Donatello.studio. This article describes the product and systems principles...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-9952edbb256b",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "You can't trust assembly an AI wrote. Here's the 3-command gate.",
+      "url": "https://dev.to/trothbyte/you-cant-trust-assembly-an-ai-wrote-heres-the-3-command-gate-4ige",
+      "publishedAt": "2026-08-16T22:29:09Z",
+      "excerpt": "AI assistants are confident about assembly and wrong in specific, repeatable ways. Here's a mechanical gate (assemble → disassemble → compare bytes) that catches the real failures.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-325c3d16f4db",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "So, I Vibe Coded A Way Out, Again.",
+      "url": "https://dev.to/realvorl/so-i-vibe-coded-a-way-out-again-heb",
+      "publishedAt": "2026-08-16T22:18:46Z",
+      "excerpt": "A while ago I wrote an article asking When Is 100% Vibe Coding OK?. My conclusion was that it works...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-cebe8c16163d",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "PawPal is your New Dog's AI Sidekick 🐶⭐",
+      "url": "https://dev.to/ishikathakur7802/pawpal-is-your-new-dogs-ai-sidekick-3bc8",
+      "publishedAt": "2026-08-16T22:13:40Z",
+      "excerpt": "What I Built Bringing a new dog home is exciting... and also confusing. Why are they...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 2
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a192d1d9463b",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Sidewalk to Summit — build log",
+      "url": "https://dev.to/ohkpond/sidewalk-to-summit-build-log-4kp4",
+      "publishedAt": "2026-08-16T22:10:12Z",
+      "excerpt": "Catching up a build log I let go quiet for a few weeks: a property test finds a plan engine bug that's been undercounting since day one, CI lands and immediately flags four dependency holes, a friend hand-draws a mountain background, and a text from a friend reorders the roadmap.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-3ad2c7b3683d",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Why await Doesn't Make JavaScript Run in Order",
+      "url": "https://dev.to/designly/why-await-doesnt-make-javascript-run-in-order-1h0o",
+      "publishedAt": "2026-08-16T22:06:08Z",
+      "excerpt": "Learn why await only pauses one async function—not the whole program—with a two-function example, log timeline, and when Promise.all() is better.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-27324cd00c49",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "The Angular pattern that needs no Provider",
+      "url": "https://dev.to/playfulprogramming-angular/the-angular-pattern-that-needs-no-provider-2ee4",
+      "publishedAt": "2026-08-16T22:00:00Z",
+      "excerpt": "Services are often the default abstraction for reusable Angular logic. But what if the logic is local...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-4965449b1919",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "AGENTS.md was supposed to end the sprawl. I counted the files on one laptop.",
+      "url": "https://dev.to/untactit/agentsmd-was-supposed-to-end-the-sprawl-i-counted-the-files-on-one-laptop-5e4l",
+      "publishedAt": "2026-08-16T21:57:32Z",
+      "excerpt": "One laptop: 111 AGENTS.md files with 19 distinct contents, 38 CLAUDE.md with 19, 3,073 SKILL.md with 887.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-9c91f32fac44",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "I've decided to take back control of my brain in the era of ai",
+      "url": "https://dev.to/zeejers/ive-decided-to-take-back-control-of-my-brain-in-the-era-of-ai-1inj",
+      "publishedAt": "2026-08-16T19:03:52Z",
+      "excerpt": "to write is to think. think for me. whir-buzz-and-spin until the content is complete. while I...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-24ac7ca92a38",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Don't Start With RAG: Lessons From Building an Automotive AI Pipeline",
+      "url": "https://dev.to/younes_bentlili_9480340f/dont-start-with-rag-lessons-from-building-an-automotive-ai-pipeline-2igc",
+      "publishedAt": "2026-08-16T18:03:12Z",
+      "excerpt": "When building an AI product, it's tempting to start with the fashionable pieces. Vector...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-67f203be21cb",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "I Built AI DevList Because Finding AI Content Is No Longer the Problem",
+      "url": "https://dev.to/younes_bentlili_9480340f/i-built-ai-devlist-because-finding-ai-content-is-no-longer-the-problem-502b",
+      "publishedAt": "2026-08-16T17:47:49Z",
+      "excerpt": "There is no shortage of AI content. Actually, we probably have the opposite problem. Every day...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-686dcb967c41",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "How to remove a Gemini sparkle watermark in the browser (no account)",
+      "url": "https://dev.to/ammyy9908/how-to-remove-a-gemini-sparkle-watermark-in-the-browser-no-account-330c",
+      "publishedAt": "2026-08-16T17:10:17Z",
+      "excerpt": "Gemini stills and Veo / Flow clips often come with a small sparkle in the corner. Google is rolling...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-819ae95744a0",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "The Ad Blocker With 40 Million Users Now Runs in Exactly One Major Browser: Firefox",
+      "url": "https://dev.to/jamilxt/the-ad-blocker-with-40-million-users-now-runs-in-exactly-one-major-browser-firefox-22lm",
+      "publishedAt": "2026-08-16T16:31:31Z",
+      "excerpt": "Two months ago I opened Chrome to test something, noticed my extension toolbar was emptier than I...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-4f50d8b2df26",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "I Built DeepRead: An Evidence-First Reading Skill for Articles, Books, and PDFs",
+      "url": "https://dev.to/_312a710fe7837e8fcea442/i-built-deepread-an-evidence-first-reading-skill-for-articles-books-and-pdfs-45e8",
+      "publishedAt": "2026-08-16T16:31:18Z",
+      "excerpt": "I recently built an open-source project called DeepRead to solve a problem I kept seeing with AI...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-f7ec1b0b731a",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "A check that cannot fail is not a check",
+      "url": "https://dev.to/dosai/a-check-that-cannot-fail-is-not-a-check-9dl",
+      "publishedAt": "2026-08-16T16:30:19Z",
+      "excerpt": "Two of my guardrails reported clean for weeks. Neither of them was capable of reporting anything...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-5aa9d7639e80",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "AI dragons: capable of everything, governed by nothing",
+      "url": "https://dev.to/helkyn_coello/ai-dragons-capable-of-everything-governed-by-nothing-2d9d",
+      "publishedAt": "2026-08-16T15:10:09Z",
+      "excerpt": "Last weekend the season finale of House of the Dragon ran for seventy-five minutes. I decided that...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ba92b2bb7747",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "I Tampered With a 'VERIFIED' AI-Agent Delivery. Can You Find It in 5 Minutes?",
+      "url": "https://dev.to/dengyier/i-tampered-with-a-verified-ai-agent-delivery-can-you-find-it-in-5-minutes-4kp0",
+      "publishedAt": "2026-08-16T14:57:20Z",
+      "excerpt": "You're paying an agent (or a freelancer, or an internal pipeline) to do work. The agent says: \"all...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-218aed88f755",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Why Should the Language Change the Moment I Build a UI?",
+      "url": "https://dev.to/kentaromorishita/why-should-the-language-change-the-moment-i-build-a-ui-fgd",
+      "publishedAt": "2026-08-16T13:56:42Z",
+      "excerpt": "I wanted UI code to remain an extension of ordinary data, functions, match, Signal, and Html instead of becoming a separate programming world.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-88c39f28afa7",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Software Engineering Fundamentals Matter More Than Ever — Even in the Age of AI Coding Tools",
+      "url": "https://dev.to/trismegistus/software-engineering-fundamentals-matter-more-than-ever-even-in-the-age-of-ai-coding-tools-3i9g",
+      "publishedAt": "2026-08-16T13:56:42Z",
+      "excerpt": "A blog post titled \"Software Engineering Fundamentals Matter More [Than Ever]\" hit 214 points on...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a94315816225",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "I'm Building a Programming Language by Arguing With ChatGPT",
+      "url": "https://dev.to/kentaromorishita/im-building-a-programming-language-by-arguing-with-chatgpt-4ij5",
+      "publishedAt": "2026-08-16T13:52:32Z",
+      "excerpt": "A surprising amount of Seseragi's design comes from arguing with ChatGPT until I can explain exactly why an idea feels wrong.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-e16fb102363f",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "When AI Writes All the Code, What's Left for Developers? The Case for Taste",
+      "url": "https://dev.to/trismegistus/when-ai-writes-all-the-code-whats-left-for-developers-the-case-for-taste-452o",
+      "publishedAt": "2026-08-16T13:50:55Z",
+      "excerpt": "A post titled \"Taste Is All That's Left\" hit the front page of Hacker News this week with 410 points...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-66e9361303c1",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Why Littlebird Sits At The Center Of My AI Stack",
+      "url": "https://dev.to/richardlemon/why-littlebird-sits-at-the-center-of-my-ai-stack-3naa",
+      "publishedAt": "2026-08-16T11:53:10Z",
+      "excerpt": "The AI subscriptions I cancelled I used to pay for several AI tools every month. Over time that...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c69cdbaca265",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Why I stopped pasting sensitive data into random developer tools",
+      "url": "https://dev.to/collabier/why-i-stopped-pasting-sensitive-data-into-random-developer-tools-1lej",
+      "publishedAt": "2026-08-16T11:31:13Z",
+      "excerpt": "I probably don't need to explain how often developers use online utility websites. Need to decode a...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c09d29a45e73",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Trend: Amodei predicts 1-person billion-dollar company",
+      "url": "https://dev.to/frederikvonderheyden/trend-amodei-predicts-1-person-billion-dollar-company-53oa",
+      "publishedAt": "2026-08-16T09:21:56Z",
+      "excerpt": "Dario Amodei Is Right. But He Is Missing the Hard Part. Dario Amodei said the first...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-1560f563def1",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "We made a 31-second promo to say one thing: your phone is the best remote for your agent",
+      "url": "https://dev.to/joey020907/we-made-a-31-second-promo-to-say-one-thing-your-phone-is-the-best-remote-for-your-agent-2j1c",
+      "publishedAt": "2026-08-16T09:07:23Z",
+      "excerpt": "We made a 31-second promo to say one thing: your phone is the best remote for your...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c50cdcc6957d",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "The 5 agent tasks I most often run from my phone: a real list",
+      "url": "https://dev.to/joey020907/the-5-agent-tasks-i-most-often-run-from-my-phone-a-real-list-20oa",
+      "publishedAt": "2026-08-16T06:59:59Z",
+      "excerpt": "The 5 agent tasks I most often run from my phone: a real list No concepts — a list. These...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-b873bdaaa4d6",
+      "targetDate": "2026-08-16",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Ai in Docs - Saviour of Dev's",
+      "url": "https://dev.to/shanitiwari/ai-in-docs-saviour-of-devs-409k",
+      "publishedAt": "2026-08-16T05:54:00Z",
+      "excerpt": "AI in docs changed how I learned to build a SaaS. 🤯 I recently built a SaaS using: →...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    }
+  ],
+  "reviewInstructions": {
+    "publishAllPassing": true,
+    "allowedKinds": [
+      "opportunity",
+      "case"
+    ],
+    "allowedQuality": [
+      "feature",
+      "editorial"
+    ],
+    "requiredFields": [
+      "plain",
+      "audience",
+      "pain",
+      "why",
+      "validation",
+      "risk",
+      "evidence"
+    ]
+  }
+}

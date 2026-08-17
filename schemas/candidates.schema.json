@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opportunity Gazette candidate issue",
+  "type": "object",
+  "required": ["schemaVersion", "targetDate", "generatedAt", "status", "counts", "sources", "candidates"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "targetDate": {"type": "string", "format": "date"},
+    "status": {"const": "ready_for_review"},
+    "candidates": {"type": "array", "maxItems": 180}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opportunity Gazette reviewed issue",
+  "type": "object",
+  "required": ["schemaVersion", "targetDate", "generatedAt", "status", "counts", "failedSources", "entries"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "targetDate": {"type": "string", "format": "date"},
+    "status": {"enum": ["ready_for_publish", "no_quality_entries"]},
+    "entries": {"type": "array"}
+  }
+}
