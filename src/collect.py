@@ -31,6 +31,16 @@ RELEVANCE = {
     "github", "startup", "founder", "customer", "billing", "cost", "failure",
     "人工智能", "自动化", "工具", "开发", "创业", "增长", "工作流", "失败",
 }
+CREDENTIAL_ASSIGNMENT = re.compile(
+    r"(?i)\b(cookie|set-cookie|authorization|bearer|password|passwd|secret|session credential)"
+    r"\b(\s*[:=]\s*)([^\r\n,;]{1,200})"
+)
+
+
+def redact_sensitive_assignments(value: Any) -> str:
+    """Remove copied credential-like assignments from public source text."""
+    text = str(value or "")
+    return CREDENTIAL_ASSIGNMENT.sub(lambda match: f"{match.group(1)}{match.group(2)}[redacted]", text)
 
 
 def clean(value: Any, limit: int = 700) -> str:
@@ -99,7 +109,8 @@ class Collector:
             excerpt: str = "", metrics: dict[str, Any] | None = None, topics: list[str] | None = None,
             boundary: str = "Public source signal; requires editorial verification before publication.") -> bool:
         self.raw_count += 1
-        title = clean(title, 240)
+        title = clean(redact_sensitive_assignments(title), 240)
+        excerpt = redact_sensitive_assignments(excerpt)
         url = canonical_url(clean(url, 900))
         if len(title) < 8 or not url.startswith(("https://", "http://")):
             return False
