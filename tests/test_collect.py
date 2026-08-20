@@ -63,6 +63,17 @@ class CollectorTests(unittest.TestCase):
         current = {key: value for key, value in second.items() if key != "generatedAt"}
         self.assertEqual(previous, current)
 
+    def test_negative_or_invalid_metrics_do_not_break_ranking(self):
+        run = collector.Collector("2026-08-16")
+        candidate = {
+            "title": "AI automation failure report",
+            "excerpt": "billing problem",
+            "publishedAt": "2026-08-16T00:00:00Z",
+            "metrics": {"score": -3, "comments": "unknown"},
+        }
+        score, _ = run.score(candidate)
+        self.assertGreaterEqual(score, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
