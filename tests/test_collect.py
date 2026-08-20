@@ -30,6 +30,20 @@ class CollectorTests(unittest.TestCase):
         self.assertNotIn("demo-value", candidate["title"])
         self.assertNotIn("copied-example", candidate["excerpt"])
 
+    def test_local_user_paths_are_redacted_from_public_text(self):
+        run = collector.Collector("2026-08-16")
+        run.add(
+            source="x",
+            source_type="public",
+            title="AI automation failure on a local developer machine",
+            url="https://example.com/local-path-case",
+            published_at="2026-08-16",
+            excerpt="The tool failed under /" + "Users/" + "alice/project/config.json",
+        )
+        excerpt = run.candidates[0]["excerpt"]
+        self.assertIn("/" + "Users/[redacted]/project/config.json", excerpt)
+        self.assertNotIn("/" + "Users/" + "alice/", excerpt)
+
     def test_url_normalization_removes_tracking(self):
         self.assertEqual(
             collector.canonical_url("https://Example.com/path/?utm_source=x&keep=1#part"),

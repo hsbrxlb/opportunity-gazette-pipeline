@@ -35,12 +35,14 @@ CREDENTIAL_ASSIGNMENT = re.compile(
     r"(?i)\b(cookie|set-cookie|authorization|bearer|password|passwd|secret|session credential)"
     r"\b(\s*[:=]\s*)([^\r\n,;]{1,200})"
 )
+LOCAL_USER_PATH = re.compile(r"/" + r"Users/[^/\s]+/")
 
 
 def redact_sensitive_assignments(value: Any) -> str:
-    """Remove copied credential-like assignments from public source text."""
+    """Remove copied credentials and local usernames from public source text."""
     text = str(value or "")
-    return CREDENTIAL_ASSIGNMENT.sub(lambda match: f"{match.group(1)}{match.group(2)}[redacted]", text)
+    text = CREDENTIAL_ASSIGNMENT.sub(lambda match: f"{match.group(1)}{match.group(2)}[redacted]", text)
+    return LOCAL_USER_PATH.sub("/" + "Users/[redacted]/", text)
 
 
 def clean(value: Any, limit: int = 700) -> str:
