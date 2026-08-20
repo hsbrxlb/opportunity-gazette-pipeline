@@ -324,7 +324,11 @@ class Collector:
         )
         value = 12.0 * sum(marker in text for marker in pain_markers)
         for key in ("comments", "replies", "answers", "points", "score", "ratings", "views"):
-            value += math.log1p(float(metrics.get(key, 0) or 0))
+            try:
+                metric = max(0.0, float(metrics.get(key, 0) or 0))
+            except (TypeError, ValueError):
+                metric = 0.0
+            value += math.log1p(metric)
         if any(marker in text for marker in ("[control]", "worker registry", "coordination ledger", "hourly controller")):
             value -= 18
         return value, candidate.get("publishedAt", "")
