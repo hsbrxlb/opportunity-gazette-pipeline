@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 patterns = {
-    "local-user-path": re.compile(r"/" + r"Users/[^/]+/"),
+    "local-user-path": re.compile(r"/" + r"Users/(?!\[redacted\]/)[^/]+/"),
     "credential-field": re.compile(
         r"(?i)\b(cookie|set-cookie|authorization|bearer|password|passwd|secret|session credential)"
         r"\b\s*[:=]\s*(?!\[redacted\]|<redacted>|redacted\b)[^\s,}\]]+"

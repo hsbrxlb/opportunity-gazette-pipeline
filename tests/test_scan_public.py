@@ -24,6 +24,12 @@ class PublicScanTests(unittest.TestCase):
     def test_token_shape_is_still_rejected(self):
         self.assertIn("token-shape", scan_public.scan_text("sk-" + "abcdefghijklmnop1234"))
 
+    def test_redacted_local_user_path_is_allowed(self):
+        self.assertNotIn("local-user-path", scan_public.scan_text("/" + "Users/[redacted]/project/file"))
+
+    def test_named_local_user_path_is_rejected(self):
+        self.assertIn("local-user-path", scan_public.scan_text("/" + "Users/" + "alice/project/file"))
+
 
 if __name__ == "__main__":
     unittest.main()
