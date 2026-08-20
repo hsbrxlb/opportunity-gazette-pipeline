@@ -14,6 +14,22 @@ SPEC.loader.exec_module(collector)
 
 
 class CollectorTests(unittest.TestCase):
+    def test_credential_assignments_are_redacted_from_public_text(self):
+        run = collector.Collector("2026-08-16")
+        run.add(
+            source="x",
+            source_type="public",
+            title="AI automation failure with " + "password" + ": demo-value",
+            url="https://example.com/credential-case",
+            published_at="2026-08-16",
+            excerpt="Authorization" + ": Bearer copied-example; ordinary explanation remains.",
+        )
+        candidate = run.candidates[0]
+        self.assertIn("password: [redacted]", candidate["title"])
+        self.assertIn("Authorization: [redacted]", candidate["excerpt"])
+        self.assertNotIn("demo-value", candidate["title"])
+        self.assertNotIn("copied-example", candidate["excerpt"])
+
     def test_url_normalization_removes_tracking(self):
         self.assertEqual(
             collector.canonical_url("https://Example.com/path/?utm_source=x&keep=1#part"),
