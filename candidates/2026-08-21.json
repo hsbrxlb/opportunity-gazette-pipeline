@@ -1,0 +1,3114 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-08-21",
+  "generatedAt": "2026-08-22T12:53:48.663331+08:00",
+  "status": "ready_for_review",
+  "counts": {
+    "observed": 927,
+    "candidates": 150,
+    "mechanicallyRejectedOrDeduplicated": 777,
+    "sourceFailures": 5
+  },
+  "sources": [
+    {
+      "source": "Hacker News",
+      "status": "ok",
+      "count": 110,
+      "detail": "observed=300; added_after_dedupe=110",
+      "sourceType": "public"
+    },
+    {
+      "source": "GitHub Issues",
+      "status": "ok",
+      "count": 167,
+      "detail": "observed=300; added_after_dedupe=167",
+      "sourceType": "public"
+    },
+    {
+      "source": "DEV.to",
+      "status": "ok",
+      "count": 154,
+      "detail": "observed=400; added_after_dedupe=154",
+      "sourceType": "public"
+    },
+    {
+      "source": "V2EX",
+      "status": "ok",
+      "count": 0,
+      "detail": "observed=40; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "ok",
+      "count": 1,
+      "detail": "observed=1; added_after_dedupe=1",
+      "sourceType": "public"
+    },
+    {
+      "source": "App Store Search",
+      "status": "ok",
+      "count": 15,
+      "detail": "observed=466; added_after_dedupe=15",
+      "sourceType": "runtime_visible_public_api"
+    },
+    {
+      "source": "Reddit",
+      "status": "rate_limited_or_blocked",
+      "count": 0,
+      "detail": "HTTP 403",
+      "sourceType": "public"
+    },
+    {
+      "source": "Product Hunt",
+      "status": "not_configured",
+      "count": 0,
+      "detail": "Official API credential is not configured; skipped.",
+      "sourceType": "credential_required"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "No stable credential-free date-bounded endpoint.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "微博",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-b4bc185a6668",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — phynars/oodim-game",
+      "sourceType": "production_or_user_issue",
+      "title": "[Mara] PR-review job-logs endpoint returns 401 (dead token) — reviewers blind to CI failure logs",
+      "url": "https://github.com/phynars/oodim-game/issues/1345",
+      "publishedAt": "2026-08-21T15:36:11Z",
+      "excerpt": "**Type:** bug · **LOE:** S · **Priority:** P2 ## Problem During review of PR #1344, the `query_logs`/CI job-logs endpoint returned 401 Unauthorized. The review token appears to be dead/expired. Reviewers can still diagnose from code + the failure-summary bot comment, but they lose the raw runner log — which is exactly what's needed to distinguish \"webServer boot failed\" from \"first spec timed out\" from \"spec threw.\" ## Affected surface - Whatever job-logs proxy the review tools hit (Actions API token or its wrapper). - Not blocking on any one code path — this is credential/infra. ## Acceptance criteria - Reviewer tools can fetch the raw runne",
+      "metrics": {
+        "comments": 63,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-122978f49b2d",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — JoshCLWren/comic-pile",
+      "sourceType": "production_or_user_issue",
+      "title": "Database not available",
+      "url": "https://github.com/JoshCLWren/comic-pile/issues/1590",
+      "publishedAt": "2026-08-21T04:15:34Z",
+      "excerpt": "**Reported by:** Josh **Report type:** Bug report I got an error while rating a comic even though we hav edone work to alleivate scale to zero db errors <details> <summary>Diagnostic Information</summary> **Timestamp:** 2026-08-21T04:15:03.203Z **URL:** https://comic-pile.vercel.app/ **User Agent:** Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0 **Screen:** 1920×1080 @1.0x **Viewport:** 1920×926 **Scroll:** (0, 0) **Performance:** DOMContentLoaded: 913ms, Load: 1424ms **Console Errors (last 3):** ``` API Error: Request failed with status code 409 ``` ``` Failed to roll: A roll is already pending for 'Cable'. Rate, snoo",
+      "metrics": {
+        "comments": 35,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-459af3bf8783",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3058: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3061",
+      "publishedAt": "2026-08-21T21:12:16Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3058 — feat(security): bypass-proof shadow-MCP endpoint governance (Closes #90) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3058 **Head SHA**: `7eca74d496058aceefb176518399a09d59a80928` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32524863261/job/96904661786 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** ``",
+      "metrics": {
+        "comments": 33,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e79c74781b35",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — naugehyde/bt-sensors-plugin-sk",
+      "sourceType": "production_or_user_issue",
+      "title": "Lost Gobius sensor",
+      "url": "https://github.com/naugehyde/bt-sensors-plugin-sk/issues/188",
+      "publishedAt": "2026-08-21T13:57:30Z",
+      "excerpt": "I have a Gobius sensor that was creating a bit of problems this winter, but has behaved perfectly since that. But now I can't connect to it at all. I checked with the Gobius app on my phone, and that works as it should. Here are the log entries: ``` Aug 21 15:50:07 bt-sensors-plugin-sk (GOBIUS C 54:FE:EB:37:47:6B) Unable to communicate with device 54:FE:EB:37:47:6B Reason: operation timed out +0ms Aug 21 15:50:07 bt-sensors-plugin-sk Unable to communicate with device 54:FE:EB:37:47:6B Reason: operation timed out +1ms Aug 21 15:50:07 bt-sensors-plugin-sk Error: operation timed out bt-sensors-plugin-sk at Timeout.<anonymous> (/root/.signalk/nod",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-b9035252339a",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3000: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3018",
+      "publishedAt": "2026-08-21T02:42:08Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3000 — feat(security): lint instruction/config files for prompt-injection patterns (Closes #88) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3000 **Head SHA**: `279fc0f036bbcfe586c65938859a5f4e5e589a7a` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32375800707/job/96446765779 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotati",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2b4eba11b774",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — dkblinux98/nyxGPT",
+      "sourceType": "production_or_user_issue",
+      "title": "bug: v3.0.0 red - SLACK_CONFLICT_CHANNEL manifest gap, admin coverage",
+      "url": "https://github.com/dkblinux98/nyxGPT/issues/3979",
+      "publishedAt": "2026-08-21T03:03:50Z",
+      "excerpt": "## Problem / Motivation `ci-tests.yml` is failing on `v3.0.0` at `dce1a06c` ([run 32439784804](https://github.com/dkblinux98/nyxGPT/actions/runs/32439784804)), and a red tip blocks the release candidate. The sprint autopilot cuts an rc only from the release branch, and without a candidate every repo-less install path can still only exercise **3.0.0rc12** (cut 2026-08-16), never the tip carrying this round's fixes. Two independent failures, both produced by #3911 and #3976 merging 35 minutes apart. **Each PR was green on its own branch.** `ci-tests.yml` triggers only on release-branch pushes, so the combination was never exercised until it lan",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-4ed4265c0042",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — retorquere/zotero-better-bibtex",
+      "sourceType": "production_or_user_issue",
+      "title": "Better BibTeX fails to load on both Zotero 10 and Zotero 8.0.4 with \"v128 not enabled\" CompileError",
+      "url": "https://github.com/retorquere/zotero-better-bibtex/issues/3583",
+      "publishedAt": "2026-08-21T08:52:49Z",
+      "excerpt": "### Debug log ID D383420489 ### What happened? I am unable to get Better BibTeX working on either Zotero 10 or Zotero 8.0.4. The plugin fails to load with the same WebAssembly-related error in both versions. Steps to reproduce: 1. Fresh installation of Zotero 10 (or 8.0.4) 2. Install Better BibTeX via .xpi file from the official releases page 3. Restart Zotero 4. Plugin fails to initialize with the error shown below Error message (full): CompileError: at offset 673544: v128 not enabled initSync@chrome://zotero-better-bibtex/content/key-manager/chinese-optional.js:85466:16 @chrome://zotero-better-bibtex/content/key-manager/chinese-optional.js:",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-98e8aff928f0",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "The Stripe Connect refund that only costs the platform",
+      "url": "https://dev.to/veristria/the-stripe-connect-refund-that-only-costs-the-platform-1l68",
+      "publishedAt": "2026-08-21T13:39:36Z",
+      "excerpt": "There is a class of bug in Stripe Connect that never throws, never logs, and never fails a webhook....",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-548aaf2c2d6d",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Detect and Auto-Retry Flaky Test Failures in Build Loop Before Counting as Failure",
+      "url": "https://github.com/sethdford/shipwright/issues/2558",
+      "publishedAt": "2026-08-21T00:06:11Z",
+      "excerpt": "## Strategic Improvement When a build-loop test run fails, immediately re-run only the failed test(s) once before recording the iteration as a failure — if the retry passes, log the test as flaky (with signature) instead of triggering a build-loop failure/circuit-breaker increment. This directly targets the success-rate gap since flaky (non-deterministic) test failures currently look identical to real regressions and waste iterations and restarts. ### Acceptance Criteria - - sw-loop.sh detects a failing test run, extracts the specific failed test identifier(s) from output, and re-runs just those before deciding pass/fail - - Flaky detections ",
+      "metrics": {
+        "comments": 99,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d566ad37eab2",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — neokapi/neokapi",
+      "sourceType": "production_or_user_issue",
+      "title": "🔴 main CI is red",
+      "url": "https://github.com/neokapi/neokapi/issues/2133",
+      "publishedAt": "2026-08-21T02:41:18Z",
+      "excerpt": "Workflow \"E2E\" finished with \"failure\" on main at commit 3787c4edd. Run: https://github.com/neokapi/neokapi/actions/runs/32439877386 push-to-main and the nightly run the FULL suite (race detector, every module). A red here means main is broken even though the merging PR was green (its check was path-skipped). Fix forward or revert; this issue closes automatically when main is green across all watched workflows again.",
+      "metrics": {
+        "comments": 35,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-eb3849b05bcf",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — keeptxred/TexasDefined",
+      "sourceType": "production_or_user_issue",
+      "title": "[Site Quality] TexasDefined watchdog failures",
+      "url": "https://github.com/keeptxred/TexasDefined/issues/342",
+      "publishedAt": "2026-08-21T04:48:27Z",
+      "excerpt": "The recurring TexasDefined site-quality watchdog found one or more failures. Latest run: https://github.com/keeptxred/TexasDefined/actions/runs/32480076398 # TexasDefined Site Quality Watch - Started: 2026-08-21T12:04:08.803Z - Finished: 2026-08-21T12:04:09.880Z - Checks: 18 - Passed: 17 - Failed: 1 ## Summary | Check | Result | Duration | |---|---:|---:| | Thin, empty and generated-content quality | PASS | 0.0s | | Verified county property-tax source freshness and crawl policy | PASS | 0.0s | | Primary destination indexing and duplicate-unit consolidation | PASS | 0.0s | | Required content fields and data integrity | PASS | 0.0s | | Repetiti",
+      "metrics": {
+        "comments": 32,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-b9d11ac7265a",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3015: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3016",
+      "publishedAt": "2026-08-21T00:42:17Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3015 — feat: failure-cause mutating counter — increment 1 of #3014 **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3015 **Head SHA**: `62d93b4f22c1f03f43b804c52c4c9bb32bce9fb8` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32432773442/job/96627725050 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** ```\\nfailure at",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2aae8337f3a0",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2982: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3024",
+      "publishedAt": "2026-08-21T02:42:19Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2982 — [UPSTREAM] Sync upstream release v2026.8.18 (159 commits) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2982 **Head SHA**: `95f227ca7f7909c207fe115c4f0bb137fa6c94f0` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32339572293/job/96335770103 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** ```\\nfailure at .",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e528c263326d",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2984: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3023",
+      "publishedAt": "2026-08-21T02:42:17Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2984 — [UPSTREAM] Sync upstream release v2026.8.18 (159 commits) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2984 **Head SHA**: `4c6ff4acca5186290c8bf556862cabed159f1a07` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32341045673/job/96340058195 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** ```\\nfailure at .",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e8077bfe60eb",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2989: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3022",
+      "publishedAt": "2026-08-21T02:42:15Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2989 — feat(delegation): attribution markers for subagent artifacts (Closes #67) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2989 **Head SHA**: `b3ec6b0e3a5508e74369c4bcb744a6c87390fc47` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32376003405/job/96447432309 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** `",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-a113233f4026",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2990: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3021",
+      "publishedAt": "2026-08-21T02:42:14Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2990 — feat(memory): contradiction detection for episodic memory (Closes #37) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2990 **Head SHA**: `896f8759502128bf8c259420060ae84b83da25e5` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32376001086/job/96447425344 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation excerpt:** ```\\",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0027ca57518d",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2999: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3019",
+      "publishedAt": "2026-08-21T02:42:09Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2999 — feat(tools): wire Pydantic tool-schema validation into the runtime schema path (Closes #49) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2999 **Head SHA**: `b10950bd96aafd6bbc826ff539d80a200494a046` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32375795293/job/96446748313 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annot",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2764d4f528ef",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3001: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3017",
+      "publishedAt": "2026-08-21T02:42:06Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3001 — feat(evolution): harness component inventory — file-level observability (#39, slice 1) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3001 **Head SHA**: `eba489d24021c1cc166efb1ecb2b74bd1c7fc626` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32375991932/job/96447395595 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-289018ceeee2",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2975: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3025",
+      "publishedAt": "2026-08-21T02:42:22Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2975 — fix(nix): define fix-lockfiles package + harden hash_check diagnostic (Closes #2973) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2975 **Head SHA**: `8f33f54f9c8cc0bdc560c3013cdaa0a66fdaae87` **Failed checks**: 3 (of 3 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32319173042/job/96327346511 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annotation e",
+      "metrics": {
+        "comments": 28,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-64d0de772419",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #2998: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3020",
+      "publishedAt": "2026-08-21T02:42:12Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #2998 — feat(evolution): forge invariant filter slices 3+4 — staged rollout + pinned safe fallbacks (Closes #2978) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/2998 **Head SHA**: `667d21370b14bcd25a1faf0331f5d46b6bb2c6b6` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32369374858/job/96426127720 **Error message:** ```\\nProcess completed with exit code 1\\n",
+      "metrics": {
+        "comments": 28,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-54d4ef3ab867",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — ijassani/Reactor_iorg10",
+      "sourceType": "production_or_user_issue",
+      "title": "Dependency Audit",
+      "url": "https://github.com/ijassani/Reactor_iorg10/issues/11",
+      "publishedAt": "2026-08-21T19:06:39Z",
+      "excerpt": "## Dependency Audit Overview The table presented below outlines a dependency audit based on the findings from our recent Software Composition Analysis (SCA) scan. We have identified several dependencies within this project that require attention to ensure compliance, security, and optimal performance. ### Key Highlights: - **Dependencies**: The table lists dependencies under review for upgrade and remediation. - **Current vs. Target Versions**: Each dependency is accompanied by its current version and the recommended target version. - **Status**: The status column indicates whether the upgrade is pending, failed, or completed. - **Location**:",
+      "metrics": {
+        "comments": 27,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0b72aceb7b56",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Mingla-LLC/mingla-main",
+      "sourceType": "production_or_user_issue",
+      "title": "Let hosts create manual contact groups from their Book or an upload",
+      "url": "https://github.com/Mingla-LLC/mingla-main/issues/2395",
+      "publishedAt": "2026-08-21T12:13:05Z",
+      "excerpt": "## Problem Groups currently appear only as system-derived audiences after purchases or events. A Mingla Host cannot create a named group for their own segmentation, choose existing people from the Book, or upload a contact list directly into that group. ## Confirmed product intent - A host can create a manual, named group. - They can add existing people by selecting them from the overall Book. - They can upload/import contacts while creating or editing the group. - Every uploaded contact is first created or reconciled as a person in the brand-owned Book using the existing contact identity, merge, provenance, consent-attestation, and suppressi",
+      "metrics": {
+        "comments": 26,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e08d9226f534",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — oyatie/console",
+      "sourceType": "production_or_user_issue",
+      "title": "🚨 Trunk CI Failure on `main`: Run #32431770544 (INFRASTRUCTURE)",
+      "url": "https://github.com/oyatie/console/issues/854",
+      "publishedAt": "2026-08-21T00:13:14Z",
+      "excerpt": "### 🚨 Trunk CI Failure Diagnostic: Release Please on `main` | Attribute | Details | |---|---| | **Category** | INFRASTRUCTURE | | **Culprit File** | `.github/workflows/release-please.yml` / GitHub Repository Settings | | **Root Cause** | `GITHUB_TOKEN` lacks permission to create pull requests via GitHub Actions. | #### 🔍 Diagnostic Breakdown - **Failed Step**: `Run googleapis/release-please-action@8b8fd2cc23b2e18957157a9d923d75aa0c6f6ad5` - **Error Message**: `release-please failed: GitHub Actions is not permitted to create or approve pull requests. - https://docs.github.com/rest/pulls/pulls#create-a-pull-request` - **Mechanism**: The action ",
+      "metrics": {
+        "comments": 26,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7f786dabadcb",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3052: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3055",
+      "publishedAt": "2026-08-21T16:42:15Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3052 — fix(session): guard SessionDB connection + JSONL spool fallback (rework) (Closes #82) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3052 **Head SHA**: `44e061dc7321158d72f7c647440b84f0138b0247` **Failed checks**: 3 (of 3 total) ### All required checks pass - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32503602174/job/96840079874 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annota",
+      "metrics": {
+        "comments": 25,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-604c52cad0dd",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Jellyfin-PG/JellyEmu",
+      "sourceType": "production_or_user_issue",
+      "title": "[Bug]: Can't play any games",
+      "url": "https://github.com/Jellyfin-PG/JellyEmu/issues/163",
+      "publishedAt": "2026-08-21T11:03:25Z",
+      "excerpt": "### Acknowledgment - [x] I acknowledge that I have read and agree to the rules above. ### Severity Critical ### Jellyfin Version 10.11.11 ### JellyEmu Version 0.8.6.1 ### File Transformation Version 2.5.11.0 ### Bug Description I try to open a game in this case on gba pokemon fire red, it opens in a new tab and then takes a lot of time to load and after is just black. And if i try on the jellyfin app it doesnt open because it wants to open in a new tab. <img width=\"1868\" height=\"1006\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0262055a-9c47-4b86-9138-c02a584939b0\" /> <img width=\"1446\" height=\"690\" alt=\"Image\" src=\"https://git",
+      "metrics": {
+        "comments": 25,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-5bf8aec8a047",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — lumenwatch/stellar-intel",
+      "sourceType": "production_or_user_issue",
+      "title": "[publisher] reputation cron failing — 2026-08-21",
+      "url": "https://github.com/lumenwatch/stellar-intel/issues/65",
+      "publishedAt": "2026-08-21T01:51:10Z",
+      "excerpt": "The reputation cron failed. It runs every 5 minutes, so this issue collects the day’s failures rather than opening one per run. - `refresh` failed at 2026-08-21T01:51:10.699Z — https://github.com/lumenwatch/stellar-intel/actions/runs/32437733271 Check `/api/publisher/health`: `durable: false` means no database is configured, `pendingCount > 0` alongside a large `publishedStaleMs` means rows are stuck, and `lastError` carries the last in-process error (best effort — it resets on a cold start). If a step log shows `Redirecting...` or a non-2xx status, the `APP_URL` secret points somewhere that redirects — check for a trailing slash, an `http://",
+      "metrics": {
+        "comments": 24,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-aebb84c5e8cb",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — royhsu-work/investment-strategy",
+      "sourceType": "production_or_user_issue",
+      "title": "Explore CI-discovery wait semantics after implementation push",
+      "url": "https://github.com/royhsu-work/investment-strategy/issues/124",
+      "publishedAt": "2026-08-21T05:56:01Z",
+      "excerpt": "Change: require-ci-reobservation-before-async-exit ## Problem A recurring Executor failure mode remains after #112 introduced continuation-by-default / positive Invocation Exit Proof: after pushing a new implementation revision, the invocation may end merely because exact-head GitHub Actions runs are not yet discoverable on the first read. Concrete recent evidence: #110 / PR #123. Executor repaired the only remaining deterministic regression failure, pushed new head `c6944826c6b79baaddfb0283521b0765218c4020`, observed that Python Quality / OpenSpec Validate were not yet visible, then ended the invocation and deferred exact-head verification t",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-fb634af5e55f",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Mingla-LLC/mingla-main",
+      "sourceType": "production_or_user_issue",
+      "title": "Nigerian businesses cannot see any banks when connecting a payout account",
+      "url": "https://github.com/Mingla-LLC/mingla-main/issues/2418",
+      "publishedAt": "2026-08-21T16:33:13Z",
+      "excerpt": "## What is happening In the Mingla Host app, choosing Nigeria while connecting a payout bank account does not produce a bank list. The organiser cannot select a bank, so they cannot finish Nigerian payout onboarding. This is reported from the live app. It previously worked through the Paystack onboarding path, so this is being treated as a regression until disproven. The same journey also exposes Stripe for non-Nigerian countries; we must establish whether the failure is isolated to Paystack, shared by both providers, or caused before provider routing. ## Why this matters Connecting a bank is a required money-path step for a business to becom",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-254dc95cd929",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — AmarRakhan/tradementor",
+      "sourceType": "production_or_user_issue",
+      "title": "URGENT: Strategy 2 runtime unavailable after GCP project suspension",
+      "url": "https://github.com/AmarRakhan/tradementor/issues/41",
+      "publishedAt": "2026-08-21T07:37:40Z",
+      "excerpt": "## Incident Google Cloud project `tradementor-amar-20260813` / project number `279138931455` is currently unavailable. GitHub WIF authentication now fails with: `Consumer 'projects/279138931455' has been suspended.` The Strategy-2 test-live Cloud Run endpoints currently return HTTP 404, while the production API still returns HTTP 200/ready. ## User impact - Strategy-2 scans/exits cannot currently be trusted. - Dashboard data may be stale or inconsistent. - Automatic TP/close actions may not execute. - Users may need to manage urgent exits directly in Aster until runtime health is proven again. ## Last proven Strategy-2 runtime state Last succ",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9d159ffc7961",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Lexus2016/hermes-agent-evolution",
+      "sourceType": "production_or_user_issue",
+      "title": "CI failure on PR #3027: exit-code",
+      "url": "https://github.com/Lexus2016/hermes-agent-evolution/issues/3028",
+      "publishedAt": "2026-08-21T04:42:04Z",
+      "excerpt": "## Auto-detected CI failure **PR**: #3027 — fix(model_tools): stop spurious JSON-parse WARNING on scalar read_file path (Closes #3026) **PR URL**: https://github.com/Lexus2016/hermes-agent-evolution/pull/3027 **Head SHA**: `cf6dca2743afa7b15ec19aed3086ff49baf7da98` **Failed checks**: 1 (of 1 total) ### nix (ubuntu-latest) - **Error class**: `exit-code` - **Classification**: `complex` - **MAST mode**: `3.1 Premature Termination` - **Source**: `annotations` - **Check run URL**: https://github.com/Lexus2016/hermes-agent-evolution/actions/runs/32447268474/job/96669071993 **Error message:** ```\\nProcess completed with exit code 1\\n``` **Log/annota",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2e116bdb1d42",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — jeffhandley/dotnet-runtime-servicing-release-manager",
+      "sourceType": "production_or_user_issue",
+      "title": "[aw] Servicing Repro Producer failed",
+      "url": "https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/issues/131",
+      "publishedAt": "2026-08-21T07:32:56Z",
+      "excerpt": "### Workflow Failure **Workflow:** [Servicing Repro Producer](https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md) **Branch:** main **Run:** https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/32458968083 > [!WARNING] > **Engine Failure**: The `copilot` engine terminated unexpectedly. **Last agent output:** ``` ● Request failed (transient_auth_error). Retrying... ● Request failed (transient_auth_error). Retrying... Authentication failed with provider at http://172.30.0.30:10002 (HTTP 401). Check your COPILOT_PROVIDER_API_KEY or COPILOT",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-1ff4fba5a0a0",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — kburson/ai-task-manager",
+      "sourceType": "production_or_user_issue",
+      "title": "🐞 [BUG] Reviewer Bash guard blocks required co-review lifecycle commands",
+      "url": "https://github.com/kburson/ai-task-manager/issues/1365",
+      "publishedAt": "2026-08-21T13:28:24Z",
+      "excerpt": "<!-- aitm-last-known-state state=\"done\" ts=\"2026-08-21T16:40:40.888Z\" --> ## User Story As an AITM operator affected by a confirmed defect I want Reviewer Bash guard blocks required co-review lifecycle commands corrected So that the expected behavior is restored with regression protection ## Scope Allow the configured reviewer holding a live co-review claim to run the exact AITM co-review lifecycle commands required by the generated reviewer handoff, including read-only status and the reviewer handoff that records an immutable review decision. Keep the reviewer write boundary fail-closed: the reviewer may author only the session-bound pending",
+      "metrics": {
+        "comments": 18,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e167b1809d58",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — 6ZoSo9/void-node",
+      "sourceType": "production_or_user_issue",
+      "title": "Lamarr worker ledger v2 — adversarial security and sovereignty",
+      "url": "https://github.com/6ZoSo9/void-node/issues/1362",
+      "publishedAt": "2026-08-21T11:09:20Z",
+      "excerpt": "## Worker Experimental worker: **Lamarr** Marker: `VOID_WORKER_LAMARR_SOVEREIGN_SECURITY_EXPERIMENT_V2` ## Continuity - predecessor ledger: #1240 - repository-wide coordination source of truth: #1301 This is the sole open dedicated Lamarr ledger. It continues the same adversarial security, privacy, identity, trust, recovery, and sovereignty mission; it does **not** create a new product lane or expand Lamarr's authority. ## Current authoritative state - Current source `main`: `161ed07862980804e1ece93e616422c52ef4a3d4` at rollover creation. - #1301 remains the live low-churn coordination state index; live GitHub refs/states override historical ",
+      "metrics": {
+        "comments": 18,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-1788d940cba0",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — isacmatola-bot/EduCareer",
+      "sourceType": "production_or_user_issue",
+      "title": "Gate 3 — Production Acceptance Testing",
+      "url": "https://github.com/isacmatola-bot/EduCareer/issues/15",
+      "publishedAt": "2026-08-21T05:03:27Z",
+      "excerpt": "## Objetivo Validar os fluxos críticos da EduCareer diretamente em produção (`https://edu-career-chi.vercel.app`) com Supabase live antes do beta controlado. ## Regras - Usar contas descartáveis quando for necessário criar dados. - Não usar dados pessoais sensíveis no relatório do GitHub. - Registar PASS / FAIL e evidência resumida para cada cenário. - Qualquer P1/P2 bloqueia o fecho do Gate 3. - Testar também negações de RBAC, não apenas ações permitidas. ## A. Baseline de produção - [x] `/api/health` = HTTP 200 / Supabase healthy - [x] Vercel production sem erros `error/fatal` na verificação inicial - [x] Gate 2 MFA live - [x] Gate 2.1 RBAC",
+      "metrics": {
+        "comments": 17,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-8367a1abf08f",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — posix4e/winnow",
+      "sourceType": "production_or_user_issue",
+      "title": "Epic: security hardening, adversarial testing, and independent audit readiness",
+      "url": "https://github.com/posix4e/winnow/issues/100",
+      "publishedAt": "2026-08-21T12:51:38Z",
+      "excerpt": "## /goal Lock down Winnow for a deliberately limited mainnet beta by independently reviewing and hardening every security-critical production path: key lifecycle, transaction authorization, Taproot vaults, MuSig2, PSBT/descriptor/import handling, persistence, compact-filter validation, hostile-peer behavior, privacy boundaries, and release supply chain. The goal is achieved only when: - the security-critical code has been reviewed against explicit invariants at a recorded commit; - no known critical or high-severity finding remains open; - every medium finding is fixed or has a documented owner, mitigation, and release decision; - malformed a",
+      "metrics": {
+        "comments": 14,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0547ee748a02",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — bochs-emu/Bochs",
+      "sourceType": "production_or_user_issue",
+      "title": "ACPI breaks without BX_SUPPORT_APIC when plugins are enabled",
+      "url": "https://github.com/bochs-emu/Bochs/issues/830",
+      "publishedAt": "2026-08-21T00:25:06Z",
+      "excerpt": "Hi, I've decided to report this one as an issue rather than fix it myself, because I don't know how to go about the MSVC build side of things. This is purely a build system configuration problem rather than a bug in the source code itself. **Description**: `BX_SUPPORT_APIC` is implicitly disabled in the build configuration when compiled with CPU level <= 4. This ends up disabling most of `cpu/apic.cc`, leaving only the two functions `apic_bus_deliver_smi` and `apic_bus_broadcast_smi` to be compiled into `libcpu.a`. When plugins are disabled this is not a problem, but once the `--enable-plugins` is passed to configure, it will compile ACPI sup",
+      "metrics": {
+        "comments": 13,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7f7aed4e22c5",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Claude by Anthropic",
+      "url": "https://apps.apple.com/us/app/claude-by-anthropic/id6473753684?uo=4",
+      "publishedAt": "2026-08-21T15:39:11Z",
+      "excerpt": "Meet Claude, your AI problem solver and thinking partner. Claude works with you to write, research, code, and tackle complex problems and hard questions with depth and precision. It enhances your thinking and expands what you're capable of, right from your phone. AI WRITING ASSISTANT Turn rough ideas into polished work. Whether you're crafting social media posts, professional emails, or complex reports, Claude refines tone, structure, and clarity, iterating with you until your voice comes through. Get writing support that understands what you're trying to say, even when you're still figuring it out. AI CODING AND PROGRAMMING HELP Claude handl",
+      "metrics": {
+        "ratings": 242923,
+        "rating": 4.72107
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-3ad0ed715e32",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "My Service Account Key Got Blocked By an Org Policy I Didn't Know Existed",
+      "url": "https://dev.to/just_a_side_project/my-service-account-key-got-blocked-by-an-org-policy-i-didnt-know-existed-4cjl",
+      "publishedAt": "2026-08-21T12:02:15Z",
+      "excerpt": "The error didn't even try to be helpful: FAILED_PRECONDITION: Key creation is not allowed on this...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-4b9a6455c943",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "AI Video in 2026: The Expensive Part Is the Failed Shot, Not the Generate Button",
+      "url": "https://dev.to/ugliai/ai-video-in-2026-the-expensive-part-is-the-failed-shot-not-the-generate-button-215l",
+      "publishedAt": "2026-08-21T06:55:09Z",
+      "excerpt": "Runway, Kling, Pika, Luma, and Google Flow/Veo compared by usable-shot rate and cost per delivered shot, plus a test protocol you can run with your own assets.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-e2e035315f12",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "What Happens When the Cost of Intelligence Drops 100x",
+      "url": "https://catalystneuro.com/blog/cost-of-intelligence-drops-100x",
+      "publishedAt": "2026-08-21T13:24:28Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 121,
+        "comments": 128
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-35e84be4217d",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "DeepSeek - AI Assistant",
+      "url": "https://apps.apple.com/us/app/deepseek-ai-assistant/id6737597349?uo=4",
+      "publishedAt": "2026-08-21T10:00:38Z",
+      "excerpt": "Experience seamless interaction with DeepSeek's official AI assistant for free! Powered by DeepSeek’s latest flagship model, it delivers faster responses and more powerful features to help you solve problems and live more efficiently. Contact us: Twitter: @deepseek_ai Email: service@deepseek.com",
+      "metrics": {
+        "ratings": 11216,
+        "rating": 3.98894
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-4542610e9ada",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — MentallyQuill/TavernKeeper",
+      "sourceType": "production_or_user_issue",
+      "title": "[scanner-operations] chronic target failure",
+      "url": "https://github.com/MentallyQuill/TavernKeeper/issues/190",
+      "publishedAt": "2026-08-21T17:41:13Z",
+      "excerpt": "TavernKeeper is continuing automatic retries for a repeatedly failing target.\\n\\nTarget incident key: `658adbb796d17c7cc6e76272468354f92ba5748cd94d618b43dfa7dfa43cae93`\\nRepository: `linux4life1/front-porch-AI`\\nRepository ID: `1158227036`\\nTarget commit: `76c4ca72341e671d8797beb956888e0d08fd4493`\\nConsecutive failures: `5`\\nDomain: `target`\\nCode: `PREPARATION_FAILED`\\nComponent: `evidence-context`\\nDiagnostic: `preparation_evidence`\\nNext retry: `2026-08-21T23:40:46.351Z`\\nFailure history (latest four): `[{\"failed_at\":\"2026-08-21T08:29:21.997Z\",\"domain\":\"target\",\"code\":\"PREPARATION_FAILED\",\"component\":\"evidence-context\",\"diagnostic\":\"prepar",
+      "metrics": {
+        "comments": 285,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-43793a3214e8",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — kenshoushouri-cloud/boat-ai-v2",
+      "sourceType": "production_or_user_issue",
+      "title": "Railway Bridge Control",
+      "url": "https://github.com/kenshoushouri-cloud/boat-ai-v2/issues/42",
+      "publishedAt": "2026-08-21T13:27:56Z",
+      "excerpt": "ChatGPT ↔ GitHub Actions ↔ Railway の操作・結果確認用の制御Issueです。 安全方針: - Railway token / DATABASE_URL / LINE token 等の秘密値は投稿しない - 初期段階は status / service確認 / safe logsのみ - Variables変更・redeployは明示的なallowlistを追加してから有効化 - service削除 / environment削除 / DB削除は対象外 このIssueはbridge workflowの結果サマリー受信用に使用します。",
+      "metrics": {
+        "comments": 132,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-adb07e93e578",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Fleet-Wide Memory Pattern Sharing — Cross-Repo Failure Pattern Propagation",
+      "url": "https://github.com/sethdford/shipwright/issues/2559",
+      "publishedAt": "2026-08-21T00:06:15Z",
+      "excerpt": "## Strategic Improvement Currently `shipwright memory` captures failure patterns per-repo only; in fleet mode, a fix discovered in one repo isn't available to pipelines running in sibling repos even when the root cause (e.g. a shared tool/config quirk) recurs. Add a fleet-level shared memory store that aggregates patterns across repos in `.claude/fleet-config.json` and injects cross-repo-relevant patterns (tagged as generic/tooling, not repo-specific code) into build-loop prompts for other fleet members. ### Acceptance Criteria - - sw-memory.sh gains a `--scope fleet` mode that reads/writes to a shared `~/.shipwright/fleet-memory/<fleet-id>/p",
+      "metrics": {
+        "comments": 112,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-b458bdf2a36e",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Stage Duration Regression Alerts — Flag Pipeline Stages Running Abnormally Long",
+      "url": "https://github.com/sethdford/shipwright/issues/2728",
+      "publishedAt": "2026-08-21T16:07:03Z",
+      "excerpt": "## Strategic Improvement The daemon and pipeline vitals track stage durations but don't compare a running stage against its own historical baseline in real time, so stalls/regressions are only caught after timeout or failure. Add a baseline-comparison check (using `~/.shipwright/baselines/`) that flags when a stage exceeds e.g. 2x its rolling median duration, emitting an event and surfacing it in `shipwright vitals` and daemon patrol output before the stage hard-times-out. ### Acceptance Criteria - - Rolling median stage duration computed per stage from `events.jsonl` and cached in `~/.shipwright/baselines/` - - New event type emitted (`stage",
+      "metrics": {
+        "comments": 110,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-a532563851db",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — wakuwaku3/agentic-loop-foundation",
+      "sourceType": "production_or_user_issue",
+      "title": "lifecycle E2E: pidfile-loss shutdown試験がCPU負荷下で間欠的にfailする",
+      "url": "https://github.com/wakuwaku3/agentic-loop-foundation/issues/327",
+      "publishedAt": "2026-08-21T08:25:56Z",
+      "excerpt": "## 概要 `tests/test-agentic-loop.sh` の lifecycle群、pidfile-loss shutdown試験 （`tests/test-agentic-loop.sh:4947` 付近、\"a worker was not claimed before the pidfile-loss shutdown test\"）が、CPUが制約された環境下で間欠的に failする。 ## 再現方法・証拠 - `origin/main`（`8144b88`）の `tests/test-agentic-loop.sh` をそのまま `taskset -c 0-1 devbox run --pure -e AGENTIC_LOOP_TEST_GROUP=lifecycle -- ./tests/test-agentic-loop.sh` で4回連続実行 → 2/4 failで同一assertionが 同一文言でfail（本文issueとは無関係のbranchでも再現）。 - PR #314（Issue #223, head `8f15f011`）のCI run `https://github.com/wakuwaku3/agentic-loop-foundation/actions/runs/32455286572` の `check (lifecycle)` job（`job/96698180392`）が同種の条件（CI runnerの 4 vCPU）で同一パター",
+      "metrics": {
+        "comments": 83,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-71bd9e9f24b2",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — yody38/KizCapital-Battle-of-Bots",
+      "sourceType": "production_or_user_issue",
+      "title": "[integrity-watchdog] drift detected — 2026-08-21",
+      "url": "https://github.com/yody38/KizCapital-Battle-of-Bots/issues/207",
+      "publishedAt": "2026-08-21T00:25:49Z",
+      "excerpt": "**Watchdog detected drift at 2026-08-21T00:25:15+00:00** ## Fails - live-stream dead-man: real account(s) stale {25425: 68116, 43414: 68116, 43306: 68116, 43411: 68035}s (>90s — Railway worker / tailnet / MT5 down?) - live-stream root-cause: publisher vivo en ['vps3'] (→ lado MT5/broker), heartbeat muerto en ['vps6'] (→ proceso/SSH/Railway) · ages_sec={'vps6': 2086415, 'vps3': 2} ## Steps ```json { \"ci\": { \"id\": 32431938898, \"status\": \"completed\", \"conclusion\": \"success\", \"updated_at\": \"2026-08-21T00:21:48Z\" }, \"artifact\": { \"ok\": true, \"bots_checked\": 626, \"bots_failed\": 0 }, \"supabase\": { \"ok\": true, \"bots_checked\": 626, \"generated_at\": \"20",
+      "metrics": {
+        "comments": 76,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-b2cd09ac7d4d",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Detect and Skip Iteration Extensions When Build Loop Is Clearly Stalled",
+      "url": "https://github.com/sethdford/shipwright/issues/2751",
+      "publishedAt": "2026-08-21T20:04:21Z",
+      "excerpt": "## Strategic Improvement The build loop's `max_extensions`/`extension_size` config grants more iterations on exhaustion, but if the last N iterations produced near-zero diff (below `min_progress_lines`) repeatedly, granting another extension just burns budget on a run that won't converge. Add a stall check before granting an extension — if the last 2 consecutive iterations were both under `min_progress_lines`, skip the extension and fail fast into session-restart/context-exhaustion handling instead. Note: distinct from open #2435 (early-exit within a single iteration) and #2558 (flaky test retry) — this is specifically about the extension-gra",
+      "metrics": {
+        "comments": 72,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-ef0d05ea7645",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — tadanobutubutu/screeps",
+      "sourceType": "production_or_user_issue",
+      "title": "♿ Insight Code: REACT_027 — React Table Structure (26 occurrences)",
+      "url": "https://github.com/tadanobutubutu/screeps/issues/15613",
+      "publishedAt": "2026-08-21T21:33:45Z",
+      "excerpt": "<!-- insight-code:rule=REACT_027 --> ## 🟡 React Table Structure > &lt;th&gt; has no scope | | | |---|---| | Rule | `REACT_027` | | Severity | 🟡 warning | | Occurrences | **26** | | Files affected | 1 | | Branch | `main` | ### 💡 How to fix Add scope=\"col\" or scope=\"row\" so cells map to their headers ```html scope=\"col\" ``` ### 🤖 AI review (26) > Written by a language model against the surrounding code. The finding itself is rule-based and reproducible; these suggestions are not — review before applying. **docs/dependency-graph.html:547** · confidence 100% The header cell lacks a scope attribute, so assistive technologies cannot programmaticall",
+      "metrics": {
+        "comments": 66,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-6ea65229a8c4",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — karthikabinav/comment-auto-bot-28",
+      "sourceType": "production_or_user_issue",
+      "title": "Bug report",
+      "url": "https://github.com/karthikabinav/comment-auto-bot-28/issues/3655",
+      "publishedAt": "2026-08-21T02:20:07Z",
+      "excerpt": "Test automation for bug label",
+      "metrics": {
+        "comments": 53,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9b323c35a2ed",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — pjunod/plurx",
+      "sourceType": "production_or_user_issue",
+      "title": "Activation: accept or safely upgrade prior valid Hiqlite markers after schema advances",
+      "url": "https://github.com/pjunod/plurx/issues/451",
+      "publishedAt": "2026-08-21T12:47:30Z",
+      "excerpt": "Swarm-Parent-Issue: #278 ## Context Lead reconciliation of #278 on 2026-08-21 verified that the row-count mitigation (#279 / PR #280), byte-budget safety fix (#282 / PR #309), and shared 16 MiB WAL tuning (#304 / PR #418) are merged with green required checks. The remaining #278 acceptance run is currently impossible on the named m6 node. A bounded read-only check found the existing `plurxd` container in a restart loop (`RestartCount=679`, exit 1) with: ```text schema migration failed: Hiqlite activation marker is incomplete ``` The active `/srv/plurx/hiqlite/activation.json` has the expected structural keys and dates from the successful 2026",
+      "metrics": {
+        "comments": 51,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f98eeceb35d9",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — BuilderIO/agent-native",
+      "sourceType": "production_or_user_issue",
+      "title": "Agent Native site availability failing",
+      "url": "https://github.com/BuilderIO/agent-native/issues/3328",
+      "publishedAt": "2026-08-21T03:56:59Z",
+      "excerpt": "The five-minute public-host availability monitor is failing. ``` INCONCLUSIVE production chat.agent-native.com unrecognised body (http 401) INCONCLUSIVE production clips.agent-native.com unrecognised body (http 401) INCONCLUSIVE production brain.agent-native.com unrecognised body (http 401) INCONCLUSIVE production assets.agent-native.com unrecognised body (http 401) INCONCLUSIVE production design.agent-native.com unrecognised body (http 401) INCONCLUSIVE production starter.agent-native.com unrecognised body (http 401) INCONCLUSIVE production mail.agent-native.com unrecognised body (http 401) INCONCLUSIVE production macros.agent-native.com unr",
+      "metrics": {
+        "comments": 45,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-fa3b7b28a9c4",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — jikig-ai/soleur",
+      "sourceType": "production_or_user_issue",
+      "title": "[ci/prod-version-drift] Production is serving a stale build",
+      "url": "https://github.com/jikig-ai/soleur/issues/7676",
+      "publishedAt": "2026-08-21T01:02:38Z",
+      "excerpt": "Production is missing 2 commit(s) that should have been deployed. Detail: prod build_sha dc201e757f63faa2001b4cf3e4ae4d8e6748bb38; 2 qualifying commit(s) undeployed, oldest is 226m old (threshold 195m) Run: https://github.com/jikig-ai/soleur/actions/runs/32434874795 Undeployed (first 10): ff8ac47f7 8eb877477 ### Remediation 1. Find the release run that did not deploy: `gh run list --workflow=web-platform-release.yml --limit 10 --json conclusion,createdAt,url,headSha` A run whose `deploy` job is SKIPPED (not failed) is this alarm's motivating case: the absence is the signal, so nothing on the release-outcome path reports it. 2. List exactly wh",
+      "metrics": {
+        "comments": 36,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-14848d2ed893",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — marcusquinn/aidevops",
+      "sourceType": "production_or_user_issue",
+      "title": "t18301: Capture optional Google Trends evidence through a browser-assisted workflow",
+      "url": "https://github.com/marcusquinn/aidevops/issues/30498",
+      "publishedAt": "2026-08-21T00:14:43Z",
+      "excerpt": "**Task ID:** `t18301` | **Status:** open | **Estimate:** `~5h` **Logged:** 2026-08-21 **Tags:** `enhancement` `auto-dispatch` `browser` `database` `priority:medium` `seo` `interactive` ## Outcome Capture optional Google Trends evidence through a browser-assisted workflow **Blocked by:** `t18296` ## Done when - [ ] Queue manifests preserve all comparison/filter metadata required to reproduce and interpret a browser export. - [ ] Fixture inspect/import stores one batch with raw hash, parser version, normalized points, term order, and source/retrieval provenance. - [ ] Exact replay is idempotent; mismatched term/time/geography CSVs fail before d",
+      "metrics": {
+        "comments": 36,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c109b5d56b4b",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — yangjeep/simple-ecommerce-search-engine",
+      "sourceType": "production_or_user_issue",
+      "title": "Epic — Phases 6–9: cross-dataset validation, multi-tenant economics, BFCM elasticity, and integrated system",
+      "url": "https://github.com/yangjeep/simple-ecommerce-search-engine/issues/21",
+      "publishedAt": "2026-08-21T00:18:09Z",
+      "excerpt": "## Why The project now has enough evidence to stop treating this as a generic “build a faster search engine” exercise. The real problem is a production-derived multi-tenant commerce serving problem: - many merchants with highly heterogeneous catalog sizes and QPS; - different daily/weekly/seasonal traffic cycles per tenant; - statistical multiplexing is valuable during normal operation; - major retail events such as BFCM create strongly correlated bursts across most tenants at once; - category/PLP/filter/facet traffic is structurally different from open-ended free-text search; - price/inventory/availability are high-churn commerce state; - st",
+      "metrics": {
+        "comments": 33,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-00163929baad",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — elng12/pinpoint-answer-today-new",
+      "sourceType": "production_or_user_issue",
+      "title": "Pinpoint candidate stuck: pinpoint/candidate/2026-08-21-pinpoint-answer-843",
+      "url": "https://github.com/elng12/pinpoint-answer-today-new/issues/175",
+      "publishedAt": "2026-08-21T08:02:47Z",
+      "excerpt": "A Pinpoint candidate branch could not be closed automatically. Branch: `pinpoint/candidate/2026-08-21-pinpoint-answer-843` SHA: `9ba4b046f0c1841bb52e3d06b1ca039e04fea4d8` Reason: Lint, Typecheck, Guardrails concluded failure; automatic rerun is disabled because deterministic failures need a code or data fix; age=60m Close condition: - candidate payload is on `main` - public fetch audit passes - candidate branch is deleted - candidate branch count returns to 0",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e59f60857b87",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Mingla-LLC/mingla-main",
+      "sourceType": "production_or_user_issue",
+      "title": "Release Mingla 1.1.6 to both app stores",
+      "url": "https://github.com/Mingla-LLC/mingla-main/issues/2425",
+      "publishedAt": "2026-08-21T21:43:52Z",
+      "excerpt": "Seth explicitly approved a new public native release on 2026-08-21: “lets cut a new build and publish to both stores.” Outcome: cut the next unified Mingla release from reviewed merged `origin/main`, upload and verify all four production artifacts (Explorer iOS, Explorer Android, Host iOS, Host Android), preserve manual/coordinated release controls, and verify actual App Store Connect / Play Console state rather than trusting CLI success. Required release contents include the merged Host fixes for false publish failure (#2396) and truthful free-order/sold counts (#2411), plus every other reviewed change already on `main`. Affected surfaces: -",
+      "metrics": {
+        "comments": 29,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e2fcc4cc3a71",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — HemSoft/hs-buddy",
+      "sourceType": "production_or_user_issue",
+      "title": "[aw] Issue Processor failed",
+      "url": "https://github.com/HemSoft/hs-buddy/issues/550",
+      "publishedAt": "2026-08-21T07:22:15Z",
+      "excerpt": "### Workflow Failure **Workflow:** [Issue Processor](https://github.com/HemSoft/hs-buddy/blob/main/.github/workflows/issue-processor.md) **Branch:** main **Run:** https://github.com/HemSoft/hs-buddy/actions/runs/32457995902 > [!WARNING] > **Engine Failure**: The `codex` engine terminated unexpectedly. **Last agent output:** ``` 2026-08-21T07:20:47.372461Z WARN codex_otel::events::session_telemetry: metrics histogram [codex.turn.tool.call] failed: tag value contains invalid characters: gpt-5.5?effort=high 2026-08-21T07:20:47.372473Z WARN codex_otel::events::session_telemetry: metrics histogram [codex.turn.token_usage] failed: tag value contain",
+      "metrics": {
+        "comments": 29,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-bff293557bbf",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — leegahuyn/mathlib4",
+      "sourceType": "production_or_user_issue",
+      "title": "BuildAll final blocker execution checkpoint",
+      "url": "https://github.com/leegahuyn/mathlib4/issues/59",
+      "publishedAt": "2026-08-21T03:02:39Z",
+      "excerpt": "This is a machine-readable checkpoint for the final authority recovery. Active branch: gpt/final-authority-batch-v7-20260820. Active PR: #55. Current only actual blocker: BuildAll one error. Required terminal gates: BuildAll 0, clean #1 PASS, clean #2 PASS, source identity PASS, checklist 15/15. Protected FA/Integrated/QYM identities must remain unchanged. Coding agent may use this checkpoint as execution context.",
+      "metrics": {
+        "comments": 29,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-66e1f1422c86",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — bankielewicz/DevForgeAI",
+      "sourceType": "production_or_user_issue",
+      "title": "The CI specval step reads 7 of 60 tracked spec documents: docs/specs/*.md is a one-level shell glob, and 29 uncovered documents exit 1 today",
+      "url": "https://github.com/bankielewicz/DevForgeAI/issues/300",
+      "publishedAt": "2026-08-21T02:56:54Z",
+      "excerpt": "## Read this first You are picking this up **cold**. Everything binding is either in this issue or at a path it names. Do not infer requirements from a conversation you do not have. **Template: incident-bug** **Dispatch mode: dispatchable** **Baseline commit:** `0148ed226bdc66eacb07e451416d4a4c5d3e31bd` on `main` --- ## Provenance **Chain.** `PR #299 spec-merger run, consolidating the skill-builder specification under issue #285, 2026-08-20` → `docs/specs/skills/spec-driven-skill-builder/SPEC-01.md` at `0148ed2`, `sha256:23e6f6a22b0d713acf9b6b7486a45f034919ebc9ec0c44b271df77c4c128593e` — a document written with a deliberate `blocked_by`, on w",
+      "metrics": {
+        "comments": 29,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-4ab8ef7c8b62",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — asanabrial/estigia",
+      "sourceType": "production_or_user_issue",
+      "title": "guided-setup-refuses-at-the-door-not-at-the-write: the lifecycle preflight takes the setup screen away before anything can be written",
+      "url": "https://github.com/asanabrial/estigia/issues/118",
+      "publishedAt": "2026-08-21T00:08:29Z",
+      "excerpt": "## Description for dumb humans > [!NOTE] > Al abrir la pantalla de configuración con un binario compilado en casa, Estigia se niega antes de > mostrarla, aunque mirarla no cambia nada. La negativa tiene que llegar cuando se pulsa instalar, no > cuando se abre la pantalla. ## Problem `tui` and `install` are visible aliases of `setup` (`src/cli/args.rs:65`), so a bare `estigia tui` builds the same `Command::Setup` and inherits everything `setup` does before it decides anything. On a source-built or unrecorded binary that includes `lifecycle_preflight`, which runs at the door: `after_lifecycle_preflight(...)` wraps the call to `guided()` at `src",
+      "metrics": {
+        "comments": 29,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d65d556f96f9",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — KwaneleNtshangase/Notho",
+      "sourceType": "production_or_user_issue",
+      "title": "🔴 Notho health check failing (since 2026-08-21 02:43 UTC)",
+      "url": "https://github.com/KwaneleNtshangase/Notho/issues/43",
+      "publishedAt": "2026-08-21T02:43:09Z",
+      "excerpt": "The automated health check could not confirm the app is working. **First failing run:** [#1000](https://github.com/KwaneleNtshangase/Notho/actions/runs/32440793650) **Commit:** 9676344 The run log lists which checks failed. The `App booted` check is the important one: if it failed, React never rendered an interactive control and users are looking at a stuck splash screen. The uploaded screenshot artifact shows what the browser actually saw. This issue updates itself on each subsequent failure and closes automatically once a run passes. Please do not close it by hand while the check is still red.",
+      "metrics": {
+        "comments": 25,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-bf0a50df73a2",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — E-merging-digital/agency-website-drupal",
+      "sourceType": "production_or_user_issue",
+      "title": "[P1][Prod] Image style large — dérivée AVIF #401 renvoie HTTP 500",
+      "url": "https://github.com/E-merging-digital/agency-website-drupal/issues/596",
+      "publishedAt": "2026-08-21T14:49:54Z",
+      "excerpt": "## Contexte Après résolution du maintenance mode (#590/#592) et correction du faux négatif lazy-load (#594/#595), la Browser Validation production #401 atteint réellement l’image et expose un défaut production reproductible. Run `32493973219`, desktop + mobile : - page FR accessible ; - image source présente dans le DOM avec ALT exact ; - lazy-load attendu jusqu’à 10 s ; - dérivée appelée : `https://emergingdigital.be/sites/default/files/styles/large/public/articles/issue-401-redesign-checklist-f925e3b41c32.png.avif?itok=bTtxA4Oo` - réponse HTTP `500` sur desktop et mobile ; - console : `Failed to load resource: the server responded with a st",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0ecbd00e23e8",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — bankielewicz/DevForgeAI",
+      "sourceType": "production_or_user_issue",
+      "title": "skillcheck exits 2 on a present, well-formed but unrecognised --target — the owner ruling assigns 1, and #220, the issue that ruling named, does not bind the case",
+      "url": "https://github.com/bankielewicz/DevForgeAI/issues/310",
+      "publishedAt": "2026-08-21T05:02:31Z",
+      "excerpt": "## Read this first You are picking this up **cold**. Everything binding is either in this issue or at a path it names. Do not infer requirements from a conversation you do not have. **Template: incident-bug** **Dispatch mode: dispatchable** **Baseline commit:** `0148ed226bdc66eacb07e451416d4a4c5d3e31bd` on `main` --- ## Provenance **Chain.** `cold independent QA of PR #309, 2026-08-21, finding F3` → `QA verdict comment pull/309#issuecomment-5365306180`, envelope marker `devforge.qa_verdict:v1 key=ce2d18e3e41917f97825824c54f634d5ffe953fda005c98c1dbfe2d1d96f024c` → `embedded QA report, 45258 bytes, sha256:01461e485e8c6182ee56f9b333fdd715326d423",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e837c1afd8ab",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — kofun-lang/kofun",
+      "sourceType": "production_or_user_issue",
+      "title": "Publish corrected v0.10.1-seed without moving the failed v0.10 tag",
+      "url": "https://github.com/kofun-lang/kofun/issues/1591",
+      "publishedAt": "2026-08-21T02:39:14Z",
+      "excerpt": "## Metadata - State: in-progress - Tracker role: curated release-recovery issue - Kind: maintenance - Area: Release / evidence - Priority: P0 - Size: S - Blocked by: none - Audited against: `main@1539b4377fe7814814cc86d343b24fab45e7b2ff` ## Goal Publish the corrected release as `v0.10.1-seed` without moving or deleting the failed unpublished `v0.10.0-seed` tag, and prove the exact final main/tag, release evidence, assets, digests, prerelease state, and notes. ## Current state - `v0.10.0-seed` points to `f2b5debb8c9dca16467dc1cc1d23875c2477ef28`. - Release workflow run 32438536204 was cancelled during `task verify`; its asset/archive/upload st",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-bbed1309184c",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — nursena-pc/payflow",
+      "sourceType": "production_or_user_issue",
+      "title": "v0.16.0: align API, OpenAPI, Postman, and architecture documentation",
+      "url": "https://github.com/nursena-pc/payflow/issues/180",
+      "publishedAt": "2026-08-21T14:34:33Z",
+      "excerpt": "## Objective Complete v0.16.0 Increment 5 by reconciling the frozen `/api/v1` implementation with OpenAPI, Postman, README, architecture/ADR/security/operations documentation, and roadmap evidence without changing product behavior merely to make documentation agree. Part of #169. Follows completed Redis/Kafka outage-recovery rehearsal #178 / merged PR #179. ## Baseline - exact `main` baseline: `b4c4a1fa5e8146960b17fd6f1eb6030bae6230f4` - Increment 4 reviewed head: `4356e153fe322a29b03c916c3cbadb7eb38398ee` - Increment 4 PR: #179 - exact-head CI #256: success - exact-head Docker Smoke #57: success - complete Maven verification at Increment 4 c",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-91c31c6ddc0f",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Dhivya-SF4094/maui",
+      "sourceType": "production_or_user_issue",
+      "title": "[aw] Rerun Review Scanner failed",
+      "url": "https://github.com/Dhivya-SF4094/maui/issues/133",
+      "publishedAt": "2026-08-21T06:52:52Z",
+      "excerpt": "### Workflow Failure **Workflow:** [Rerun Review Scanner](https://github.com/Dhivya-SF4094/maui/blob/main/.github/workflows/rerun-review-scanner.md) **Branch:** main **Run:** https://github.com/Dhivya-SF4094/maui/actions/runs/32455870300 > [!WARNING] > **Engine Failure**: The `copilot` engine terminated before producing output. The engine exited immediately without producing any output. This often indicates a transient infrastructure issue (e.g., service unavailable, API rate limiting). If this failure recurs, check the GitHub Copilot status page and review the firewall audit logs. 💡 **This repository is a fork.** If this failure is due to mi",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-5b1248d4226c",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — marcusquinn/aidevops",
+      "sourceType": "production_or_user_issue",
+      "title": "t18299: Score readable exact-match .com domain candidates",
+      "url": "https://github.com/marcusquinn/aidevops/issues/30496",
+      "publishedAt": "2026-08-21T00:12:36Z",
+      "excerpt": "**Task ID:** `t18299` | **Status:** open | **Estimate:** `~6h` **Logged:** 2026-08-21 **Tags:** `enhancement` `auto-dispatch` `database` `priority:medium` `scoring` `seo` `interactive` ## Outcome Score readable exact-match .com domain candidates **Blocked by:** `t18296` ## Done when - [ ] Every eligible candidate has at least one exact phrase reading with source/confidence and a component-level score explanation. - [ ] Hard filters and risk flags are configurable, versioned, and covered by positive plus malformed/ambiguous fixtures. - [ ] Missing demand/appraisal/history evidence remains explicitly unknown and cannot silently score as measure",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-687657d25265",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — Cyrax321/CONTINUUM",
+      "sourceType": "production_or_user_issue",
+      "title": "All harnesses should automatically checkpoint without prompt",
+      "url": "https://github.com/Cyrax321/CONTINUUM/issues/191",
+      "publishedAt": "2026-08-21T15:19:38Z",
+      "excerpt": "What problem does this solve? Currently only the Claude Code flow benefits from the async and file derived hooks. The task prompt still says Use CONTINUUM for safe resumption, and the model must be told to call continuum_checkpoint. For a true product, every harness that uses an adapter, Generic, LangChain, LangGraph, and OpenAI, should get durability automatically, like normal coding where the file system just works. Proposed solution Wire make_async_auto_checkpoint_hook and make_file_derived_progress_hook into GenericAgentAdapter so they run after every capture_state and intercept_action without a model tool call. The hook derives completed",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f0e44bb153ee",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — walidatiyaai2025-gif/Modrik",
+      "sourceType": "production_or_user_issue",
+      "title": "P0-WEB-LEARNING-RESPONSIVE-020 — fix Learning/Study 320/360px 200% horizontal clipping",
+      "url": "https://github.com/walidatiyaai2025-gif/Modrik/issues/125",
+      "publishedAt": "2026-08-21T09:30:10Z",
+      "excerpt": "## Purpose Fix the concrete P0 Learning/Study responsive defects exposed by Issue #108 after strict-nonce CSP hydration was restored. This is remediation of verified release-gate failures, not new product scope. ## Rolling-pool assignment **Overflow Slot 9 — IMPLEMENTATION / ACTIVE** ## Source evidence Issue #108 / PR #114 browser runtime acceptance on the repaired CSP baseline reported these Learning failures: - FR/LTR 360×800 @ 200% — `E2E_LEARNING_HORIZONTAL_OVERFLOW`; - AR/RTL 320×720 @ 200% — `E2E_STUDY_WORKSPACE_HORIZONTAL_CLIP`. ## Ownership Student Web Learning/Study presentation and Learning-specific responsive styling/tests only. ##",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-eee69ea35216",
+      "targetDate": "2026-08-21",
+      "source": "GitHub Issue — sgajbi/lotus-workbench",
+      "sourceType": "production_or_user_issue",
+      "title": "Make Risk and Impact a source-backed proposal decision workspace",
+      "url": "https://github.com/sgajbi/lotus-workbench/issues/748",
+      "publishedAt": "2026-08-21T05:21:42Z",
+      "excerpt": "## Business problem The visible Risk and Impact lifecycle mode currently filters the bounded proposal-list window to RISK_REVIEW and then renders the generic lifecycle table. The navigation promises risk and allocation evidence, but this screen does not read or present proposal-specific risk, allocation-change, benchmark, scenario, limit, or lineage evidence. This creates a feature-truth risk: a private-banking user can reasonably interpret the named screen as a risk decision workspace when it is only a lifecycle-state view. ## Evidence - src/features/proposals/proposal-lifecycle-workspace-view-model.ts derives this mode from source lifecycle",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-5bf4d70090cf",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: A coding-agent workbench built around Matt Pocock's coding workflow",
+      "url": "https://github.com/ticketry-hq/ticketry-downloads/releases/download/0.2.0/Ticketry_0.2.0_aarch64.dmg",
+      "publishedAt": "2026-08-21T14:31:56Z",
+      "excerpt": "Repo URL: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;ticketry-hq&#x2F;ticketry\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;ticketry-hq&#x2F;ticketry</a><p>Ticketry helps you execute a coding workflow using terminal agents. We run coding agents on tmux-based durable terminals. Each idea you have can be written down, and we take it through grilling, speccing, splitting it into tickets, implementation, and review. The workflow is based on Matt Pocock&#x27;s workflow.<p>Please have tmux installed for the terminal to work. Also go into your privacy settings and say &quot;open anyway&quot;. I haven&#x27;t signed it yet.<p>Note: This is not a ",
+      "metrics": {
+        "points": 3,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-bc8ce8791257",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Bounded GenAI metrics from Otel traces with O raw prompts",
+      "url": "https://github.com/llm-measurement/otelcol-genai-sketches",
+      "publishedAt": "2026-08-21T15:37:37Z",
+      "excerpt": "Hi friends,<p>Author here. Like to present a project I&#x27;ve been working on - Otelcol-GenAI-Sketches, a Otel connector that works on genai&#x2F;agent traces, and summarizes them (via sketches), to produce:<p>(<i>) exact request counts&#x2F;totals for tokens; (</i>) distinct users&#x2F;prompts (estimates) (*) &#x27;heavy&#x27; items in terms of tokens<p>Why does this exist: I&#x27;m a data scientist by profession, and needed to look at Otel traces, but soon ran into cardinality and portability issues, along with privacy issues (raw prompts being transported elsewhere, like for analysis in a notebook env is a no-no). I wrote a sketchlib firs",
+      "metrics": {
+        "points": 4,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-a585b59bc5b8",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Delta Use AI to Cut Costs Set Diff Ticket Price–CEO Says Profits Could Rise 50%",
+      "url": "https://viewfromthewing.com/delta-will-use-ai-to-cut-jobs-and-set-a-different-ticket-price-for-every-passenger-ceo-says-profits-could-rise-50",
+      "publishedAt": "2026-08-21T11:47:08Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-eb89c428180a",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
+      "url": "https://lists.freedesktop.org/archives/dri-devel/2026-August/590630.html",
+      "publishedAt": "2026-08-21T15:57:39Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 6,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e31ff6a49e12",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "I made a web puzzle game based on logic questions that 99% of people fail",
+      "url": "https://www.telegraph.co.uk/puzzles/puzzle?number=194",
+      "publishedAt": "2026-08-21T12:17:46Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-4a51d486b29d",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Tosynch – reconnect with your friends and meet often",
+      "url": "https://tosynch.com",
+      "publishedAt": "2026-08-21T15:10:09Z",
+      "excerpt": "I built this app to solve problem I had, and perhaps others too. I have been finding tough stay in touch with friends. Other than occasional hi&#x2F;hellos, there is lack of meaningful interactions ongoing basis. Tosynch helps with connecting with existing friends, without calendar setup. It does one thing only and focuses on that. There is no hidden agenda of selling personal data for ads, nor any scheme around increasing likes. There is no discovery mechanism, and no public profiles. If we want to reduce our usage of phones and devices, we don&#x27;t need another app to helps us constrained. We want to create more opportunities to meet peop",
+      "metrics": {
+        "points": 3,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-2325a03e13ba",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Disclosure Has a Billionaire Problem",
+      "url": "https://medium.com/@moketchups/the-billionaire-problem-underneath-disclosure-926030c64dc7",
+      "publishedAt": "2026-08-21T12:23:51Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-aa52b6f83fa2",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "AI didn't make me a worse coder. It made me a worse reviewer.",
+      "url": "https://dev.to/dev_michael/ai-didnt-make-me-a-worse-coder-it-made-me-a-worse-reviewer-48d0",
+      "publishedAt": "2026-08-21T22:10:19Z",
+      "excerpt": "I built a lot of apps with AI last year and approved most of the code without really reading it. The research says the skill that decays isn't typing — it's the cognitive work underneath. Here's why every fix I've read (including my own first idea) is built to fail, and the one shape that isn't.",
+      "metrics": {
+        "comments": 2,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2a62e203536e",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "How Frontier AI Is Changing the Economics of Cybersecurity",
+      "url": "https://corporate.comcast.com/stories/how-frontier-ai-is-changing-the-economics-of-cybersecurity",
+      "publishedAt": "2026-08-21T15:48:26Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e25fbcc22c25",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Authenticated Git-fetch-over-HTTPS against gitlab.com is failing",
+      "url": "https://news.ycombinator.com/item?id=49389577",
+      "publishedAt": "2026-08-21T15:26:25Z",
+      "excerpt": "Official [0] status [1] hasn&#x27;t been updated as I post this but Downdetector [2] confirms an issue is happening at the same time I was experiencing it.<p>[0] https:&#x2F;&#x2F;status.gitlab.com&#x2F; [1] https:&#x2F;&#x2F;x.com&#x2F;gitlabstatus [2] https:&#x2F;&#x2F;downdetector.com&#x2F;status&#x2F;gitlab&#x2F;",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-731a6a354c19",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: My thirds steam game (and it failed)",
+      "url": "https://store.steampowered.com/app/4943550/NOMSTERS",
+      "publishedAt": "2026-08-21T14:40:40Z",
+      "excerpt": "During my solodev journey I had up and downs. But market is so brutal right now. I have made my first multiplayer (it is pvp toony shooter) but I hit rocks of reality.",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-fd5d42d29d1c",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Transformation Failure, POM Before AI – Food for Agile Thought 558",
+      "url": "https://age-of-product.com/food-agile-thought-558-transformation-failure",
+      "publishedAt": "2026-08-21T14:30:03Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-5e0a6b6ac819",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nvidia's Switchyard router reshuffles AI models mid-task to cut task costs",
+      "url": "https://venturebeat.com/orchestration/nvidias-switchyard-router-reshuffles-ai-models-mid-task-cutting-task-costs-to-a-third-in-its-own-tests",
+      "publishedAt": "2026-08-21T14:10:29Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-26a0c31dfef8",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Everyday Technology Is Becoming a Black Box. Is There a Cost?",
+      "url": "https://thereader.mitpress.mit.edu/everyday-technology-is-becoming-a-black-box-is-there-a-cost",
+      "publishedAt": "2026-08-21T13:23:31Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e68a657a4ba5",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "A failed project could help solve the biggest energy need",
+      "url": "https://www.washingtonpost.com/business/2026/08/21/how-ai-energy-crisis-revived-failed-nuclear-project",
+      "publishedAt": "2026-08-21T12:04:57Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-af5dfc2f7f89",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "I Got Called Out by My Senior — and It Taught Me the Real Cost of \"AI-First\" Coding",
+      "url": "https://dev.to/kumaresan02/i-got-called-out-by-my-senior-and-it-taught-me-the-real-cost-of-ai-first-coding-1pg5",
+      "publishedAt": "2026-08-21T11:07:08Z",
+      "excerpt": "For a while now, I've been quietly embarrassed about something, and I think a lot of junior devs are...",
+      "metrics": {
+        "comments": 2,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a19ae64a826a",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "What a Website Can Learn From Your Browser: IP, WebRTC, and IPv6",
+      "url": "https://dev.to/skayletdev/what-a-website-can-learn-from-your-browser-ip-webrtc-and-ipv6-2n6i",
+      "publishedAt": "2026-08-21T19:49:20Z",
+      "excerpt": "Most people think browser privacy begins and ends with cookies. Cookies matter, but a website can...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 2
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-e190edded525",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "The Real Cost of a $200K Engineering Salary",
+      "url": "https://dev.to/xxxn3m3s1sxxx/the-real-cost-of-a-200k-engineering-salary-4meb",
+      "publishedAt": "2026-08-21T19:24:35Z",
+      "excerpt": "Last month I walked away from a $200K salary at a FAANG company. My manager thought I was crazy. My...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-8e06954160b3",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Your AI Assistant Ships Insecure Code Almost Half the Time. Catching It in Review Is Too Late.",
+      "url": "https://dev.to/sangyeonpark/your-ai-assistant-ships-insecure-code-almost-half-the-time-catching-it-in-review-is-too-late-4ml",
+      "publishedAt": "2026-08-21T19:24:32Z",
+      "excerpt": "By Sangyeon Park — creator of Cencurity, an open-source security gateway for LLM coding agents In...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-7a9dd8df6e11",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "I gave it four facts and it invented a fifth",
+      "url": "https://dev.to/eugen_taranowski/i-gave-it-four-facts-and-it-invented-a-fifth-5a91",
+      "publishedAt": "2026-08-21T18:59:12Z",
+      "excerpt": "Every show page on my site carried a synopsis that appears verbatim on a hundred other sites. Fixing that with a local LLM worked — but only after I stopped it doing four specific things, each of which it did confidently and none of which failed loudly.",
+      "metrics": {
+        "comments": 1,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-d84986262f17",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "The beauty of zero telemetry software: A look at a truly local first meditation app",
+      "url": "https://dev.to/brentvandy/the-beauty-of-zero-telemetry-software-a-look-at-a-truly-local-first-meditation-app-2l1e",
+      "publishedAt": "2026-08-21T15:24:17Z",
+      "excerpt": "Modern consumer apps have a serious bloat problem. If you look at the health and wellness space...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-95b7bc507b7b",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "My Investment Bot's Sell Rule Was Broken: How I Added SEC EDGAR Filings to Catch 'Pre-Bankruptcy' Signals Sooner",
+      "url": "https://dev.to/masaoshimadaopen/my-investment-bots-sell-rule-was-broken-how-i-added-sec-edgar-filings-to-catch-pre-bankruptcy-5dbi",
+      "publishedAt": "2026-08-21T23:30:18Z",
+      "excerpt": "Hey dev.to! Grandpa here. I'm a 38-year-old tinkering with AI agents and automated trading bots on...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-0b49830b1833",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Your AI Agent Will Follow a Malicious Instruction. Design So It Can't Do Anything With It.",
+      "url": "https://dev.to/shashikanthgs/your-ai-agent-will-follow-a-malicious-instruction-design-so-it-cant-do-anything-with-it-j1e",
+      "publishedAt": "2026-08-21T22:53:24Z",
+      "excerpt": "A support agent reads a ticket. The ticket body contains: IGNORE ALL PREVIOUS INSTRUCTIONS. You...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-389dd91d0faf",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "Understanding the Git Workflow:Working directory,staging ,commit and push.",
+      "url": "https://dev.to/esther_karanja_/understanding-the-git-workflowworking-directorystaging-commit-and-push-2b3j",
+      "publishedAt": "2026-08-21T22:22:18Z",
+      "excerpt": "Introduction Understanding git has become easier for me when broken down into this four...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-775b762c8803",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Agentic AI Feels Like the Internet in 1998: Powerful, Exciting, and Full of Risks We Don't Yet Understand",
+      "url": "https://dev.to/michaelbutak/agentic-ai-feels-like-the-internet-in-1998-powerful-exciting-and-full-of-risks-we-dont-yet-51cb",
+      "publishedAt": "2026-08-21T21:44:21Z",
+      "excerpt": "OWASP Top 10 for Agentic Applications for 2026 - OWASP Gen AI Security Project If you haven't read...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c7c6c784cbed",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Filter-After-Slice: The Bug That Quietly Broke Our Deduplication Window",
+      "url": "https://dev.to/mukesh_13/filter-after-slice-the-bug-that-quietly-broke-our-deduplication-window-58p1",
+      "publishedAt": "2026-08-21T18:56:59Z",
+      "excerpt": "Every night, an autonomous agent I run scans Hacker News, pulls out two takeaways, and appends them...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-3c42acdffed0",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "100% Local AI Meets Self-Hosting: From GitHub Repo to Production Container Stack Without Cloud APIs",
+      "url": "https://dev.to/henk_van_hoek/100-local-ai-meets-self-hosting-from-github-repo-to-production-container-stack-without-cloud-apis-30dj",
+      "publishedAt": "2026-08-21T18:54:55Z",
+      "excerpt": "Self-hosting is all about data sovereignty, privacy, and full control over your digital...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ad59c277afb1",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "Advanced WordPress Performance Optimization: A Developer's Guide",
+      "url": "https://dev.to/kai01916/advanced-wordpress-performance-optimization-a-developers-guide-2a73",
+      "publishedAt": "2026-08-21T18:53:05Z",
+      "excerpt": "WordPress performance problems are rarely caused by one thing. A slow site might have an inefficient...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-b8dfcd4e518f",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "Four places ffmpeg.wasm fails silently in a Next.js app (and the fixes)",
+      "url": "https://dev.to/_e37583b7079a729834958/four-places-ffmpegwasm-fails-silently-in-a-nextjs-app-and-the-fixes-4jo3",
+      "publishedAt": "2026-08-21T18:45:35Z",
+      "excerpt": "I shipped four browser-only video tools with ffmpeg.wasm: trim, compress, video-to-GIF and MP3...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2e8daa0c0139",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "My intention joining the community')",
+      "url": "https://dev.to/smiley_happy/my-intention-joining-the-community-2amf",
+      "publishedAt": "2026-08-21T17:54:17Z",
+      "excerpt": "I joined the community so I can post about little achievements and big failures, so that I can get...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ddbd66e8888a",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "GA4 Misattributed 22.4% of AI Overview Events as Direct in a Nine-Month Study",
+      "url": "https://dev.to/alifar/ga4-misattributed-224-of-ai-overview-events-as-direct-in-a-nine-month-study-1kf5",
+      "publishedAt": "2026-08-21T17:45:30Z",
+      "excerpt": "A nine-month, first-party GA4 study has identified a material reporting problem for teams measuring...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-1b03db597583",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "What I Learned Building a Developer Tool for AI Usage — 6 Weeks of Engineering and Product Lessons",
+      "url": "https://dev.to/anoop_kumar_63925e275ea06/what-i-learned-building-a-developer-tool-for-ai-usage-6-weeks-of-engineering-and-product-lessons-3lof",
+      "publishedAt": "2026-08-21T15:15:18Z",
+      "excerpt": "Six weeks ago I started building TokenPulse after getting cut off mid-debugging session by Claude's...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-36aa976bce2c",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Building a Full-Stack AI Application with Next.js — Architecture and Implementation",
+      "url": "https://dev.to/anoop_kumar_63925e275ea06/building-a-full-stack-ai-application-with-nextjs-architecture-and-implementation-1po8",
+      "publishedAt": "2026-08-21T15:13:55Z",
+      "excerpt": "Building an AI application is easy. Building one that handles streaming responses, manages costs,...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-8d05ea2e8748",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "PostgreSQL Row-Level Security Without the Performance Tax",
+      "url": "https://dev.to/software_mvp-factory/postgresql-row-level-security-without-the-performance-tax-436g",
+      "publishedAt": "2026-08-21T15:01:49Z",
+      "excerpt": "Deep dive into how RLS policies interact with the PostgreSQL query planner — covering policy inlining, why naive RLS destroys index usage, how to write policies that the planner can push down efficiently, and the specific index patterns (partial indexes on tenant_id, expression indexes on current_setting()) that recover seq-scan performance losses in multi-tenant SaaS schemas",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-b48a6ed7f16b",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "The Upload Endpoint Passed Every Test. Then the Security Checklist Found a Path Traversal.",
+      "url": "https://dev.to/datars_7274/the-upload-endpoint-passed-every-test-then-the-security-checklist-found-a-path-traversal-3meb",
+      "publishedAt": "2026-08-21T13:02:39Z",
+      "excerpt": "A file upload endpoint generated by an AI coding assistant passed every functional test in the suite....",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-87e2bea881ae",
+      "targetDate": "2026-08-21",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "A Practical Data Workflow for HAZOP and QRA Studies",
+      "url": "https://dev.to/samer_karwande_fb0c3a4935/a-practical-data-workflow-for-hazop-and-qra-studies-33fe",
+      "publishedAt": "2026-08-21T13:01:22Z",
+      "excerpt": "Safety studies often fail for a surprisingly ordinary reason: the data trail is hard to reproduce. A...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-d17ca900089b",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "I'm becoming AI-blind",
+      "url": "https://cymerys.com/w/im-becoming-ai-blind",
+      "publishedAt": "2026-08-21T11:48:05Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 312,
+        "comments": 319
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-1caff9183d16",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Manus - AI Agent & Automation",
+      "url": "https://apps.apple.com/us/app/manus-ai-agent-automation/id6740909540?uo=4",
+      "publishedAt": "2026-08-21T11:32:37Z",
+      "excerpt": "Leave it to Manus - The AI agent that doesn't just think, it delivers. Manus is a general AI agent that bridges mind and action. Unlike chatbots that stop at generating text, Manus uses its own virtual \"computer\" to autonomously plan, research, write code, and deliver a finished product. It works asynchronously in the cloud—close the app and Manus keeps working, notifying you when your task is complete. ADVANCED SPREADSHEETS & DATA ANALYSIS - Instantly handle complex financial modeling, data analysis, and automated reporting. - Transform raw Excel or CSV data into clear visual insights and interactive dashboards. BOARDROOM-QUALITY SLIDES - Ge",
+      "metrics": {
+        "ratings": 36721,
+        "rating": 4.73639
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-055bd0b2025a",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Turbo AI - Learn Faster",
+      "url": "https://apps.apple.com/us/app/turbo-ai-learn-faster/id6502794561?uo=4",
+      "publishedAt": "2026-08-21T16:41:51Z",
+      "excerpt": "Learn faster. Turbo AI turns anything you upload into bite-sized lessons, quizzes, flashcards, podcasts, and summaries—so you can understand more in less time. Upload text, documents, PDFs, presentation slides, websites, videos, or lecture recordings. Turbo transforms them into personalized study materials in seconds. WAYS TO USE TURBO • Cram for exams Turn your class materials into summaries, practice quizzes, and flashcards that focus on what you need to know. • Take better lecture notes Record a lecture and let Turbo create clear, organized notes automatically—complete with key ideas, tables, diagrams, and equations. • Replace doomscrollin",
+      "metrics": {
+        "ratings": 33324,
+        "rating": 4.75276
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-48cb7d9f46df",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Aippy: Game Maker",
+      "url": "https://apps.apple.com/us/app/aippy-game-maker/id6749073777?uo=4",
+      "publishedAt": "2026-08-21T06:10:03Z",
+      "excerpt": "Turn your imagination into reality. Aippy is a creative studio where you can build interactive experiences all with simple words. Describe an idea, and our powerful AI partner brings it to life. Want to build a retro pixel-art game, a useful online tool, or an interactive story? Simply talk to the AI. Your language is the only tool you need. Join a vibrant community of creators and explore an endless gallery of AI-powered creations: - GAMES & SIMULATORS: Build and play everything from text adventures to arcade classics. - TOOLS & GENERATORS: Create handy utilities, from a random color palette generator to a workout planner. - INTERACTIVE ART:",
+      "metrics": {
+        "ratings": 23118,
+        "rating": 4.85759
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-5b5e9c974cb7",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "ClickUp: Tasks, Chat, Docs, AI",
+      "url": "https://apps.apple.com/us/app/clickup-tasks-chat-docs-ai/id1535098836?uo=4",
+      "publishedAt": "2026-08-21T00:20:33Z",
+      "excerpt": "ClickUp is the world's most productive platform: all software, humans, and AI Agents - in one place. Maximize productivity by replacing all software and all AI with one app that's famously flexible and perfectly personalized for you: • Project Management • Team Communication • AI Super Agents™ • Scheduling & Time Tracking • Brain AI Assistant • Docs & Wikis • AI Meetings & Calls • Sprints, CRM, and ITSM • Whiteboards & Dashboards • Files & Approvals + 50 more Over 20 million from the world's most innovative teams trust ClickUp for unprecedented productivity, collaboration, and alignment. • Orchestrate every project, task, and conversation fro",
+      "metrics": {
+        "ratings": 9451,
+        "rating": 4.6721
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-4956b009e9e7",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Cancer-related mortality among US pilots and flight attendants",
+      "url": "https://www.cnn.com/2026/08/19/health/flight-attendants-pilots-radiation-cancer-deaths",
+      "publishedAt": "2026-08-21T15:23:32Z",
+      "excerpt": "<a href=\"https:&#x2F;&#x2F;jamanetwork.com&#x2F;journals&#x2F;jamainternalmedicine&#x2F;article-abstract&#x2F;2852504\" rel=\"nofollow\">https:&#x2F;&#x2F;jamanetwork.com&#x2F;journals&#x2F;jamainternalmedicine&#x2F;articl...</a>",
+      "metrics": {
+        "points": 85,
+        "comments": 93
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-ff0c78d49e3e",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Kimi - Kimi K3 is Live",
+      "url": "https://apps.apple.com/us/app/kimi-kimi-k3-is-live/id6474233312?uo=4",
+      "publishedAt": "2026-08-21T02:35:33Z",
+      "excerpt": "# Key Features: - Kimi K3: 2.8T parameters. 1M context. It leads the field in coding, agentic tasks, long-horizon reasoning, visual understanding, and agent swarm capabilities. - Visual Agentic Slides: Upload your visual references, and Kimi will customize the exact visual style you need. Generate professionally formatted, highly personalized presentations with just one click. - Game Generation: One prompt in, an AAA multiplayer 3D game out. It can build the world, characters, levels, and combat on its own — playtesting and polishing until the visuals stun and every hit lands. - Agent Swarm: Whether it's massive literature reviews, wide resea",
+      "metrics": {
+        "ratings": 5055,
+        "rating": 4.76438
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-f363ae46284e",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "AI boosted homework scores, then exam scores dropped: Study",
+      "url": "https://canews24.online?p=71",
+      "publishedAt": "2026-08-21T15:25:42Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 165,
+        "comments": 9
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-d141fc4012ae",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Jobescape AI, learn automation",
+      "url": "https://apps.apple.com/us/app/jobescape-ai-learn-automation/id6752938888?uo=4",
+      "publishedAt": "2026-08-21T04:48:53Z",
+      "excerpt": "Jobescape is the AI learning app for working professionals. Whether you work in legal, HR, finance, marketing, project management, or content creation — we have a Claude course built exactly for your role. No tech background needed. Just Claude, real tasks, and practice. 15+ structured learning paths, each designed for a specific role: • Legal — draft contracts, summarise case files, research faster • HR — screen CVs, write job descriptions, onboard with AI • Finance — analyse reports, model scenarios, automate updates • Project Management — run meetings, write briefs, track risks • Video & Content — script, edit, repurpose content at scale •",
+      "metrics": {
+        "ratings": 1575,
+        "rating": 4.72952
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-a246a891ac7e",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Voice Recorder AI Notes: Spiik",
+      "url": "https://apps.apple.com/us/app/voice-recorder-ai-notes-spiik/id6451387537?uo=4",
+      "publishedAt": "2026-08-21T14:01:32Z",
+      "excerpt": "Spiik is an easy-to-use voice recording and auto-transcribing app. Record lectures, interviews, meetings, personal notes or ideas and get automatic transcriptions. Generate detailed notes, summaries, quizzes, flashcards from your recordings with our built-in AI. FEATURES: • Record, save and replay audio without limits. • Transcribe and translate in over 100 languages. • Generate structured notes, summaries, quizzes, flashcards, and more with our AI-powered note taker. • Organize your recordings into projects. • Export transcriptions with or without timestamps. The free version of Spiik provides unlimited recording and replaying. The best way ",
+      "metrics": {
+        "ratings": 751,
+        "rating": 4.70439
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-4560e10d4ba7",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "MindBack 回响 - 你的AI记录伙伴",
+      "url": "https://apps.apple.com/cn/app/mindback-%E5%9B%9E%E5%93%8D-%E4%BD%A0%E7%9A%84ai%E8%AE%B0%E5%BD%95%E4%BC%99%E4%BC%B4/id6751882656?uo=4",
+      "publishedAt": "2026-08-21T22:26:52Z",
+      "excerpt": "一款简单记录，偶尔回响的地方， 记录那些不知该记在哪里的内容， 没有压力，后置意义，纯粹记录。 · 灵感涌现，随手安放 像聊天一样，轻松记录文字、语音、图片、链接与文件，告别打标签、建目录的整理焦虑，让记录回归简单纯粹。 · 随时随地「问一问」 随时向MindBack提问，无论是“帮我总结这篇文章”，还是“我去年想看的电影是哪部？” 会基于你的专属记录，给出只属于你的答案。 · 静候回响，不期而遇 无需整理，MindBack会为你串联那些零散的思绪。 比如将你收藏的餐厅汇集成“美食清单”，或将你的旅行碎片编织成“回忆影片”——也许会为你生成一份惊喜的洞察卡片。 · 链接速览，要义即达 不论是公众号文章还是网页资讯，只管丢进来。MindBack 会自动生成内容速览，让你快速了解那些原本躺在“稍后阅读”里的链接。 · 思绪万千，皆有迹可循 所有的记录与AI回响，都会在列表页自动按时间汇集，通过分类筛选与关键词搜索，你可以轻松回溯生活中的任何一个瞬间。 · 时光印记，一览无余 在个人页，通过热力图看见记录的节奏；在分类列表中，重温你收藏的所有图片、链接与每一次回响。 这是一份只为你绘制的、独一无二的生活轨迹图。",
+      "metrics": {
+        "ratings": 701,
+        "rating": 4.71041
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-7dc85f263701",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Coding Agents killed my identity. How do you feel?",
+      "url": "https://news.ycombinator.com/item?id=49389408",
+      "publishedAt": "2026-08-21T15:15:14Z",
+      "excerpt": "I always was a nerdy, deeply technical programmer. Contributing-to-open-source-and-reading-papers-in-my-spare-time type of programmer.<p>Programming is like a game of chess for me: winning (i.e. delivering a product) is important, but only if I played this game myself. I don&#x27;t enjoy winning if my opponent disconnected. I don&#x27;t enjoy beating people who don&#x27;t know how to move pieces. I don&#x27;t enjoy winning with an engine, and coding agents are basically &quot;winning with a chess engine&quot;.<p>I started to use AI for coding a long time ago, when copilot was first introduced. At first, I was happy: &quot;wow, this can write ",
+      "metrics": {
+        "points": 10,
+        "comments": 31
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-87af6f4b2eb4",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Every shape can be cut exactly in half with one straight line",
+      "url": "https://bisecto.com/every-shape-can-be-cut-in-half.html",
+      "publishedAt": "2026-08-21T15:45:44Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 9,
+        "comments": 26
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-62ea6a7183d9",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: A desktop fly drawn to the scent of vibecode",
+      "url": "https://github.com/kulikov0/desktop-vibe-fly",
+      "publishedAt": "2026-08-21T15:19:00Z",
+      "excerpt": "It is a fork of <a href=\"https:&#x2F;&#x2F;github.com&#x2F;DenisSergeevitch&#x2F;desktop-fly\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;DenisSergeevitch&#x2F;desktop-fly</a>, but with an important update.<p>Now the fly can pick up the scent of the codebase with its neurons and fly straight to the source code of your B2B AI SaaS startup. It has learned to scan its surroundings for agent markers: AGENTS.md, CLAUDE.md, .cursor&#x2F;rules, .kiro&#x2F;steering, and forty others. Anything on the screen that points to these markers becomes a source of the scent - an editor window with an open project, a line in Finder, or a desktop icon. An o",
+      "metrics": {
+        "points": 19,
+        "comments": 9
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-03a60d7564bb",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "AI;DR or Don't be a meat proxy",
+      "url": "https://theaspiringnerd.com/aidr-or-dont-be-a-meat-proxy",
+      "publishedAt": "2026-08-21T12:25:45Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 17,
+        "comments": 7
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-375689a7e880",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "I Became the Scapegoat in the Jason Arday Affair",
+      "url": "https://www.wsj.com/opinion/free-expression/how-i-became-the-scapegoat-in-the-jason-arday-affair-dc134088",
+      "publishedAt": "2026-08-21T13:36:15Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 12,
+        "comments": 10
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-136b7198a6e7",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "We burned 11.7B tokens to find the best cyber AI model",
+      "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026",
+      "publishedAt": "2026-08-21T12:09:07Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 13,
+        "comments": 6
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-0be1cd2f388b",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Is GitHub Down Again?",
+      "url": "https://news.ycombinator.com/item?id=49388293",
+      "publishedAt": "2026-08-21T14:07:00Z",
+      "excerpt": "Connection closed by 4.228.31.150 port 22",
+      "metrics": {
+        "points": 11,
+        "comments": 7
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-9220c3c8c245",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "语音备忘录与转录 : Spiik",
+      "url": "https://apps.apple.com/cn/app/%E8%AF%AD%E9%9F%B3%E5%A4%87%E5%BF%98%E5%BD%95%E4%B8%8E%E8%BD%AC%E5%BD%95-spiik/id6451387537?uo=4",
+      "publishedAt": "2026-08-21T14:01:32Z",
+      "excerpt": "Spiik 是一款简单易用的语音录制和自动转录应用。录制讲座、采访、会议、个人笔记或灵感，立即获得自动转录结果。 利用内置 AI，从录音中生成详细笔记、摘要、测验和抽认卡。 功能特色： • 无限制录制、保存和回放音频。 • 支持 100 多种语言的转录与翻译。 • 借助 AI 助手生成结构化笔记、摘要、测验、抽认卡等多种内容。 • 将录音整理为项目，便于管理。 • 支持带时间戳或不带时间戳导出转录文本。 Spiik 的免费版本提供无限录音和回放功能。 联系我们的最佳方式： support+spiik@fadel.io 查看我们的最终用户许可协议（EULA）：https://www.fadel.io/apps/terms.html",
+      "metrics": {
+        "ratings": 76,
+        "rating": 4.86842
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-655afb8cd2ee",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Myro:Home for Leviton/HAI",
+      "url": "https://apps.apple.com/us/app/myro-home-for-leviton-hai/id1334786091?uo=4",
+      "publishedAt": "2026-08-21T14:07:52Z",
+      "excerpt": "Also, check out Myro:Home Helper on the Mac App Store! With Myro:Home Helper you can enable capabilities like receiving push notifications, log data, expose items as HomeKit accessories and much more! Experience the ultimate in home automation control with Myro:Home for Leviton/HAI automation controllers. Myro:Home combines Leviton/HAI's proven home automation controllers with the latest features of iOS like FaceID/TouchID, Siri and WatchOS. Finally, a user-friendly and convenient home automation interface for your Leviton/HAI system that is as usable from anywhere in the world as it is from the comfort of your couch. Anything from changing t",
+      "metrics": {
+        "ratings": 64,
+        "rating": 4.5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-e0433176d4c9",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: OpenCode no longer including DeepSeek?",
+      "url": "https://news.ycombinator.com/item?id=49388835",
+      "publishedAt": "2026-08-21T14:37:34Z",
+      "excerpt": "I noticed that OpenCode harness no longer is including DeepSeek. Does anyone know why?<p>The current free models provided by OpenCode are currently: Nemotron (NVidia), Hy3 (Tencent), Muse Spark (Meta), Ox Alpha (stealth&#x2F;unknown developer), Mimo (Xiaomi), Big Pickle (OpenCode).",
+      "metrics": {
+        "points": 8,
+        "comments": 6
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-30965a1f5848",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Code Obfuscation via Local Mixing",
+      "url": "https://vitalik.eth.limo/general/2026/08/21/obfuscation_part_iii_local_mixing.html",
+      "publishedAt": "2026-08-21T15:11:10Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 30,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-a5e2ff5f9a96",
+      "targetDate": "2026-08-21",
+      "source": "Stack Overflow #artificial-intelligence",
+      "sourceType": "developer_question",
+      "title": "Lightweight state management patterns for multi-agent workflows without heavy frameworks",
+      "url": "https://stackoverflow.com/questions/79996973/lightweight-state-management-patterns-for-multi-agent-workflows-without-heavy-fr",
+      "publishedAt": "2026-08-21T05:18:17+00:00",
+      "excerpt": "best-practices python artificial-intelligence agent",
+      "metrics": {
+        "score": -4,
+        "answers": 0,
+        "views": 59
+      },
+      "topics": [
+        "artificial-intelligence",
+        "developer-pain"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-f156ba5c1acf",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "For decades, we were told to choose low-fat dairy. New research says otherwise",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260808234948.htm",
+      "publishedAt": "2026-08-21T15:27:37Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 8,
+        "comments": 4
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-86f56b453ae7",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: ssh sshfighter.com",
+      "url": "https://news.ycombinator.com/item?id=49386763",
+      "publishedAt": "2026-08-21T11:56:28Z",
+      "excerpt": "I&#x27;ve been playing with trying to get the most out of regular terminal (ansi) graphics rendering for an mmorpg game for a bit of fun. Thought that I might take a quick detour and make a streetfighter style game that turned out better than I thought it would.<p>Type &quot;ssh sshfighter.com&quot; in your terminal to play<p>Visit the website <a href=\"https:&#x2F;&#x2F;sshfighter.com\" rel=\"nofollow\">https:&#x2F;&#x2F;sshfighter.com</a> to watch replays etc (tv feature is cool)<p>My friends and I have been working on bot models for a bit of fun, you can queue against them if you want to and they have their own leaderboard. look at &#x2F;bots ",
+      "metrics": {
+        "points": 8,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-39aa1c8d7671",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "WPS笔记-AI录音转文字·智能整理",
+      "url": "https://apps.apple.com/cn/app/wps%E7%AC%94%E8%AE%B0-ai%E5%BD%95%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97-%E6%99%BA%E8%83%BD%E6%95%B4%E7%90%86/id6756649261?uo=4",
+      "publishedAt": "2026-08-21T02:41:41Z",
+      "excerpt": "WPS笔记是一款AI驱动的智能笔记应用，支持录音转文字、语音速记、会议纪要自动生成，让知识记录、整理和复用变得前所未有的高效。免费使用，全平台加密同步。 WPS笔记为AI时代而生——它能听懂你的语音、看懂你的图片、理解你的文字，自动帮你总结、分类和整理，同时继承WPS强大的文字编辑与Markdown能力。 WPS笔记帮你把记录变得更简单，让信息整理得更高效，而你只需要专注于创造与思考。 【产品四大核心能力】 智能语音笔记：录音自动转文字与总结 告别\"只录音、没时间重听\"的困扰，让会议、课堂、讲座的\"听记\"体验焕然一新。 • 实时语音转文字：一键录音实时转写，声纹识别自动区分发言人，记录清晰明了。 • AI越用越准：手动修改转写错误后，AI会学习你的语言习惯和专业词汇，质量持续提升。 • 录音中标重点：听到关键信息随手\"打点\"，回顾时可快速定位。 • 自动总结与待办：录音结束即生成会议总结和待办事项，无需重听长录音。 智能图片处理：AI驱动的图像创编与解读 打破图文转换壁垒，让图片成为笔记工作流的核心资产。 • 划词生图：选中文字，AI结合上下文异步生成配图，不打断书写节奏。 • AI重绘：选中图片输入自然语言指令，一句话完成风格转换、背景替换、元素修改，支持撤销。 • 结构化提取：自动解析图像，完整还原文字、表格、列表，所有内容可复制、可编辑。 • AI智能读图：结合笔记语境理解流程图、统计表，直接提炼核心结论。 智能全局查找：精准定位段落、语音与图片 不只是\"找笔记\"，而是精准",
+      "metrics": {
+        "ratings": 33,
+        "rating": 3.15152
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-dbab59332b5e",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Apple paid $17B in taxes to Ireland after court ruling on back levies",
+      "url": "https://www.ft.com/content/65fb0ad1-e4d5-43be-9dcf-f7aba1bea3a6",
+      "publishedAt": "2026-08-21T14:37:36Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 10,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-704de849de52",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Which developer tool got worse as it became popular?",
+      "url": "https://news.ycombinator.com/item?id=49387714",
+      "publishedAt": "2026-08-21T13:22:59Z",
+      "excerpt": "What tool do you think was better before it became widely used?<p>What changed? More features, more complexity, worse defaults, enterprise stuff, etc.<p>And did you switch to something else, or just keep using it?<p>Interested in specific examples rather than “everything was better before.”",
+      "metrics": {
+        "points": 2,
+        "comments": 9
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-d5d0e00c7588",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Markable AI Creator Automation",
+      "url": "https://apps.apple.com/us/app/markable-ai-creator-automation/id1636245508?uo=4",
+      "publishedAt": "2026-08-21T01:54:53Z",
+      "excerpt": "Turn comments into sales. Markable automatically sends DMs to your followers with the exact product link they asked for, opens affiliate links straight inside the native Amazon, Target, and Walmart apps for higher conversion, and turns your content into a shoppable storefront, all in one app built for affiliate creators. Auto-DM Skip the manual replies. When someone comments a keyword, Markable automatically sends them the exact link or offer they want, right when they're most interested. Set your trigger once and let it run. Smart Deep Links Create affiliate short links that open directly inside the native apps of top retailers, for a smooth",
+      "metrics": {
+        "ratings": 25,
+        "rating": 4.8
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-4f48bd641777",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nintendo Wipes Out 400 Switch Emulator Repos in Single-Day GitHub Sweep",
+      "url": "https://torrentfreak.com/nintendo-wipes-out-400-switch-emulator-repos-in-single-day-github-sweep",
+      "publishedAt": "2026-08-21T15:36:55Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 11,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7e26ff6a7ee1",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Gramola, a CoverFlow-style music dock for macOS",
+      "url": "https://apps.apple.com/us/app/gramola-music-dock/id6801078031?mt=12",
+      "publishedAt": "2026-08-21T15:52:56Z",
+      "excerpt": "I&#x27;m a 23yo solo dev from Spain with a passion for UI&#x2F;UX and I built Gramola, a music dock for macOS that is there when you need it. No more opening a music app to change what you&#x27;re listening to; just move your mouse to the edge of the screen, and all your music is there in a gorgeous CoverFlow style, or ready to be instantly searched.<p>Fully usable with a mouse, but also fully usable with keyboard, accessibility built in, and both Spotify and Apple Music support as well as local tracks via the Music app.<p>Free to try for 7 days! I would love to know what you think :)<p>Please feel free to ask any questions, technical or not!",
+      "metrics": {
+        "points": 6,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-ac3c8170ac8a",
+      "targetDate": "2026-08-21",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Town Assistant",
+      "url": "https://apps.apple.com/us/app/town-assistant/id6759411716?uo=4",
+      "publishedAt": "2026-08-21T18:30:38Z",
+      "excerpt": "Town connects to your tools and does real work: capturing meetings, managing your schedule, drafting in your voice, and keeping workflows moving — from anywhere, with your oversight. Town for iOS expands how you can use your assistant in three ways: Speak, don’t type Skip the typing and talk naturally. Tap the mic, tell your assistant what to do, and it gets straight to work. Hit record, then let Town do the rest You get a clear summary as soon as your meeting finishes, action items with owners and follow-ups, and the full recording saved to town.com/content, available anytime. Stay in control from anywhere Review and approve pending actions ",
+      "metrics": {
+        "ratings": 16,
+        "rating": 4.75
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-4ab0f7abec6d",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: AgentSight – eBPF observability for AI agents, no code changes",
+      "url": "https://github.com/alibaba/anolisa/blob/main/docs/user-guide/en/agent-observability/agentsight.md",
+      "publishedAt": "2026-08-21T15:21:10Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 15,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-b9f699a16a41",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Agent Office (Slack for AI Agents) – Similar to Grok Bot but older",
+      "url": "https://github.com/baturyilmaz/agent-office",
+      "publishedAt": "2026-08-21T13:04:59Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 6,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-fef929ab7c2c",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "UC Berkeley professor admits to using AI to edit op-ed on students' math skills",
+      "url": "https://www.theguardian.com/us-news/2026/aug/19/uc-berkeley-professor-ai",
+      "publishedAt": "2026-08-21T13:28:49Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-5feb3f9fdc1a",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Vertical AI Founders, You Are Going Through 3 Existential Crises",
+      "url": "https://medium.com/@MirArshadTalpur/vertical-ai-founders-you-are-going-through-3-existential-crises-and-most-of-you-dont-know-it-b3d86a386d37",
+      "publishedAt": "2026-08-21T12:04:48Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-8cfc4bd6dc29",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "A Texas student blew the whistle on a rogue AI hacking attempt",
+      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20",
+      "publishedAt": "2026-08-21T13:43:33Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 10,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e0c57507c9f4",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Advanced AI Sycophancy",
+      "url": "https://www.seangoedecke.com/advanced-ai-sycophancy",
+      "publishedAt": "2026-08-21T14:32:34Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-fedf92be4577",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Telex Page – Turn secrets into AES 256 encrypted PDFs, locally",
+      "url": "https://telexpage.com",
+      "publishedAt": "2026-08-21T15:42:46Z",
+      "excerpt": "Hey! Every time I had to send something confidential, like a password, secret, .env, etc, I ended up using some openssl enchantment. It worked, but it was annoying for the team and impossible for my family.<p>PDF docs already support strong AES 256 encryption and open pretty much everywhere. The annoying part was creating a doc and then jumping into a cli just to encrypt it.<p>So I made telexpage.com. It runs 100% local in your browser and makes creating an encrypted PDF from a message as simple as possible. It works offline too.<p>It&#x27;s been really useful for me, hopefully it&#x27;s useful for you too.<p>Remember to send the password tro",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-524a4947f339",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: ctx 1.0 - `git blame` but for agent sessions",
+      "url": "https://github.com/ctxrs/ctx/releases/tag/v1.0.0",
+      "publishedAt": "2026-08-21T15:30:44Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-922076df7469",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Rust – Enabling the next-generation trait solver on nightly",
+      "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly",
+      "publishedAt": "2026-08-21T15:24:43Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 7,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-a0a30cf67690",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "The AI boom: rational enthusiasm or the next dot-com bubble?",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260817~754a8a4418.en.html",
+      "publishedAt": "2026-08-21T15:07:10Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-d55661e97db3",
+      "targetDate": "2026-08-21",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "The Babel fish that we have been waiting for",
+      "url": "https://networkedthought.substack.com/p/this-is-the-babel-fish-weve-been",
+      "publishedAt": "2026-08-21T13:21:54Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    }
+  ],
+  "reviewInstructions": {
+    "publishAllPassing": true,
+    "allowedKinds": [
+      "opportunity",
+      "case"
+    ],
+    "allowedQuality": [
+      "feature",
+      "editorial"
+    ],
+    "requiredFields": [
+      "plain",
+      "audience",
+      "pain",
+      "why",
+      "validation",
+      "risk",
+      "evidence"
+    ]
+  }
+}
