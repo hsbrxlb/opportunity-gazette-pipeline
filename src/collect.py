@@ -25,6 +25,14 @@ TIMEZONE = ZoneInfo("Asia/Shanghai")
 ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "OpportunityGazettePipeline/1.0 (+https://github.com/hsbrxlb/opportunity-gazette-pipeline)"
 MAX_CANDIDATES = 150
+MAX_REVIEW_QUEUE = 48
+REVIEW_QUEUE_CAPS = {
+    "GitHub": 20,
+    "Hacker News": 14,
+    "DEV.to": 8,
+    "App Store": 5,
+    "other": 1,
+}
 RELEVANCE = {
     "ai", "agent", "automation", "workflow", "developer", "tool", "saas",
     "productivity", "plugin", "browser", "local", "privacy", "monitoring",
@@ -60,6 +68,66 @@ def canonical_url(value: str) -> str:
 def stable_id(prefix: str, *parts: str) -> str:
     raw = "|".join(clean(part).casefold() for part in parts)
     return f"{prefix}-{hashlib.sha256(raw.encode('utf-8')).hexdigest()[:12]}"
+
+
+def source_group(source: str) -> str:
+    return next(
+        (name for name in ("GitHub", "Hacker News", "DEV.to", "App Store") if source.startswith(name)),
+        "other",
+    )
+
+
+def build_review_queue(candidate_payload: dict[str, Any], limit: int = MAX_REVIEW_QUEUE) -> dict[str, Any]:
+    """Build a smaller, source-diverse queue while preserving the full candidate archive."""
+    candidates = list(candidate_payload.get("candidates") or [])
+    selected: list[dict[str, Any]] = []
+    selected_ids: set[str] = set()
+    group_counts = {key: 0 for key in REVIEW_QUEUE_CAPS}
+
+    for item in candidates:
+        group = source_group(str(item.get("source", "")))
+        if group_counts[group] >= REVIEW_QUEUE_CAPS[group]:
+            continue
+        selected.append(item)
+        selected_ids.add(str(item.get("id", "")))
+        group_counts[group] += 1
+        if len(selected) >= limit:
+            break
+
+    if len(selected) < limit:
+        for item in candidates:
+            item_id = str(item.get("id", ""))
+            if item_id in selected_ids:
+                continue
+            selected.append(item)
+            selected_ids.add(item_id)
+            group_counts[source_group(str(item.get("source", "")))] += 1
+            if len(selected) >= limit:
+                break
+
+    return {
+        "schemaVersion": 1,
+        "targetDate": candidate_payload.get("targetDate"),
+        "generatedAt": candidate_payload.get("generatedAt"),
+        "status": "ready_for_review",
+        "counts": {
+            "fullCandidates": len(candidates),
+            "queuedCandidates": len(selected),
+            "overflowCandidates": max(0, len(candidates) - len(selected)),
+            "sourceFailures": candidate_payload.get("counts", {}).get("sourceFailures", 0),
+        },
+        "queueStrategy": {
+            "name": "source_diverse_ranked_v1",
+            "limit": limit,
+            "initialCaps": REVIEW_QUEUE_CAPS,
+            "selectedByGroup": group_counts,
+            "fullCandidatePath": f"candidates/{candidate_payload.get('targetDate')}.json",
+            "note": "The full candidate archive is retained; this queue bounds unattended ChatGPT review time.",
+        },
+        "sources": candidate_payload.get("sources", []),
+        "candidates": selected,
+        "reviewInstructions": candidate_payload.get("reviewInstructions", {}),
+    }
 
 
 def request_bytes(url: str, headers: dict[str, str] | None = None, timeout: int = 25) -> bytes:
@@ -342,7 +410,7 @@ class Collector:
         candidates: list[dict[str, Any]] = []
         for item in ranked:
             source = item.get("source", "")
-            group = next((name for name in ("GitHub", "Hacker News", "DEV.to", "App Store") if source.startswith(name)), "other")
+            group = source_group(source)
             if counts[group] >= caps[group]:
                 continue
             counts[group] += 1
@@ -408,6 +476,10 @@ def main() -> int:
             pass
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    review_queue = build_review_queue(payload)
+    review_queue_path = ROOT / "review_queue" / f"{target}.json"
+    review_queue_path.parent.mkdir(parents=True, exist_ok=True)
+    review_queue_path.write_text(json.dumps(review_queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     latest = ROOT / "status" / "latest.json"
     latest.parent.mkdir(parents=True, exist_ok=True)
     latest.write_text(json.dumps({
@@ -417,8 +489,15 @@ def main() -> int:
         "status": payload["status"],
         "counts": payload["counts"],
         "candidatePath": f"candidates/{target}.json",
+        "reviewQueuePath": f"review_queue/{target}.json",
+        "reviewQueueCount": review_queue["counts"]["queuedCandidates"],
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"output": str(output.relative_to(ROOT)), **payload["counts"]}, ensure_ascii=False))
+    print(json.dumps({
+        "output": str(output.relative_to(ROOT)),
+        "reviewQueue": str(review_queue_path.relative_to(ROOT)),
+        "reviewQueueCount": review_queue["counts"]["queuedCandidates"],
+        **payload["counts"],
+    }, ensure_ascii=False))
     return 0
 
 

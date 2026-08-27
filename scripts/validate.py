@@ -30,3 +30,18 @@ for path in files:
         if not item["url"].startswith(("http://", "https://")):
             raise SystemExit(f"{path.name}: invalid URL")
 print(f"Validated {len(files)} candidate file(s).")
+
+queue_files = sorted((ROOT / "review_queue").glob("*.json"))
+for path in queue_files:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if path.stem != data.get("targetDate"):
+        raise SystemExit(f"{path.name}: review queue target date mismatch")
+    candidates = data.get("candidates")
+    counts = data.get("counts", {})
+    if not isinstance(candidates, list) or counts.get("queuedCandidates") != len(candidates):
+        raise SystemExit(f"{path.name}: review queue count mismatch")
+    if len(candidates) > 48 or counts.get("fullCandidates", 0) < len(candidates):
+        raise SystemExit(f"{path.name}: review queue bounds mismatch")
+    if len({item.get("id") for item in candidates}) != len(candidates):
+        raise SystemExit(f"{path.name}: duplicate review queue id")
+print(f"Validated {len(queue_files)} review queue file(s).")

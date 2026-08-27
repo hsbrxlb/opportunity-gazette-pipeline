@@ -1,0 +1,34 @@
+name: Check opportunity review delivery
+
+on:
+  schedule:
+    - cron: "30 7 * * *"
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional Asia/Shanghai target date (YYYY-MM-DD)
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check reviewed output or Sheet bridge
+        env:
+          TARGET_DATE: ${{ inputs.target_date }}
+          SHEET_CSV_URL: https://docs.google.com/spreadsheets/d/e/2PACX-1vSglodjhuWhLmsFwyIJegmWTSpiLJCXm7ekljv8CRdZCW3__xd0W09Wuo3MGtwjCXI8GNIB3ttKyP6N/pub?gid=1900000001&single=true&output=csv
+        run: |
+          args=(--sheet-csv-url "$SHEET_CSV_URL")
+          if [ -n "$TARGET_DATE" ]; then
+            args+=(--date "$TARGET_DATE")
+          fi
+          python scripts/check_review_delivery.py "${args[@]}"

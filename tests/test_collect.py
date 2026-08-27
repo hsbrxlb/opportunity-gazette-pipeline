@@ -68,6 +68,35 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(payload["status"], "ready_for_review")
         json.dumps(payload)
 
+    def test_review_queue_is_bounded_diverse_and_keeps_full_count(self):
+        run = collector.Collector("2026-08-16")
+        groups = [
+            ("GitHub Issue — example/repo", 30),
+            ("Hacker News", 20),
+            ("DEV.to #ai", 12),
+            ("App Store Search US", 8),
+            ("Stack Overflow #automation", 3),
+        ]
+        index = 0
+        for source, count in groups:
+            for _ in range(count):
+                index += 1
+                run.add(
+                    source=source,
+                    source_type="public",
+                    title=f"AI automation failure report number {index}",
+                    url=f"https://example.com/{index}",
+                    published_at="2026-08-16",
+                    metrics={"comments": count},
+                )
+        payload = run.payload()
+        queue = collector.build_review_queue(payload)
+        self.assertEqual(queue["counts"]["fullCandidates"], len(payload["candidates"]))
+        self.assertEqual(queue["counts"]["queuedCandidates"], 48)
+        self.assertEqual(len(queue["candidates"]), 48)
+        selected_sources = {collector.source_group(item["source"]) for item in queue["candidates"]}
+        self.assertEqual(selected_sources, {"GitHub", "Hacker News", "DEV.to", "App Store", "other"})
+
     def test_same_payload_can_preserve_generation_time(self):
         run = collector.Collector("2026-08-16")
         run.add(source="x", source_type="public", title="AI automation failure report", url="https://example.com/one", published_at="2026-08-16")
