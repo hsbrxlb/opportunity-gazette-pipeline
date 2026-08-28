@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "targetDate": "2026-08-26",
-  "generatedAt": "2026-08-27T23:19:39.997484+08:00",
+  "targetDate": "2026-08-28",
+  "generatedAt": "2026-08-29T00:42:53.856736+08:00",
   "status": "ready_for_review",
   "counts": {
-    "observed": 684,
+    "observed": 1030,
     "candidates": 150,
-    "mechanicallyRejectedOrDeduplicated": 534,
+    "mechanicallyRejectedOrDeduplicated": 880,
     "sourceFailures": 5
   },
-  "candidatePath": "candidates/2026-08-26.json",
-  "reviewQueuePath": "review_queue/2026-08-26.json",
+  "candidatePath": "candidates/2026-08-28.json",
+  "reviewQueuePath": "review_queue/2026-08-28.json",
   "reviewQueueCount": 48
 }
