@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "targetDate": "2026-08-28",
-  "generatedAt": "2026-08-29T00:42:53.856736+08:00",
+  "generatedAt": "2026-08-29T19:10:48.632887+08:00",
   "status": "ready_for_review",
   "counts": {
-    "observed": 1030,
+    "observed": 741,
     "candidates": 150,
-    "mechanicallyRejectedOrDeduplicated": 880,
+    "mechanicallyRejectedOrDeduplicated": 591,
     "sourceFailures": 5
   },
   "candidatePath": "candidates/2026-08-28.json",
