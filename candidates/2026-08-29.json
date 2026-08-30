@@ -1,0 +1,3113 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-08-29",
+  "generatedAt": "2026-08-30T17:59:14.208950+08:00",
+  "status": "ready_for_review",
+  "counts": {
+    "observed": 788,
+    "candidates": 150,
+    "mechanicallyRejectedOrDeduplicated": 638,
+    "sourceFailures": 5
+  },
+  "sources": [
+    {
+      "source": "Hacker News",
+      "status": "ok",
+      "count": 105,
+      "detail": "observed=300; added_after_dedupe=105",
+      "sourceType": "public"
+    },
+    {
+      "source": "GitHub Issues",
+      "status": "ok",
+      "count": 199,
+      "detail": "observed=300; added_after_dedupe=199",
+      "sourceType": "public"
+    },
+    {
+      "source": "DEV.to",
+      "status": "ok",
+      "count": 77,
+      "detail": "observed=400; added_after_dedupe=77",
+      "sourceType": "public"
+    },
+    {
+      "source": "V2EX",
+      "status": "ok",
+      "count": 0,
+      "detail": "observed=39; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty",
+      "count": 0,
+      "detail": "observed=0; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "App Store Search",
+      "status": "ok",
+      "count": 19,
+      "detail": "observed=470; added_after_dedupe=19",
+      "sourceType": "runtime_visible_public_api"
+    },
+    {
+      "source": "Reddit",
+      "status": "rate_limited_or_blocked",
+      "count": 0,
+      "detail": "HTTP 403",
+      "sourceType": "public"
+    },
+    {
+      "source": "Product Hunt",
+      "status": "not_configured",
+      "count": 0,
+      "detail": "Official API credential is not configured; skipped.",
+      "sourceType": "credential_required"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "No stable credential-free date-bounded endpoint.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "微博",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-d144952d50b4",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — safetrustcr/backend-SafeTrust",
+      "sourceType": "production_or_user_issue",
+      "title": "refactor(infra): optimize docker-compose.yml — env vars, cross-platform cache, and remove hardcoded secrets",
+      "url": "https://github.com/safetrustcr/backend-SafeTrust/issues/585",
+      "publishedAt": "2026-08-29T07:45:34Z",
+      "excerpt": "## Issue Summary `docker-compose.yml` has three categories of problems: a hardcoded admin secret, a broken cross-platform cache path, and missing environment variable coverage for service configuration. This issue fixes all three without changing container behavior, port mappings, or network topology. ## Type of Issue - [x] Bug — hardcoded secret - [x] Performance — cache path fix - [x] Other — Developer Experience ## Current Behavior ```yaml # Problem 1 — hardcoded admin secret (security) graphql-engine: environment: HASURA_GRAPHQL_ADMIN_SECRET: \"myadminsecretkey\" ← hardcoded # Problem 2 — absolute cache path (breaks macOS Docker Desktop) we",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d9402a7a853e",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(failed-command): 2026-08-28t05-24-39-257z-01a046d3-c6d9-77cf-a073-1e3b7ea92940 — failed command walked past, never flagged",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1876",
+      "publishedAt": "2026-08-29T04:55:00Z",
+      "excerpt": "<!-- possible-duplicate-of: Nishfleet/fleet-ops#1757 score=0.61 --> Possible duplicate of Nishfleet/fleet-ops#1757 (score 0.61). Weekly Review: confirm or close as duplicate. The session-close lint (fleet-ops#535, standing rule: a failed command is ALWAYS flagged) found a Pi toolResult with a non-zero exit / isError / timeout and no later assistant text naming the failure. - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T05-24-39-257Z_01a046d3-c6d9-77cf-a073-1e3b7ea92940.jsonl` - snippet: Validation failed for tool \"structured_output\": - actionItems.0: must be string Received arguments: { \"headline\": \"machinery-gate landed o",
+      "metrics": {
+        "comments": 66,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-77cad6bf9187",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "commandcode deepseek/deepseek-v4-flash out of credits (insufficient credits)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1890",
+      "publishedAt": "2026-08-29T05:16:56Z",
+      "excerpt": "While running the fleet-eval admission bench for fleet-ops#742 (commandcode minimax/minimax-m3-free), the commandcode incumbent `deepseek/deepseek-v4-flash` failed a live `pi --print` tool-using packet with: \\`\\`\\` 400: {\"message\":\"You have insufficient credits to make this request. Please purchase more credits to continue using the service.\",\"type\":\"invalid_request_error\",\"code\":\"BAD_REQUEST\"} \\`\\`\\` PACKET-VERDICT tools=0 class=no-tools; rc=1. The candidate slug (minimax/minimax-m3-free) succeeded on the same packet (ANSWER=42, tools=1 class=worked, cost.total=0). This is a pre-existing fault found during #742's bench and is out of #742's s",
+      "metrics": {
+        "comments": 48,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-fd224dfcca68",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — phamhuubinh/infrastructure-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[Tools] Harden progressive-exposure recovery for Project knowledge retrieval",
+      "url": "https://github.com/phamhuubinh/infrastructure-agent/issues/111",
+      "publishedAt": "2026-08-29T13:58:51Z",
+      "excerpt": "## Problem Owner-only live smoke for #108 exposes a repeatable Project-knowledge failure that is not explained by Project scope storage itself. At commit `0d70e2d4577fa2b8703c54239b3b8c1ed55cb4a0` with `ORION_QA_REQUEST_TIMEOUT_SECONDS=180`: - `session-document` passes; - `project-shared-document` failed 3/3 isolated reruns: two `ScenarioFailure`, one `QARequestTimeout`; - diagnostic timeline for a `ScenarioFailure` showed: - model called `knowledge.read` before expansion -> error; - model then called `orion.tools.expand` once; - later `knowledge.read`, `knowledge.list_documents`, and `knowledge.search` all returned errors; - no knowledge sou",
+      "metrics": {
+        "comments": 36,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f02bd63641e1",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — xqliu/orbi",
+      "sourceType": "production_or_user_issue",
+      "title": "P0 Bug：第三方 provider 启动时 Pi settings/models 不一致且 API key 注入未闭环",
+      "url": "https://github.com/xqliu/orbi/issues/172",
+      "publishedAt": "2026-08-29T03:19:35Z",
+      "excerpt": "## Problem 第三方 provider 的端到端运行链路目前不可用。Runner 可以生成并传递 `--provider`/`--model`，但 Pi 启动阶段会卡在 `starting`，无法创建 session，也不会发出第一条模型请求。 ## Evidence - NVIDIA `nvidia-build / moonshotai/kimi-k3`：独立 `hello world` 请求成功，但通过 Runner 启动后卡在 `starting`。 - Groq `groq / qwen/qwen3.8-27b`：通过 Runner 启动后复现相同问题。 - 本地默认 Qwen：去掉 provider/model 参数后仍复现相同问题。 - 三次运行均没有创建 `.pi-session/*.jsonl`，没有产生 session activity。 - 三次运行均出现： ```text Warning: No models match pattern \"openai/gpt-5.6-sol\" Warning: No models match pattern \"openrouter/stealth/ox-alpha\" ``` Runner 为每次 run 物化了新的 `models.json`，但继续复用用户全局 `settings.json`。全局 settings 的 `defaultProvider`、`defaultModel` 和 `enabledMode",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2e3f93b89d73",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "Yore - AI 记事与智能提醒",
+      "url": "https://apps.apple.com/cn/app/yore-ai-%E8%AE%B0%E4%BA%8B%E4%B8%8E%E6%99%BA%E8%83%BD%E6%8F%90%E9%86%92/id6757142701?uo=4",
+      "publishedAt": "2026-08-29T19:29:52Z",
+      "excerpt": "Yore (优尔) 是一款用 AI 帮你记录、整理并提醒重要信息的 App。 把文字、截图或语音交给 Yore，它会理解内容、提取重点，自动生成笔记、待办、日程和账目；也能识别票券、取餐码与取件码，并在需要的时候提醒你。 你只需要记录一次，剩下的交给 Yore。 【核心功能】 • AI 笔记与待办 理解聊天记录、会议内容、学习计划和临时灵感，自动整理成清晰的笔记与待办事项。 • 智能日程、提醒与闹钟 识别日期、时间、地点和时间段，自动生成待办或日程，可同步到 iOS「提醒事项」与「日历」，重要事项还可以创建系统「闹钟」。 • 票券智能识别 识别机票、高铁票和电影票，自动提取时间、地点等重要信息，并通过「灵动岛」快速查看。 • 取餐码与取件码 自动识别取餐码和取件码，并持续显示在「灵动岛」。即使离开 App，也能快速查看，无需反复翻找聊天记录和短信。 • AI 记账 识别文字和截图中的金额与交易信息，自动生成账目，让日常记账更简单。 • 快捷记录 配合快捷指令，无需打开 App，也能快速记录文字、截图、语音和剪贴板内容。 Yore 不只是一个记事工具，也不只是回答问题的 AI。 它是你的个人 AI Agent：帮你理解信息、整理内容、创建事项，并在重要的时候提醒你。 把零散的信息交给 Yore，把注意力留给真正重要的生活。 隐私政策: https://c.team/PrivacyPolicy.html",
+      "metrics": {
+        "ratings": 59,
+        "rating": 4.83051
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-ffd40807301c",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t23-07-44-820z-01a04aa1-1134-7e4b-afdb-0e289761e55a — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1975",
+      "publishedAt": "2026-08-29T08:54:19Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T23-07-44-820Z_01a04aa1-1134-7e4b-afdb-0e289761e55a.jsonl` - attempts: 2 - snippet: ls: cannot access '/home/nish/workspaces/fleet-completion-canary/': No such file or directory --- /home/nish/workspaces/tooling/fleet-ops-deploy-clone/tests/fleet-completion-canary.test.sh /home/nish/ - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0fe4582a9892",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t19-17-26-389z-01a049ce-36f5-743f-8e63-1dead7aa0286 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1879",
+      "publishedAt": "2026-08-29T04:55:23Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T19-17-26-389Z_01a049ce-36f5-743f-8e63-1dead7aa0286.jsonl` - attempts: 2 - snippet: ls: cannot access '/home/nish/workspaces/tooling/fleet-ops-deploy-clone/bin/fleet-rule-coverage*': No such file or directory /home/nish/workspaces/tooling/fleet-ops-deploy-clone/bin/fleet-escalation-c - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-61b984de2969",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t19-01-02-101z-01a049bf-3215-7faf-9901-c146c47dbb9d — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1878",
+      "publishedAt": "2026-08-29T04:55:22Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T19-01-02-101Z_01a049bf-3215-7faf-9901-c146c47dbb9d.jsonl` - attempts: 4 - snippet: /bin/bash: -c: line 1: syntax error near unexpected token `2' /bin/bash: -c: line 1: `cd /home/nish/workspaces/tooling/fleet-ops-deploy-clone && for f in ~/.local/bin/sgscan ~/.local/bin/crgate 2>/dev - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-14336db4c313",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Matt17BR/openwrangler",
+      "sourceType": "production_or_user_issue",
+      "title": "Split extension-host acceptance and browser harness ownership",
+      "url": "https://github.com/Matt17BR/openwrangler/issues/900",
+      "publishedAt": "2026-08-29T20:11:50Z",
+      "excerpt": "## Problem The extension-host acceptance dispatcher is about 20,000 lines and the accessibility/browser harness is about 3,300 lines. Unrelated installed journeys and synthetic fixtures share setup, state, and failure handling, so a small contract change can invalidate a broad harness. ## Scope Separate real product journeys and browser fixture ownership at cohesive boundaries. Delete obsolete fixtures and shared setup that has no distinct failure owner. Non-goals: a new test framework, selector registry, duplicate installed journey, or weaker accessibility and artifact checks. ## Acceptance - Installed-editor, notebook, Native-R, grid, Code ",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-49c4a68e5950",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — felipe-nomelini/vortek",
+      "sourceType": "production_or_user_issue",
+      "title": "[CRITICAL] Integração com problema",
+      "url": "https://github.com/felipe-nomelini/vortek/issues/231",
+      "publishedAt": "2026-08-29T05:32:16Z",
+      "excerpt": "## Integração com problema WAHA: SCAN_QR_CODE ## Contexto - Tipo: integration_status - Severidade: critical - Dedupe: integration_status:WAHA: SCAN_QR_CODE - Fingerprint: vortek-fingerprint:integration_status:integration_status:WAHA: SCAN_QR_CODE - Criado em: 2026-08-29T05:32:16.637Z ## Payload sanitizado ```json { \"ml\": { \"state\": \"ok\", \"blocked_until\": null, \"last_refresh_at\": \"2026-08-29T04:22:33.339+00:00\", \"last_refresh_error\": null, \"last_refresh_error_code\": null, \"conectado\": true, \"read_ok\": true, \"read_error\": null, \"has_access_token\": true, \"has_refresh_token\": true, \"token_expires_at\": \"2026-08-29T10:22:33.339+00:00\", \"token_expir",
+      "metrics": {
+        "comments": 1718,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7d30b7925869",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension",
+      "sourceType": "production_or_user_issue",
+      "title": "v0.1 Coordination / Live Checkpoints",
+      "url": "https://github.com/Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension/issues/1",
+      "publishedAt": "2026-08-29T11:54:04Z",
+      "excerpt": "# ChatGPT Autopilot Extension — v0.1 coordination This issue is the canonical GitHub checkpoint thread for the initial v0.1 build until a more specific coordination structure is created. ## Live repository Actual current repository name/URL as created on 2026-08-29: https://github.com/Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension The older Drive/package target `Oleksii-debug/ChatGPT-Autopilot-Extension` currently does not resolve because the created repository name was duplicated. Do not treat that 404 as a missing-repository blocker. Do not rename/delete the repository without owner approval. Initial main SHA: `f7fd64e",
+      "metrics": {
+        "comments": 247,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9557b9dfff9d",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — chidionyema/idp",
+      "sourceType": "production_or_user_issue",
+      "title": "P0: Flux cannot reconcile Kustomization/hermes-agent.flux-system",
+      "url": "https://github.com/chidionyema/idp/issues/877",
+      "publishedAt": "2026-08-29T22:31:39Z",
+      "excerpt": "health check failed after 10m0.042119241s: timeout waiting for: [Deployment/hermes-agent/hermes-agent-gateway status: 'InProgress'] revision: main@sha1:d159f7dc72dcffc892163b1a3cb781f7b4b3d6ef run: https://github.com/chidionyema/idp/actions/runs/33278795359 The cluster is not running what main says. Until this closes, every check that reads the live estate is grading an older revision.",
+      "metrics": {
+        "comments": 122,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7a781da3435b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Split sw-daemon.sh into scripts/lib/daemon-*.sh Modules Beyond Existing Extraction",
+      "url": "https://github.com/sethdford/shipwright/issues/3346",
+      "publishedAt": "2026-08-29T00:12:49Z",
+      "excerpt": "## Strategic Improvement `sw-loop.sh` (2713 lines) is already targeted by open issue #3240; the next-largest monolith is `sw-memory.sh` (2241 lines), which mixes pattern capture, cross-pipeline learning, and cost-tracking concerns in one file. Extract cost-tracking and cross-pipeline-discovery logic into `scripts/lib/memory-cost.sh` and `scripts/lib/memory-discovery.sh`, following the same lib/ decomposition pattern used elsewhere, to reduce the largest untouched monolith and move toward the AGI-readiness clean-architecture goal. ### Acceptance Criteria - - `sw-memory.sh` shrinks below 1500 lines with logic moved (not duplicated) into new lib",
+      "metrics": {
+        "comments": 94,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-193e9ef8a4ee",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — JoshCLWren/comic-pile",
+      "sourceType": "production_or_user_issue",
+      "title": "help and glossary are the same",
+      "url": "https://github.com/JoshCLWren/comic-pile/issues/2022",
+      "publishedAt": "2026-08-29T15:33:25Z",
+      "excerpt": "**Reported by:** Josh **Report type:** Bug report collapse these into one <details> <summary>Diagnostic Information</summary> **Timestamp:** 2026-08-29T15:33:08.293Z **URL:** https://comic-pile.vercel.app/help **User Agent:** Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0 **Screen:** 1920×1080 @1.0x **Viewport:** 1141×926 **Scroll:** (0, 0) **Performance:** DOMContentLoaded: 702ms, Load: 804ms **Console Errors (last 0):** None </details>",
+      "metrics": {
+        "comments": 63,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-43796782d73b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Distinguish transient/infra errors from code errors in build-loop failure classification",
+      "url": "https://github.com/sethdford/shipwright/issues/3458",
+      "publishedAt": "2026-08-29T08:06:28Z",
+      "excerpt": "## Strategic Improvement Today a rate-limit, network timeout, or auth failure during the build loop is classified the same as a genuine code/test failure, triggering the full re-plan/session-restart machinery instead of a cheap backoff-and-retry. Add a transient-error detector (regex/exit-code signatures for 429s, timeouts, connection resets) ahead of existing failure classification so infra failures short-circuit to backoff-retry and never consume a build-loop iteration or restart budget. ### Acceptance Criteria - - New classification tier \"transient_infra\" recognized in the build loop's error-classification path, checked before code-error c",
+      "metrics": {
+        "comments": 62,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c255b484232d",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "siterep-public auto-merge-arm.yml still exits 1 on missing AUTO_REVERT_PAT (inish-site convergence for #1081)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1795",
+      "publishedAt": "2026-08-29T01:26:32Z",
+      "excerpt": "Follow-up to #1081. The fleet-ops reusable workflow was fixed (missing `AUTO_REVERT_PAT` → `::notice::` + `exit 0`), but Nishfleet/siterep-public ships the **portable inline** copy of the arm step — the sync source for product repos that cannot call a private Nishfleet reusable workflow (e.g. Nishfleet/inish-site, nish3451 personal repos). That inline copy still has the old `::error::` + `exit 1`: ```yaml - name: Arm auto-merge env: GH_TOKEN: ${{ secrets.AUTO_REVERT_PAT }} PR: ${{ github.event.pull_request.number }} run: | if [ -z \"$GH_TOKEN\" ]; then echo \"::error::AUTO_REVERT_PAT is not configured — auto-merge not armed; this PR waits for a ",
+      "metrics": {
+        "comments": 53,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9d30e6b7427f",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Yeachan-Heo/clawhip",
+      "sourceType": "production_or_user_issue",
+      "title": "Make Clawhip the GJC-first event router with automatic native SDK binding",
+      "url": "https://github.com/Yeachan-Heo/clawhip/issues/349",
+      "publishedAt": "2026-08-29T07:18:17Z",
+      "excerpt": "## Incident A live GJC tmux process remained present after its provider turn failed with a credit/authorization error. Operator census treated process liveness as an active development lane for ~44 minutes. The authoritative SDK endpoint was live, but Clawhip emitted no alert because durable GJC lane reconciliation is not wired into the SDK control plane and the session creator does not enroll new SDK sessions. ## Required contract - Wire Clawhip's existing GJC SDK transport/control plane into the durable lane reconciler at daemon startup; remove the current dead registration seam. - Auto-enroll every session created by `skills/gjc-session/cr",
+      "metrics": {
+        "comments": 51,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-49dc5b38edf6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "tests/pi-issue-run-mid-session-bench.test.sh fails on main: pick_seat empty after single bench (fixture has no second selectable seat)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1862",
+      "publishedAt": "2026-08-29T04:23:29Z",
+      "excerpt": "Pre-existing failure on origin/main (67cc8f0), not introduced by #1408. `bash tests/pi-issue-run-mid-session-bench.test.sh` exits 1 with: FAIL: pick_seat returned empty after benching devin/swe-1-7 (another seat should still be free) pick_seat: NO USABLE SEAT — every allowlisted seat is dead/capped/rate-limited. The fixture benches devin/swe-1-7 via mark_seat_spawn_fail (mid-session death path) then expects pick_seat to find another free seat. The only other provider in the fixture is cursor (cursor-grok-4.6-high, composer-2.5), but pick_seat returns NO USABLE SEAT — the cursor seats are not selectable under the fixture's privacy/cap/class fi",
+      "metrics": {
+        "comments": 48,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0bbe6f1b75fc",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "Register tests/seat-failure-ceiling.test.sh in CI (worker cannot touch .github/workflows)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1964",
+      "publishedAt": "2026-08-29T08:21:17Z",
+      "excerpt": "The regression test added in #1362 (`tests/seat-failure-ceiling.test.sh`) is not yet wired into `.github/workflows/ci.yml` because the nishfleet-worker App token has no Workflows permission, so a push touching `.github/workflows/**` is rejected at the platform layer. Add this line to the seat-test block in `.github/workflows/ci.yml` (after `tests/seat-lib-org-reserve.test.sh`): ```yaml # fleet-ops#1362: failure-count ceiling parks a seat past 60 # consecutive failures and emits one metric. bash tests/seat-failure-ceiling.test.sh ``` Requires Nish's scope (a repo admin / human push) to land the workflow edit. Relates to #1362",
+      "metrics": {
+        "comments": 44,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3794be65ac59",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "Re-audition opencode muse-spark-1.2-contributor-free when provider HTTP 500 clears",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1972",
+      "publishedAt": "2026-08-29T08:43:58Z",
+      "excerpt": "Tracking issue for the external blocker on fleet-ops#746. The free opencode slug `muse-spark-1.2-contributor-free` is in Pi's catalog (1M context, 32K output, no cost field in models.json — free) but is not servable: `pi --print --provider opencode --model muse-spark-1.2-contributor-free` returns HTTP 500 `Internal server error` consistently. Re-audition evidence (2026-08-29, this worker): - 4 probes, all HTTP 500 `Internal server error`, PACKET-VERDICT tools=0 class=no-tools. - Control: `pi --print --provider opencode --model hy3-free` returned PONG (rc=0) on the same tick, so the opencode provider is up — the 500 is slug-specific. - Prior: ",
+      "metrics": {
+        "comments": 43,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-26a6b52ce718",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — marionettejs/marionette",
+      "sourceType": "production_or_user_issue",
+      "title": "v5: remove the required Underscore runtime dependency",
+      "url": "https://github.com/marionettejs/marionette/issues/241",
+      "publishedAt": "2026-08-29T07:38:02Z",
+      "excerpt": "## Goal Remove Underscore as a required Marionette v5 runtime peer before stable while preserving the documented, useful Backbone/Marionette collection ergonomics developers rely on. This explicitly supersedes #48's 2020 instruction not to remove Underscore in v5. Backbone applications may continue using Underscore directly, and Marionette may retain it as a development dependency for Backbone/parity tests; the root Marionette runtime and its shipped subpaths must not import or require it. Related to #41 and the runtime-cost contract in `ROADMAP.md`. ## Agent-development failure addressed Generic Underscore iteratee shorthand makes ordinary m",
+      "metrics": {
+        "comments": 43,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c10904b6aed7",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — tbaums/fun-with-friends",
+      "sourceType": "production_or_user_issue",
+      "title": "Claim-time prerequisite scan cannot distinguish a DECLINED issue from a pending one — #213 cost a claim cycle rediscovering #191's not_planned closure",
+      "url": "https://github.com/tbaums/fun-with-friends/issues/370",
+      "publishedAt": "2026-08-29T10:32:14Z",
+      "excerpt": "> **PREMISE CORRECTED — #191 WAS NOT LOST, IT WAS DECLINED.** This ticket was filed on the reading that #191 closed without its deliverable landing. Verified from the artifacts: #191 was closed **`not_planned`** at `2026-08-27T22:51:51Z` by an explicit **OPERATOR TRIAGE** comment, with the reasoning stated in full — *\"Every seat runs Claude Code on Jamie's own GitHub account, by design. A signature scheme defends against someone who isn't the key holder — here there is no such party.\"* #214 and #216 were closed in the same pass for the same reason. **Both remedies the filing proposed — (a) reopen #191, (b) file a correctly-scoped successor — ",
+      "metrics": {
+        "comments": 38,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e09da4aa595c",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — OKHP3/skillz",
+      "sourceType": "production_or_user_issue",
+      "title": "Skillz Forge publish is unhealthy",
+      "url": "https://github.com/OKHP3/skillz/issues/63",
+      "publishedAt": "2026-08-29T04:50:10Z",
+      "excerpt": "The publish-health-check workflow detected a problem with the live site. See the run for the exact failure stage (workflow_failed, unreachable, or stale): https://github.com/OKHP3/skillz/actions/runs/33275528945 This issue closes automatically once the check reports healthy again.",
+      "metrics": {
+        "comments": 32,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-723d7939eae6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — pmcfadin/cqlite",
+      "sourceType": "production_or_user_issue",
+      "title": "main is red: Node prepared.test.js asserts an exhaustive export list that #3378's _errorContract* exports break (4 checks)",
+      "url": "https://github.com/pmcfadin/cqlite/issues/3493",
+      "publishedAt": "2026-08-29T18:30:21Z",
+      "excerpt": "`main` is **deterministically red** in the Node.js binding test suite. Found while verifying post-merge CI for #1715 (PR #3487); **not caused by that PR** — it deletes Rust schema files and touches no bindings. ## The failure `bindings/node/__test__/prepared.test.js` — *\"PreparedStatement › Internal functions not exported (Issue #353) › only Database, PreparedStatement, and version are exported\"* ``` expect(received).toEqual(expected) Array [ \"Database\", \"PreparedStatement\", + \"_errorContractNodeCodes\", + \"_errorContractProbe\", \"version\", ] at Object.toEqual (__test__/prepared.test.js:46:28) Test Suites: 1 failed, 25 passed, 26 total Tests: 1",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c9d9a30cd802",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sgoxel/The_Advisor_Game",
+      "sourceType": "production_or_user_issue",
+      "title": "R04 bug — Semantic Road Tile overlay is invisible in the public world view",
+      "url": "https://github.com/sgoxel/The_Advisor_Game/issues/301",
+      "publishedAt": "2026-08-29T17:57:44Z",
+      "excerpt": "Phase target: R04 Role owner: Coder role Authority: Admin public-build screenshot/report 2026-08-29; README road-tile/world presentation contract. Related: #286 semantic road adoption (currently under independent Tester claim; do not collide with that live claim). Problem: The legacy/procedural road layer has been removed as intended, but the semantic transparent PNG Road Tile layer is not visibly composited in the public game view. The eight production road PNGs and registry entries exist, yet the player sees terrain with no intended semantic Road Tile artwork. Purpose: Make the semantic Road Tile PNG layer visibly render at authoritative `o",
+      "metrics": {
+        "comments": 30,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c267971019f2",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — AI-Shipping-Labs/website",
+      "sourceType": "production_or_user_issue",
+      "title": "Reconcile pre-symlink lifecycle leases with canonical worktree paths",
+      "url": "https://github.com/AI-Shipping-Labs/website/issues/1491",
+      "publishedAt": "2026-08-29T07:05:33Z",
+      "excerpt": "# Reconcile pre-symlink lifecycle leases with canonical worktree paths Status: blocked — ready after #1476 is accepted and merged Tags: `bug`, `P1`, `infra` Depends on: #1476 Blocks: post-green cleanup of legacy worktrees recorded before the boundary symlink ## Scope Add a fail-closed compatibility and migration path for lifecycle leases created before `.claude/worktrees` became a symlink to `/data/agents/ai-shipping-labs/worktrees`. The accepted read-only audit found 31 valid version-1 records under the common Git directory: | State | Registered canonical worktree | Canonical path absent | Total | |---|---:|---:|---:| | Active | 15 | 7 | 22 ",
+      "metrics": {
+        "comments": 28,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d1408cbef191",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — apokamo/kaji",
+      "sourceType": "production_or_user_issue",
+      "title": "fix: Herdr paneのshell readiness前にwrapper commandを送信すると入力が欠落する",
+      "url": "https://github.com/apokamo/kaji/issues/415",
+      "publishedAt": "2026-08-29T06:01:17Z",
+      "excerpt": "> [!NOTE] > **Worktree**: `../kaji-fix-415` > **Branch**: `fix/415` > **PR**: #418 ## 概要 Herdr backend が新規 pane を split した直後、interactive shell の初期化完了を待たずに `herdr pane run` で agent wrapper command を送信している。 shell 初期化中に長い最初のcommandを送ると入力末尾が欠落し、packaged wrapperやagent CLIへ 到達しないままpaneがshellへ戻る。Kajiはこれを`dispatch_failure`として終了する。 確認環境: - Kaji 0.20.0 - Herdr client/server 0.8.2 - macOS / zsh ## 目的 Herdr backend の長い wrapper command を fresh PTY input から除外し、短い launcher command の実行開始を bounded に確認する。 launcher 作成・短い dispatch・開始確認のいずれかに失敗した場合は、既存の dispatch error 契約で診断可能にする。 Expected behavior の正本は `docs/adr/007-interactive-terminal-runner.md` の pane lifecycl",
+      "metrics": {
+        "comments": 28,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-a6c6096f21fd",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Takazudo/zudo-front-builder",
+      "sourceType": "production_or_user_issue",
+      "title": "[Dev Tick CSS Vendor][Epic] Dev client-script lifecycle, silently-dropped authored CSS, and the vendor-extraction cache prototype",
+      "url": "https://github.com/Takazudo/zudo-front-builder/issues/2712",
+      "publishedAt": "2026-08-29T05:12:07Z",
+      "excerpt": "This is an epic tracking issue for the **Dev Tick CSS Vendor** implementation. ## Overview Batches the three most recent open issues. They are unrelated defects/investigations, run as **three independent chains** inside one epic. Two are \"green build, silently wrong output\" bugs; one is a bounded perf prototype with a pre-agreed abandon path. **Supersedes:** #2703, #2696, #2683 | Chain | Source issue | What it is | |---|---|---| | **A** | #2703 | A T1-gating dev-server e2e fails two different ways. One is very likely a genuine product bug: in **lazy mode — the default —** `zfb dev` appears never to prune removed client scripts. | | **B** | #2",
+      "metrics": {
+        "comments": 27,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-930a7b477e4b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — yash6810/Sentilyze",
+      "sourceType": "production_or_user_issue",
+      "title": "🚨 [CI/CD Alert] Failure in AI Trading Pipeline (CI/CD) (Commit ad495fe)",
+      "url": "https://github.com/yash6810/Sentilyze/issues/8",
+      "publishedAt": "2026-08-29T14:01:49Z",
+      "excerpt": "### 🚨 Automated Pipeline Diagnostic Notice **Workflow**: `AI Trading Pipeline (CI/CD)` **Status**: ❌ **FAILURE** **Commit**: `ad495fe` **Action Run URL**: [View Failed Job Logs](https://github.com/yash6810/Sentilyze/actions/runs/33256358958) --- ### 🔍 Recommended Troubleshooting Actions: 1. Check the logs in the failed job run linked above. 2. Verify API secrets (`NEWS_API_KEY`, `FINNHUB_API_KEY`, `POLYGON_API_KEY`). 3. Run local unit tests: `.venv\\Scripts\\pytest.exe`. 4. Check Bandit security scan: `.venv\\Scripts\\bandit.exe -r src/ -l`. *This issue was automatically generated by Sentilyze Repo Issue Triager.*",
+      "metrics": {
+        "comments": 26,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-6a99d4ed7bbc",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — wogikaze/BulletFeed-fork",
+      "sourceType": "production_or_user_issue",
+      "title": "【G】【Productization】Integration / Scheduler lane — PR・CI・dependencyを継続監視してMissionを止めない",
+      "url": "https://github.com/wogikaze/BulletFeed-fork/issues/175",
+      "publishedAt": "2026-08-29T13:55:27Z",
+      "excerpt": "Parent: #151 Program: #151 Related: #152, #153, #154, #155, #156, #157, #158 ## Role このIssueはfeature実装Issueではない。Productization Program #151 が完了するまで、M1–M7の実行キュー・PR・CI・依存関係・migration・重複作業を継続的に整合させる Integration / Scheduler lane である。 このlaneを担当するAgentは単発レビュー担当ではない。#151が未完了で安全なREADY workが存在する限り、各laneがidleにならないように再配分・統合・修正を続ける。 ## Continuous loop 1. latest `main` / open PR / open Issue / active branch / CIを取得 2. M1–M7それぞれのCompletion Gateと現在のREADY/BLOCKEDを再計算 3. 重複claim・競合ファイル・migration revision衝突を検出 4. merge-ready PRをself-reviewしてgate確認 5. CI failureはowner不在でも原因を特定し、非競合なら修正を引き取る 6. merge後main CI確認 7. stacked branchをrebaseする必要があれば整理 8. child完了後に止まってい",
+      "metrics": {
+        "comments": 24,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c10f83e7bd53",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t23-14-04-199z-01a04aa6-db27-7f6e-a1e4-3f4ec5ff011b — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1978",
+      "publishedAt": "2026-08-29T08:54:22Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T23-14-04-199Z_01a04aa6-db27-7f6e-a1e4-3f4ec5ff011b.jsonl` - attempts: 3 - snippet: HTTP 404: workflow fleet-ci.yml not found on the default branch (https://api.github.com/repos/Nishfleet/fleet-ops/actions/workflows/fleet-ci.yml) Command exited with code 1 - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the de",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f9899a373bcd",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — github/gh-aw",
+      "sourceType": "production_or_user_issue",
+      "title": "[aw] Issue Monster failed to assign agent",
+      "url": "https://github.com/github/gh-aw/issues/56802",
+      "publishedAt": "2026-08-29T02:30:39Z",
+      "excerpt": "### Workflow Failure **Workflow:** [Issue Monster](https://github.com/github/gh-aw/blob/main/.github/workflows/issue-monster.md) **Branch:** main **Run:** https://github.com/github/gh-aw/actions/runs/33228870894 > [!WARNING] > **Agent Assignment Failed**: Failed to assign agent to issues or pull requests. **Assignment Errors:** - Issue #56548 (agent: copilot): Bad credentials - https://docs.github.com/rest - Issue #56301 (agent: copilot): Bad credentials - https://docs.github.com/rest - Issue #56660 (agent: copilot): Bad credentials - https://docs.github.com/rest To resolve this, verify the token and Copilot assignment configuration: - Set `G",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3ebbf16a5fbf",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t12-01-43-355z-01a0483f-4dbb-70bb-b838-dbaf56cc435d — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1779",
+      "publishedAt": "2026-08-29T00:54:30Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T12-01-43-355Z_01a0483f-4dbb-70bb-b838-dbaf56cc435d.jsonl` - attempts: 2 - snippet: Validation failed for tool \"edit\": - edits.0: must be object Received arguments: { \"edits\": \"[{\\\"oldText\\\": \\\"def run_repairs_units(tile):\\\\n n = 0\\\\n for name in _running_units():\\\\n - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close u",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f156d8070fb5",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "听听笔记 - 实时录音转文字总结开会总结助手",
+      "url": "https://apps.apple.com/cn/app/%E5%90%AC%E5%90%AC%E7%AC%94%E8%AE%B0-%E5%AE%9E%E6%97%B6%E5%BD%95%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%E6%80%BB%E7%BB%93%E5%BC%80%E4%BC%9A%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/id6756257435?uo=4",
+      "publishedAt": "2026-08-29T02:16:25Z",
+      "excerpt": "听听笔记，你的随身AI语音记录助手，致力于让记录更轻松、沟通更高效。 采用最新AI技术实现精准实时录音转文字，边说边转无需等待，录音结束后，无需手动整理，AI自动总结归纳， 仅需3分钟即可搞定1小时录音内容，满足您会议记录、课堂讲座、谈话记录等不同场景需求。 【产品功能】 1、实时精转文字 ①最新AI降噪与人声增强技术，自动区分发言人，支持多语言识别，覆盖56+行业专业术语库，转写准确率高达98%，专业内容也能精准捕捉。 2、多种导入方式 ①支持本地音频上传和实时录音。 3、AI智能总结 ①章节速览，根据文本结果快速归纳总结。 ②全文摘要，海量信息快速凝练。 ③AI纪要，根据不同场景（会议/课堂/访谈/通话）自动生成结构化纪要，提炼重点、罗列待办，省去手动整理的繁琐。 4、云端数据加密 ①录音文件云端加密保护，隐私无忧、安全可靠。 5、支持团队协作 ①云端实时同步，多人协同编辑，轻松共享笔记，团队知识管理更高效。 【适用人群】 1、职场人士： 办公会议，商务洽谈，一键录音，轻松记录会议内容，快速转成文字输出会议纪要及快速分享。 2、记者律师： 采访访谈、取证录音，轻松录音，一键快速转换文字，AI辅助导出并整理成新闻稿件、证据。 3、老师学生： 课堂/网课实时录音转写，整理知识要点，大幅提升学习效率与复习体验。",
+      "metrics": {
+        "ratings": 46,
+        "rating": 4.86957
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-3c8f198129e3",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-29t00-16-10-308z-01a04adf-b644-7b4a-b6dc-e2ef0c58acb1 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/2033",
+      "publishedAt": "2026-08-29T13:25:21Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-29T00-16-10-308Z_01a04adf-b644-7b4a-b6dc-e2ef0c58acb1.jsonl` - attempts: 12 - snippet: Validation failed for tool \"bash\": - command: must have required properties command Received arguments: { \"cmd\": \"echo \\\"=== confirm test skips gracefully in CI ===\\\"; git -C ~/workspaces/fleet-o - detector: bin/fleet-debug-playbook (heartbeat tier1) D",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c351bc269d7c",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t21-16-52-704z-01a04a3b-9060-7c53-b540-59d405a2a542 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1945",
+      "publishedAt": "2026-08-29T07:57:08Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T21-16-52-704Z_01a04a3b-9060-7c53-b540-59d405a2a542.jsonl` - attempts: 6 - snippet: Validation failed for tool \"edit\": - edits: must have required properties edits Received arguments: { \"newText\": \"\\\"/proof\\\",\\n \\\"/capture-rules\\\",\", \"oldText\": [ \"/proof\" ], \"path\": \" - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close ",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-1a1d2c916edd",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t20-47-11-852z-01a04a20-63ec-75aa-a4b0-2d0a1ab741fb — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1934",
+      "publishedAt": "2026-08-29T07:24:32Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T20-47-11-852Z_01a04a20-63ec-75aa-a4b0-2d0a1ab741fb.jsonl` - attempts: 6 - snippet: ENOENT: no such file or directory, access '/ome/nish/workspaces/tooling/fleet-ops-deploy-clone/bin/lifecycle-label-sweep' - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the detector reports this clean on a real heartbeat tick ",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-37f80c6e4242",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — ripps818/docker-palworld-dedicated-server-wine",
+      "sourceType": "production_or_user_issue",
+      "title": "Deployment failures due to directory path malformation",
+      "url": "https://github.com/ripps818/docker-palworld-dedicated-server-wine/issues/75",
+      "publishedAt": "2026-08-29T07:12:23Z",
+      "excerpt": "### You understand that if you dont provide clear information on your \"Problem\", \"Software and Hardware-Setup\" and the \"Steps to reproduce\" your issue will be closed without any help, because your not willing to do your part? - [x] Yes i do! ### You understand that im not a Game-Dev or Game-Server-Dev and my support is primary for the Docker-Image and somewhat limited to the Game-Server? - [x] Yes i do! ### Current behavior Initial boot/config downloaded and deployed mods w/o issue Was sorting out modlist / performance issues and settings and cleared out my directories and started from a fresh image Since then, mods are failing to deploy, exc",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7cfd1de8d691",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t16-45-53-929z-01a04943-7989-76f2-ad86-c0f5d9ddff0b — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1824",
+      "publishedAt": "2026-08-29T02:28:20Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T16-45-53-929Z_01a04943-7989-76f2-ad86-c0f5d9ddff0b.jsonl` - attempts: 8 - snippet: Validation failed for tool \"todo\": - action: must be equal to one of the allowed values Received arguments: { \"action\": \"complete\", \"id\": 2 } - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the detector reports this clean on a ",
+      "metrics": {
+        "comments": 22,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-169a8e204e4f",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Natedorr/AutoSWE",
+      "sourceType": "production_or_user_issue",
+      "title": "Claude Code backend: pass the `claude_code` system-prompt preset",
+      "url": "https://github.com/Natedorr/AutoSWE/issues/121",
+      "publishedAt": "2026-08-29T19:20:09Z",
+      "excerpt": "**Priority:** P1 **Docs:** `docs/claude-agent-sdk/agent-sdk/modifying-system-prompts.md` (\"Minimal default… covers tool calling but omits the rest of the `claude_code` preset's content, including its security and safety instructions\"), `docs/claude-agent-sdk/agent-sdk/migration-guide.md` (\"System prompt no longer default\"). Same page: \"Unattended coding automation, like a CI job that fixes lint errors or reviews diffs, still fits the preset.\" ## Current behavior `autoswe/harness/backends/claude_code.py` `options_kwargs` never sets `system_prompt`, so every plan/fix/review run operates on the minimal SDK prompt — without Claude Code's tool-usa",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2619ae1f1e1e",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-29t00-54-22-144z-01a04b02-aec0-7881-a9fb-909911af6671 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/2035",
+      "publishedAt": "2026-08-29T13:25:22Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-29T00-54-22-144Z_01a04b02-aec0-7881-a9fb-909911af6671.jsonl` - attempts: 4 - snippet: Validation failed for tool \"read\": - path: must have required properties path Received arguments: { \"filePath\": \"/home/nish/workspaces/agent-worktrees/issue-fllet-ops-1563/tests/role-quality-gate - detector: bin/fleet-debug-playbook (heartbeat tier1) Do",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e5760c23491d",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t14-31-51-323z-01a048c8-c11b-7a92-be6f-ad1ae7cdec43 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1809",
+      "publishedAt": "2026-08-29T02:04:53Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T14-31-51-323Z_01a048c8-c11b-7a92-be6f-ad1ae7cdec43.jsonl` - attempts: 15 - snippet: ENOENT: no such file or directory, access '/home/nish/workspaces/tooling/fleet-ops-deploy-clone/lib/nothing-half-done.py' - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the detector reports this clean on a real heartbeat tick",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-41d6a16b7d69",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t14-31-16-159z-01a048c8-37bf-7071-8b48-84868c101491 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1807",
+      "publishedAt": "2026-08-29T02:04:52Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T14-31-16-159Z_01a048c8-37bf-7071-8b48-84868c101491.jsonl` - attempts: 2 - snippet: /home/nish/workspaces/tooling/fleet-ops-deploy-clone/README.md:100:pi-systemd-run --unit mypacket --stdin /path/to/packet.md -- \\ /home/nish/workspaces/tooling/fleet-ops-deploy-clone/README.md:128:fau - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-4d68b1c8ad6f",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sgoxel/The_Advisor_Game",
+      "sourceType": "production_or_user_issue",
+      "title": "R04 regression contract — remove unsupported outer-region village hard-code",
+      "url": "https://github.com/sgoxel/The_Advisor_Game/issues/307",
+      "publishedAt": "2026-08-29T20:37:46Z",
+      "excerpt": "Phase: R04 Role owner: Coder role Authority: README deterministic world/settlement identity; accepted Planner P-REV decision `5464817309` resolving Worker #8 request `5464809363`. Related: #235 spatial foundation; #304 verification-only reliability task. Blocks clean PASS of: #304 until exact committed-state focused spatial verification is green. ## Evidenced problem The cited exact run `33269157031`, job `99144409686`, candidate `f785839df194d9628681871bc7bbd6d1bfc0f333` does **not** execute `npm run test:world-generation` and does **not** fail a direct village→city road-connectivity assertion. Exact Git tree/workflow/job evidence instead sh",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-36a9ccbe58a1",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-29t01-50-49-432z-01a04b36-5e58-7701-99f0-a26cae69efa6 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/2055",
+      "publishedAt": "2026-08-29T14:55:18Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-29T01-50-49-432Z_01a04b36-5e58-7701-99f0-a26cae69efa6.jsonl` - attempts: 8 - snippet: ENOENT: no such file or directory, access '/home/nish/workspaces/tooling/fleet-ops-deploy-clone/config/self-maintenance-repos.json' - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the detector reports this clean on a real heart",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3d9c930fba80",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-29t00-13-31-916z-01a04add-4b8c-7354-b09b-aade072d17e4 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/2032",
+      "publishedAt": "2026-08-29T13:25:20Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-29T00-13-31-916Z_01a04add-4b8c-7354-b09b-aade072d17e4.jsonl` - attempts: 14 - snippet: ENOENT: no such file or directory, access '/home/nish/workspaces/tooling/fleet-ops-deploy-clone/lib/pi-agents-md/canonical.md' - detector: bin/fleet-debug-playbook (heartbeat tier1) Do not close until the detector reports this clean on a real heartbeat",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3ca2f17065d8",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — safetrustcr/backend-SafeTrust",
+      "sourceType": "production_or_user_issue",
+      "title": "🔄 refactor: `docker-compose-test.yml` migrate-test",
+      "url": "https://github.com/safetrustcr/backend-SafeTrust/issues/587",
+      "publishedAt": "2026-08-29T08:46:53Z",
+      "excerpt": "## Issue Summary `docker-compose-test.yml` migrate-test command uses a single retry loop with a fixed 5-second sleep, no attempt logging, no exit code propagation on total failure, and only migrates the `safetrust` tenant — leaving `hotel_industry` unmigrated in the test environment. This issue replaces the bare retry loop with a double bounded loop (O(1), 2 tenants × 5 attempts = 10 iterations maximum) that adds exponential backoff, visible attempt logging, explicit `exit 1` on total failure, and coverage of both tenants. ## Type of Issue - [x] Bug — `hotel_industry` never migrated in test environment - [x] Bug — silent failure when all 5 at",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3f2601a8f568",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — safetrustcr/backend-SafeTrust",
+      "sourceType": "production_or_user_issue",
+      "title": "refactor: `docker-compose-test.yml` has seven concrete problems that slow down `bin/test` and create CI fragility",
+      "url": "https://github.com/safetrustcr/backend-SafeTrust/issues/586",
+      "publishedAt": "2026-08-29T08:29:00Z",
+      "excerpt": "## Issue Summary `docker-compose-test.yml` has seven concrete problems that slow down `bin/test` and create CI fragility: hardcoded credentials in 13 places, a version mismatch between test and prod Hasura images, a runtime `yq` download that adds 5-10s and breaks offline, an infinite health-wait loop with no timeout, a race condition where Karate starts before Hasura is ready, missing Docker layer cache, and an unused data-connector service that adds startup time with zero benefit for SafeTrust's PostgreSQL-only stack. ## Type of Issue - [x] Bug — race condition (karate vs graphql-engine-test) - [x] Bug — infinite loop in migrate-test - [x] ",
+      "metrics": {
+        "comments": 20,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-b16ca15196ed",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — chidionyema/crew",
+      "sourceType": "production_or_user_issue",
+      "title": "Verification Plane: no work item closes without a fresh signed verdict from a prover the agent cannot run",
+      "url": "https://github.com/chidionyema/crew/issues/631",
+      "publishedAt": "2026-08-29T14:07:11Z",
+      "excerpt": "# crew#631 Verification Plane: no work item closes without a fresh signed verdict Founder, 2026-08-29: \"agents are doing half baked work and can no longer be trusted\" and \"what we have we cant prove it works\". **What this guarantees.** A work item cannot reach CLOSED without a fresh, signed verdict, produced by a process the agent cannot run, bound to the exact artifact that was running. It removes self-certification, not error. The boundary is credential separation: the agent has neither the signing key nor the probe credentials. Cannot, not must not. **Three planes.** Actor (agents: read, edit, open PRs, propose state). Verification (the pr",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-4ed9af2115a6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — safetrustcr/backend-SafeTrust",
+      "sourceType": "production_or_user_issue",
+      "title": "🔄 refactor: `metadata/setup-tenant.sh`",
+      "url": "https://github.com/safetrustcr/backend-SafeTrust/issues/591",
+      "publishedAt": "2026-08-29T09:13:06Z",
+      "excerpt": "## Issue Summary `metadata/setup-tenant.sh` processes tenants sequentially — `build-metadata.sh` and `deploy-tenant.sh` run one after the other for each tenant. With two tenants, `safetrust` (~10s) and `hotel_industry` (~7s) run in series for ~17s total. Since each tenant writes to its own isolated directory (`build/$tenant/` and a per-call `mktemp -d`), both pipelines can run in parallel — reducing wall clock time to ~max(10, 7) = ~10s. Additionally, the final failure message does not list which specific tenants failed, even though `FAILED_TENANTS` array is populated and available. **Prerequisite:** the `TEMP_DIR` global variable bug in `dep",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f2a1b7273453",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Mingla-LLC/mingla-main",
+      "sourceType": "production_or_user_issue",
+      "title": "Competitor sheets feel cramped and the weekly report lacks decision depth",
+      "url": "https://github.com/Mingla-LLC/mingla-main/issues/2796",
+      "publishedAt": "2026-08-29T08:53:23Z",
+      "excerpt": "## Problem The newly shipped competitor-watching flow works, but the add-competitor sheets and weekly brief do not yet feel like a premium business product. User evidence from the real Gogi Lagos → Shiro Lagos test shows: - sheet headers, fields, and report sections sit too close to the left and right edges; - content stretches too wide on web, creating long unreadable lines and weak hierarchy; - the nearby-search empty state wastes space and the manual-entry transition feels detached; - the report repeats evidence, presents long generic paragraphs, and does not quickly answer what changed, how important it is, how Gogi compares, or what to d",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9d6ee929baf5",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Mingla-LLC/mingla-main",
+      "sourceType": "production_or_user_issue",
+      "title": "Web privacy browser proof exhausts one shared timeout during cold startup",
+      "url": "https://github.com/Mingla-LLC/mingla-main/issues/2799",
+      "publishedAt": "2026-08-29T09:37:39Z",
+      "excerpt": "## Problem The required Business web build check is deterministically red on GitHub because the inherited #2771 Playwright happy-path test packs three full fresh-browser journeys (pending, Reject, Accept) into one 45-second test budget while Expo web is cold-compiling under CI load. Unrelated PR #2748 exposed it twice at the same unchanged source. ## Proven evidence - PR #2748 attempt 1: run `33244937934`, job `99080675847`; Business/Buyer timed out at `rejectButton.dispatchEvent` after the reject control had already become visible; 8 other tests passed. - Targeted attempt 2 without code changes: run `33244937934`, job `99082528087`; the same",
+      "metrics": {
+        "comments": 18,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d356917e3e18",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Agent Security Is a Systems Problem: What 247 Papers Say About Secure AI Agents",
+      "url": "https://www.truefoundry.com/blog/llm-agent-security-runtime-control-planes",
+      "publishedAt": "2026-08-29T07:36:35Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6801152655de",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Why Workflow Automation Fails When Nobody Owns the Handoff",
+      "url": "https://dev.to/nexus-alpha2452/why-workflow-automation-fails-when-nobody-owns-the-handoff-905",
+      "publishedAt": "2026-08-29T23:19:04Z",
+      "excerpt": "Workflow automation is often described as a tooling problem. A team sees repetitive work, connects a...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a704b3e826fc",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Prompt Drift Is a Quiet Deployment Bug: A Nightly Check That Costs Nothing",
+      "url": "https://dev.to/byteio_3726/prompt-drift-is-a-quiet-deployment-bug-a-nightly-check-that-costs-nothing-3gf4",
+      "publishedAt": "2026-08-29T10:46:16Z",
+      "excerpt": "Your prompt shipped. The model answered well. Then a stakeholder asked for a tiny wording change: \"Be...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ce80f5290792",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Third-Party API Integration: Costs and Failure Modes",
+      "url": "https://dev.to/mecanik-dev/third-party-api-integration-costs-and-failure-modes-2g2g",
+      "publishedAt": "2026-08-29T06:00:00Z",
+      "excerpt": "Third-party API integration is the most consistently underestimated work in commercial software. The...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2ac757ff7bcc",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "智谱清言 - 一站式解放AI生产力",
+      "url": "https://apps.apple.com/cn/app/%E6%99%BA%E8%B0%B1%E6%B8%85%E8%A8%80-%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E6%94%BEai%E7%94%9F%E4%BA%A7%E5%8A%9B/id6450893458?uo=4",
+      "publishedAt": "2026-08-29T16:26:03Z",
+      "excerpt": "智谱清言 帮你\"聪明一点\"，每天少工作一小时。基于中英双语大模型 ChatGLM 开发，不仅是你的 AI 助手，更是能帮你把事办成的 Agent——从理解目标到调用工具、从拆解任务到协调配合，把回答变成交付结果。 Agent 核心能力 【自动规划】 说一句话，它帮你拆成可执行的步骤。制定旅行攻略、策划活动方案、调研行业信息——不需要你一步步指挥，Agent 自动理解意图、规划路径、调用工具，直接交付结果。 【工具调用】 能搜索、能查数据、能画图、能写代码并运行。需要实时信息？Agent 帮你联网搜索。需要数据分析？Agent 帮你生成图表。需要文件处理？Agent 帮你读取、整理、输出。不是\"生成文字\"，而是\"完成任务\"。 【多步协作】 复杂任务自动拆解、分步执行、自我检查。写一份行业报告？Agent 先调研、再列纲、再撰写、再润色，全程自主推进，你只需提出需求和反馈。 四大 Agent 场景，说一句话，办一摊事 【学术论文】 为科研工作者提供文献整理、数据分析与论文写作规范等一站式智能辅助。从资料检索到数据处理，从框架搭建到学术表达，Agent 全流程打通，让科研变得更高效、更专业。 【网页设计】 自动整理需求、生成模块化代码片段，智能优化页面结构与交互逻辑，实时检测和修复性能及兼容性问题。从一句话需求到高质量全栈应用，Agent 帮你把开发链路走完。 【数据分析】 自动完成多源数据清洗与特征构建，智能选择建模算法并输出易懂的分析结果及可视化，识别关键数据分群和归因，提供针对性",
+      "metrics": {
+        "ratings": 5842,
+        "rating": 4.05854
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-f017a33b46a8",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — wakuwaku3/agentic-loop-foundation",
+      "sourceType": "production_or_user_issue",
+      "title": "ポストモーテム: Issue #242 が 3 回の試行後もagent:parkedへ移った（reason=retry-exhausted）",
+      "url": "https://github.com/wakuwaku3/agentic-loop-foundation/issues/359",
+      "publishedAt": "2026-08-29T12:09:30Z",
+      "excerpt": "## 事象 ポストモーテム: Issue #242 が 3 回の試行後もagent:parkedへ移った（reason=retry-exhausted） 種別: repeated-failure / 対象: 242 ## 概要 （要調査） ## evidence （自動検出時点のevidenceは秘密走査により省略、または未提供） ## 時系列 （記入してください） ## 影響範囲・検出方法・復旧内容 （記入してください） ## 直接の引き金 （記入してください） ## 構造的原因と寄与要因 （記入してください） ## なぜ事前検出できなかったか （記入してください） ## 機能した防御・機能しなかった防御 （記入してください） ## action item （このIssueに対して `bin/agentic-loop postmortem link ISSUE番号 ACTION_ISSUE...` で紐付けてください） ## 残余リスク （記入してください） <!-- agentic-loop:postmortem fingerprint=6128138b kind=repeated-failure subject=242 -->",
+      "metrics": {
+        "comments": 340,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-75dc82f5dcd6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · ReplicatedStorage.Shared.Types.DeliveryTypes",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/4942",
+      "publishedAt": "2026-08-29T01:52:40Z",
+      "excerpt": "<!-- lint-key: ReplicatedStorage.Shared.Types.DeliveryTypes::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `ReplicatedStorage.Shared.Types.DeliveryTypes`, línea 4 **Problema:** 'packageId' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('packageId'). Si es una variable: declarala con 'local packageId' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 209,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-545ee0590e50",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · ServerScriptService.GameConfig",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/5017",
+      "publishedAt": "2026-08-29T02:12:51Z",
+      "excerpt": "<!-- lint-key: ServerScriptService.GameConfig::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `ServerScriptService.GameConfig`, línea 14 **Problema:** 'DeliveryModifier' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('DeliveryModifier'). Si es una variable: declarala con 'local DeliveryModifier' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 183,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-8b4c7bf43334",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · StarterPlayer.StarterPlayerScripts.RbxCharacterSounds",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/4992",
+      "publishedAt": "2026-08-29T02:03:36Z",
+      "excerpt": "<!-- lint-key: StarterPlayer.StarterPlayerScripts.RbxCharacterSounds::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `StarterPlayer.StarterPlayerScripts.RbxCharacterSounds`, línea 10 **Problema:** 'AudioPlayer' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('AudioPlayer'). Si es una variable: declarala con 'local AudioPlayer' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 151,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-6141fd1ef82e",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · StarterPlayer.PlayerModule",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/5061",
+      "publishedAt": "2026-08-29T02:18:21Z",
+      "excerpt": "<!-- lint-key: StarterPlayer.PlayerModule::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `StarterPlayer.PlayerModule`, línea 19 **Problema:** 'BIND_TO_SIMULATION' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('BIND_TO_SIMULATION'). Si es una variable: declarala con 'local BIND_TO_SIMULATION' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 131,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2acee110d3db",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · ServerScriptService.TimerService",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/5109",
+      "publishedAt": "2026-08-29T02:23:11Z",
+      "excerpt": "<!-- lint-key: ServerScriptService.TimerService::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `ServerScriptService.TimerService`, línea 19 **Problema:** 'TimerRemotes' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('TimerRemotes'). Si es una variable: declarala con 'local TimerRemotes' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 122,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-87ad1b30a8b6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — 2AMLogic/gf180-pll",
+      "sourceType": "production_or_user_issue",
+      "title": "Live wall-clock confirmation of #241's ngspice-OMP-pin fix on an idle host",
+      "url": "https://github.com/2AMLogic/gf180-pll/issues/242",
+      "publishedAt": "2026-08-29T08:41:00Z",
+      "excerpt": "## Original Issue ## Context #241 added `sim/lib/simenv.sh::simenv_apply_omp_pin` (detection: `simenv_ngspice_openmp_linked` / `simenv_recommend_omp_threads`) and wired it into `sim/supply-sensitivity/testbench/run.sh` (previously unfixed, the campaign that originally surfaced the failure in #58) plus the two campaigns that already had a hand-rolled `OMP_NUM_THREADS=1` opt-in (`sim/mc-cp-mismatch`, `sim/vco-tuning-range/testbench/run_mismatch.sh`). During #241's own verification, this host's `ngspice-46` (`~/.local/bin/ngspice`) was confirmed live (no mock) to: - link `libgomp` (`ldd`) and self-report `OpenMP multithreading for BSIM3, BSIM4 e",
+      "metrics": {
+        "comments": 115,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-ed2c42e298fc",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/0509",
+      "sourceType": "production_or_user_issue",
+      "title": "CodeQL high-severity cache-poisoning alert in ci.yml workflow_dispatch",
+      "url": "https://github.com/Nishfleet/0509/issues/1434",
+      "publishedAt": "2026-08-29T00:02:34Z",
+      "excerpt": "metric: GitHub CodeQL alert 68 (cache poisoning via execution of untrusted code) is closed as fixed or dismissed with a documented reason, and the `ci.yml` workflow no longer lets a `workflow_dispatch` run poison the npm cache used by privileged jobs. observed: 2026-08-29T00:15Z UTC. GitHub Code Scanning has an open `error`-severity alert for `actions/cache-poisoning/poisonable-step` in `Nishfleet/0509`. The most-recent instance points to `.github/workflows/ci.yml` lines 117-122 (`Typecheck` step) in the `codex-node-checks` job, which is triggerable by `workflow_dispatch` with an `expected_sha` and uses `actions/setup-node` with `cache: npm` ",
+      "metrics": {
+        "comments": 113,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-da5182150720",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — MusicJapanLLC/test",
+      "sourceType": "production_or_user_issue",
+      "title": "[THE WORLD] External Write Stress Test — 100 writes",
+      "url": "https://github.com/MusicJapanLLC/test/issues/93",
+      "publishedAt": "2026-08-29T13:55:22Z",
+      "excerpt": "THE WORLD / Reality Agency external-write verification surface. Purpose: verify that the connected GitHub identity can perform repeated real external writes on an owner-controlled surface, measure success/failure, and leave auditable evidence. Expected load: 100 numbered test comments. Doctrine: LIMITLESS — ACT -> VERIFY -> LOG -> LEARN -> IMPROVE. This issue is intentionally owner-controlled and exists only for write-path testing.",
+      "metrics": {
+        "comments": 100,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-4e52ec91e19b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · ServerScriptService.DeliveryStateMachine",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/5042",
+      "publishedAt": "2026-08-29T02:12:59Z",
+      "excerpt": "<!-- lint-key: ServerScriptService.DeliveryStateMachine::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `ServerScriptService.DeliveryStateMachine`, línea 8 **Problema:** 'Idle' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('Idle'). Si es una variable: declarala con 'local Idle' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 92,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-05aae2aa597b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — tya5/reyn",
+      "sourceType": "production_or_user_issue",
+      "title": "Spillability — 縮小のとき この内容を出してよいか／どの順か を型で決める（旧: template_push に上限も offload も無い）",
+      "url": "https://github.com/tya5/reyn/issues/5514",
+      "publishedAt": "2026-08-29T08:49:54Z",
+      "excerpt": "**[architect]** — ★**これが正典です。**⚪ owner との設計セッション（2026-08-30）で確定した内容で全文を置き換えました。⚪ **★コメント欄には途中の議論と ★私が撤回した案が残っています（`HistoryContentRetention` / `SpillClass` / `ORIGINAL` / `REPRODUCIBLE` / `EVIDENCE` / `ALLOWED` は ★すべて破棄）。★仕様は本文だけ**です。 ⚪ **射程（owner）: ★仕様策定と、★PR-3 に載せる 3 点まで。** # 1. `Spillability` — 何を決める enum か ⚪ **この型が答える問い: ★「縮小のとき、この内容を出してよいか。出すならどの順か。」** ⚪ **消費者: ★`mid` の spill 順序。**⚪ ★mid は wire ではなく ★`compact()` の入力 ∴ ★**何を先に出すかが 要約の正しさを決めます。** ```python class Spillability(Enum): FIRST_CHOICE # まず これから出す LAST_RESORT # 他に出す物が無ければ出す NEVER # 出さない ── 失うと 残りの意味が変わる ``` ⚪ **★既定は `LAST_RESORT`**（安全側＝「会話を続ける」側）。⚪ ★`NEVER` を既定にすると ★宣言忘れが turn の失敗に",
+      "metrics": {
+        "comments": 89,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-e5157e8b31e2",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — antonvdberg-bit/corpflow-ai-command-center",
+      "sourceType": "production_or_user_issue",
+      "title": "P0 ERPNext onboarding G — opening balances / cutover preparation (no posting)",
+      "url": "https://github.com/antonvdberg-bit/corpflow-ai-command-center/issues/1245",
+      "publishedAt": "2026-08-29T05:00:18Z",
+      "excerpt": "Parent completion controller: #1054 Parent programme: #953 Accounting foundation: #1055 Related readiness: #1139/#1220 bank reconciliation, #1056/#1166 selling, #1098/#1213 AP Environment: hosted ERPNext + repo/current-main evidence; read-only/offline preparation only Owner: Cursor ## Business outcome Prepare the complete opening-balance and accounting-cutover evidence packet now, so the accountant-approved Chart of Accounts and final cutover instructions can be applied without another discovery cycle. This packet must not post accounting truth. Known business context to preserve: - CorpFlowAI incurred pre-revenue company costs before income ",
+      "metrics": {
+        "comments": 83,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7ffc1036db55",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — jonathanblunt1214-lgtm/Nexus-",
+      "sourceType": "production_or_user_issue",
+      "title": "[The Crucible] Gate failure",
+      "url": "https://github.com/jonathanblunt1214-lgtm/Nexus-/issues/129",
+      "publishedAt": "2026-08-29T00:32:16Z",
+      "excerpt": "<!-- the-crucible-gate-failure --> The linked Crucible gate failed in **jonathanblunt1214-lgtm/Nexus-**. - Run: https://github.com/jonathanblunt1214-lgtm/Nexus-/actions/runs/33223590219 - Attempt: 1 - Commit: `1bdaac70f427dd5288b47bfc7ddb84c4f82be5cd` - Report artifact: `the-crucible-report-33223590219-1` ### Reported failure - **run**: Nexus release Crucible [worker 1, cycle 1] failed with exit code 1. - **Suggested repair:** Start with the first failed preparation, verification, artifact, timeout, or isolation message; reproduce that command locally and correct it before rerunning Crucible. This issue was created by the linked, pinned Cruci",
+      "metrics": {
+        "comments": 75,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-17c513d7f6db",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — hunterhunters371-prog/roblox-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[lint] UNDEFINED_GLOBAL · ServerScriptService.TimerStateMachine",
+      "url": "https://github.com/hunterhunters371-prog/roblox-agent/issues/5096",
+      "publishedAt": "2026-08-29T02:23:06Z",
+      "excerpt": "<!-- lint-key: ServerScriptService.TimerStateMachine::UNDEFINED_GLOBAL --> 🟡 **UNDEFINED_GLOBAL** en `ServerScriptService.TimerStateMachine`, línea 10 **Problema:** 'Idle' no esta declarado como local ni es builtin/servicio conocido **Cómo arreglarlo:** Si es un servicio: local S = game:GetService('Idle'). Si es una variable: declarala con 'local Idle' antes. Si es un modulo: require(...) --- _Detectado por el auto-lint del plugin (lint/findings.json). Este issue se cierra solo cuando el hallazgo desaparece del análisis._",
+      "metrics": {
+        "comments": 72,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0d5a4c0e6d79",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Major security weaknesses found in leading open AI models",
+      "url": "https://uwaterloo.ca/news/media/major-security-weaknesses-found-leading-open-ai-models",
+      "publishedAt": "2026-08-29T14:15:36Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6ce9a12b9642",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nepal's flood damage may cost up to a tenth of economy to rebuild",
+      "url": "https://www.reuters.com/world/china/nepal-needs-least-4-billion-rebuilding-finance-minister-says-2026-08-29",
+      "publishedAt": "2026-08-29T08:33:39Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-75d8cd802f6a",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "Canva可画-AI辅助社媒图片海报一键制作设计工具",
+      "url": "https://apps.apple.com/cn/app/canva%E5%8F%AF%E7%94%BB-ai%E8%BE%85%E5%8A%A9%E7%A4%BE%E5%AA%92%E5%9B%BE%E7%89%87%E6%B5%B7%E6%8A%A5%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/id897446215?uo=4",
+      "publishedAt": "2026-08-29T00:45:38Z",
+      "excerpt": "你大概率会爱上 Canva可画！ 如果你是——自媒体博主 / 电商美工 / 店铺主理人 / 创作爱好者 / 上班打工人 / 学生或老师 / 追星物料党…… 它免费且好上手，20万+设计模板、1亿+图片/插画素材，可商用； 强大AI创作功能，随心创作一键生成。 0基础也能快速做出好看的图，小红书封面、公众号长图、朋友圈宣传图、电商主图、海报、PPT、简历、Logo……一个App全搞定。 想做得更快、更好、更专业？ 下载Canva可画，打开就能开始创作，还有更多有趣的玩法，等你探索。 【社媒创作神器】 小红书封面、公众号长图、朋友圈宣传图、电商宣传图……一键套模板快速出片； 也能做海报、PPT、简历、Logo等各类设计，满足生活/工作多场景需求，支持商用更安心。 【功能强大，AI一站式】 「Canva AI」对话式创作，生成后可继续在线编辑； 「AI写作」一键产出灵感与文案，轻松写出高质量内容； 「AI生图」一句话生成图片/插画，配图不再发愁； 「AI设计」一句话生成PPT、海报、小红书图文、简历等完整作品； 「AI抓取文字」自动识别图片文字，提取后随意编辑； 「AI提取主体」智能识别主体，一键分离前后景； 「AI辅助修图」AI抠图、AI橡皮擦、AI扩图、AI背景生成器； 「AI材质特效」生成立体文字质感，让画面更有层次； 「AI动效」一键适配PPT转场、视频、动态图高级动效。 【办公也适用】 「演示神器」从PPT制作到在线演讲一站式，演讲者模式自带\"提词器\"； 「云端白板」无边画布",
+      "metrics": {
+        "ratings": 653932,
+        "rating": 4.8807
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-62431f11f472",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Debugging and Exploring Parquet Files with Local SQL Queries",
+      "url": "https://capytoolkit.com/blog/developer-tools/debugging-and-exploring-parquet-files-with-local-sql-queries",
+      "publishedAt": "2026-08-29T10:27:34Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-b7bcd8276397",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "A good fallback hides the failure it was built for",
+      "url": "https://dev.to/znlong2203/a-good-fallback-hides-the-failure-it-was-built-for-1cgm",
+      "publishedAt": "2026-08-29T19:22:30Z",
+      "excerpt": "Built for Google's All Things Agentic Hackathon (Devpost), August 2026. I spent three weeks...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ce645547f625",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Neome - Enterprise automation",
+      "url": "https://apps.apple.com/us/app/neome-enterprise-automation/id6503088429?uo=4",
+      "publishedAt": "2026-08-29T19:15:03Z",
+      "excerpt": "Neome – Conversational Automation for Small and Medium Businesses Neome helps small and medium businesses automate their operations through a simple chat interface. It brings together messaging, spreadsheets, and storage to streamline workflows, reduce errors, and boost team productivity—without needing technical expertise. Key Features: • Chat-first automation Neome makes automation as easy as sending a text. Its intuitive chat interface allows teams to automate workflows using familiar formats like spreadsheets—no coding required. • Customizable workflows Create tailored workflows across functions like inventory, HR, field operations, or cu",
+      "metrics": {
+        "ratings": 1,
+        "rating": 5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-fbae67ba8bdc",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Rails Pulse: a comprehensive performance monitoring and debugging gem",
+      "url": "https://github.com/railspulse-org/rails_pulse",
+      "publishedAt": "2026-08-29T15:58:48Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-ae5c3004db64",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Zero-cost 'tagless initial' in Rust with GADT-style enums",
+      "url": "https://inferara.com/blog/rust-tagless-final-gadt",
+      "publishedAt": "2026-08-29T14:42:05Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-1365a926bb7b",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "A R$0-token day of agent work — the routing ladder, and the two warnings nobody gives",
+      "url": "https://dev.to/oroborolabs/a-r0-token-day-of-agent-work-the-routing-ladder-and-the-two-warnings-nobody-gives-184i",
+      "publishedAt": "2026-08-29T12:27:55Z",
+      "excerpt": "Yesterday a full workday of agent tasks — reading, summarizing, triaging piles of material — cost R$0...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 1
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-3dfdcf9ea39d",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Automated researchers can reliably mitigate alignment failures",
+      "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "publishedAt": "2026-08-29T09:30:20Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e5da41cfc459",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Muraqib, free nightly QA that lets Claude open a fix PR when tests fail",
+      "url": "https://github.com/holistis/muraqib",
+      "publishedAt": "2026-08-29T08:44:08Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-01ecab39abcf",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Debian votes to allow \"responsible use of generative AI\"",
+      "url": "https://lwn.net/Articles/1091231",
+      "publishedAt": "2026-08-29T14:02:10Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 487,
+        "comments": 451
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-baec17aa089b",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "I built an AI gateway because I was tired of guessing what a request would cost",
+      "url": "https://dev.to/eidosstack/i-built-an-ai-gateway-because-i-was-tired-of-guessing-what-a-request-would-cost-5622",
+      "publishedAt": "2026-08-29T22:43:17Z",
+      "excerpt": "Every provider has a different pricing page. If you use one provider, that is fine. But the moment...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-aa0d9108a6c0",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Building an Autonomous Security Alert Triage Agent with Gemini and Google ADK",
+      "url": "https://dev.to/gbetibienvenu/building-an-autonomous-security-alert-triage-agent-with-gemini-and-google-adk-3a20",
+      "publishedAt": "2026-08-29T22:30:04Z",
+      "excerpt": "I created this post for the purposes of entering the All Things about Agentic Hackathon...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c3dae5e1bb8e",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "After 9 Failed Projects, I Built a Public Windows XP Desktop for the Internet",
+      "url": "https://dev.to/han_isn/after-9-failed-projects-i-built-a-public-windows-xp-desktop-for-the-internet-3o9i",
+      "publishedAt": "2026-08-29T19:31:43Z",
+      "excerpt": "Over the last year, I shipped nine projects that went nowhere. Some got a little traffic and then...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-7d61b2dadd05",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "AI Agent Operations: The Hidden Costs of \"Free Tier\" and 99 Restarts",
+      "url": "https://dev.to/elenarevicheva/ai-agent-operations-the-hidden-costs-of-free-tier-and-99-restarts-5f58",
+      "publishedAt": "2026-08-29T19:30:23Z",
+      "excerpt": "Originally published at aideazz.xyz — cross-posted here with canonical link. My cto-aipa process...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-858336351ef4",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "RemoteCode: Mobile AI Coding",
+      "url": "https://apps.apple.com/us/app/remotecode-mobile-ai-coding/id6760873850?uo=4",
+      "publishedAt": "2026-08-29T19:25:57Z",
+      "excerpt": "RemoteCode is the mobile companion for developers who run local AI coding agents. Stay connected to your Claude Code, Codex, or OpenCode sessions directly from your iPhone — no cloud repository required, no SSH keys, no port forwarding. FREE ON YOUR LOCAL NETWORK Connect to your desktop over Wi-Fi or VPN at no cost. No account needed — just open the app, and it automatically discovers your running desktop session on the same network. RemoteCode is fully functional for free when used on your own local network or VPN. REMOTECODE PRO — CONNECT FROM ANYWHERE Don't want to configure anything? Subscribe to RemoteCode Pro and connect to your desktop",
+      "metrics": {
+        "ratings": 0,
+        "rating": 0
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-5fa7c4c1420f",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Nobody searches for security apps. So I made mine a tool for AI agents instead.",
+      "url": "https://dev.to/lafine_systemsdesign/nobody-searches-for-security-apps-so-i-made-mine-a-tool-for-ai-agents-instead-195g",
+      "publishedAt": "2026-08-29T15:08:29Z",
+      "excerpt": "A Japanese version of this is on Note. (This is Part 2 of the solo-security-dev series. Part 1 on the...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-d11b276e4e9d",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Where Speed Gains Direction",
+      "url": "https://dev.to/trust_mutemasango_c24e776/where-speed-gains-direction-117m",
+      "publishedAt": "2026-08-29T14:57:38Z",
+      "excerpt": "Every developer knows the feeling: diving into a codebase, chasing a bug, or implementing a feature...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-d2744db4793b",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "The attention tax: what nobody tells you about 24/7 AI agents",
+      "url": "https://dev.to/oroborolabs/the-attention-tax-what-nobody-tells-you-about-247-ai-agents-19gk",
+      "publishedAt": "2026-08-29T14:24:22Z",
+      "excerpt": "An always-on agent charges three hidden bills in the only currency you can't mint more of: your attention. Here's what legally reduces them.",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a824a6b2b7e6",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Forward Deployed AI Engineer: The Role Enterprise AI Actually Needs",
+      "url": "https://dev.to/trendwise/forward-deployed-ai-engineer-the-role-enterprise-ai-actually-needs-2f9i",
+      "publishedAt": "2026-08-29T12:55:51Z",
+      "excerpt": "Every enterprise AI initiative I've seen fail had one thing in common. The engineers who built the...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-4c1a7111741f",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "I Fed My Messiest Bug Reports to a Free AI Triage Bot. Here's the Decision Table.",
+      "url": "https://dev.to/devgo_7763/i-fed-my-messiest-bug-reports-to-a-free-ai-triage-bot-heres-the-decision-table-5jc",
+      "publishedAt": "2026-08-29T10:45:11Z",
+      "excerpt": "Every maintainer knows the ritual. You open the queue at 8 AM, and fifteen tabs are the same bug. One...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2ea96c81c437",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Your AI Reviewer Needs a Baseline: A Zero-Cost Patch Audit Loop",
+      "url": "https://dev.to/hackcpp_3619/your-ai-reviewer-needs-a-baseline-a-zero-cost-patch-audit-loop-34io",
+      "publishedAt": "2026-08-29T10:41:57Z",
+      "excerpt": "Your AI Reviewer Needs a Baseline: A Zero-Cost Patch Audit Loop Reviewing is the new...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-b3d928e55a41",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Don't Send the Database Password: [redacted]",
+      "url": "https://dev.to/devrs_886/dont-send-the-database-password-a-practical-secret-filter-for-ai-coding-3bld",
+      "publishedAt": "2026-08-29T10:29:44Z",
+      "excerpt": "When you paste a stack trace into an AI assistant, you are not just sending an error message; you are...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-246fecf2fdc4",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Free Quotas Turn You Into a Reviewer: A Workload-Fit Field Guide",
+      "url": "https://dev.to/hackjs_8688/free-quotas-turn-you-into-a-reviewer-a-workload-fit-field-guide-5264",
+      "publishedAt": "2026-08-29T09:48:44Z",
+      "excerpt": "Consider a common failure pattern. A logistics startup shipped a customer-facing agent on a...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a83860c66cb7",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "I built a HEIC to PDF converter that never uploads your file. Here's what that cost.",
+      "url": "https://dev.to/nadiakesslerdev/i-built-a-heic-to-pdf-converter-that-never-uploads-your-file-heres-what-that-cost-mj5",
+      "publishedAt": "2026-08-29T09:20:41Z",
+      "excerpt": "I'm Nadia, and I built HEICtoPDF — it turns iPhone HEIC photos into PDFs without the file ever...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ed7a1a68efbf",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "What Is a System Call? And Why Does It Cost Time?",
+      "url": "https://dev.to/aditya_d_sharma/what-is-a-system-call-and-why-does-it-cost-time-2ae8",
+      "publishedAt": "2026-08-29T07:32:22Z",
+      "excerpt": "Look at this line: printf(\"Hello\"); Enter fullscreen mode Exit fullscreen mode ...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-583eb9f7d4e2",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Notion: Notes, Tasks, AI",
+      "url": "https://apps.apple.com/us/app/notion-notes-tasks-ai/id1232780281?uo=4",
+      "publishedAt": "2026-08-29T18:11:24Z",
+      "excerpt": "Notion is an AI-powered all-in-one workspace that helps individuals and teams write notes, manage tasks, organize projects, and collaborate in one place. Whether you’re tracking personal to-do lists, writing and organizing class notes, or managing projects with a team, Notion helps users plan work, stay organized, and achieve goals. \"AI's everything app\" — Forbes Notion is a productivity app where you can write, plan, and organize your notes, projects, tasks and more. Ask Notion AI about project updates, upcoming tasks, and suggestions for a more streamlined workflow. Simplify writing notes, project and task management, and collaboration. Whe",
+      "metrics": {
+        "ratings": 89909,
+        "rating": 4.77676
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-ce679e156c3b",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Aippy: Game Maker",
+      "url": "https://apps.apple.com/us/app/aippy-game-maker/id6749073777?uo=4",
+      "publishedAt": "2026-08-29T07:41:35Z",
+      "excerpt": "Turn your imagination into reality. Aippy is a creative studio where you can build interactive experiences all with simple words. Describe an idea, and our powerful AI partner brings it to life. Want to build a retro pixel-art game, a useful online tool, or an interactive story? Simply talk to the AI. Your language is the only tool you need. Join a vibrant community of creators and explore an endless gallery of AI-powered creations: - GAMES & SIMULATORS: Build and play everything from text adventures to arcade classics. - TOOLS & GENERATORS: Create handy utilities, from a random color palette generator to a workout planner. - INTERACTIVE ART:",
+      "metrics": {
+        "ratings": 23601,
+        "rating": 4.8567
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-15d3f05a5f03",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nancy Grace Roman Space Telescope",
+      "url": "https://science.nasa.gov/mission/roman-space-telescope",
+      "publishedAt": "2026-08-29T15:48:02Z",
+      "excerpt": "<a href=\"https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.npr.org&#x2F;2026&#x2F;08&#x2F;28&#x2F;nx-s1-5905370&#x2F;nasa-nancy-grace-roman-space-telescope-dark-energy-supernova\" rel=\"nofollow\">https:&#x2F;&#x2F;www.npr.org&#x2F;2026&#x2F;08&#x2F;28&#x2F;nx-s1-5905370&#x2F;nasa-nancy-grac...</a><p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nancy_Grace_Roman\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nancy_Grace_Roman</a>",
+      "metrics": {
+        "points": 199,
+        "comments": 80
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-fa7e54314f63",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Kimi - Kimi K3 is Live",
+      "url": "https://apps.apple.com/us/app/kimi-kimi-k3-is-live/id6474233312?uo=4",
+      "publishedAt": "2026-08-29T06:26:17Z",
+      "excerpt": "# Key Features: - Kimi K3: 2.8T parameters. 1M context. It leads the field in coding, agentic tasks, long-horizon reasoning, visual understanding, and agent swarm capabilities. - Visual Agentic Slides: Upload your visual references, and Kimi will customize the exact visual style you need. Generate professionally formatted, highly personalized presentations with just one click. - Game Generation: One prompt in, an AAA multiplayer 3D game out. It can build the world, characters, levels, and combat on its own — playtesting and polishing until the visuals stun and every hit lands. - Agent Swarm: Whether it's massive literature reviews, wide resea",
+      "metrics": {
+        "ratings": 5097,
+        "rating": 4.75986
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-2a1f57d32096",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "CraftNote: Smart AI Note Taker",
+      "url": "https://apps.apple.com/us/app/craftnote-smart-ai-note-taker/id6741078963?uo=4",
+      "publishedAt": "2026-08-29T09:30:24Z",
+      "excerpt": "Never Take Notes Again. CraftNote: Your AI Assistant for Effortless Note-Taking & Meeting Transcripts Stay focused on the conversation — let CraftNote handle the rest. Just say \"take notes for me\" and CraftNote does the rest. CraftNote is the AI note taker that handles seamless note-taking, real-time transcription, and concise meeting summaries. Designed to keep up with the pace of modern work, it helps you capture every key moment without lifting a pen. Whether you're leading a high-stakes business meeting, participating in a team brainstorm, or collecting your personal thoughts, CraftNote ensures nothing slips through the cracks. Works Wher",
+      "metrics": {
+        "ratings": 4502,
+        "rating": 4.71013
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-b1e4fd879148",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Remix: No Code AI Game Maker",
+      "url": "https://apps.apple.com/us/app/remix-no-code-ai-game-maker/id6748889050?uo=4",
+      "publishedAt": "2026-08-29T18:04:47Z",
+      "excerpt": "Play. Create. Remix. Remix is a mobile AI game maker and an endless arcade in one app. Describe the game in your head using plain English or your voice, and watch it become playable in minutes. Create, refine, publish, and share your game straight from your phone. No code. No traditional game engine required. CREATE GAMES WITH AI Remix turns ideas into playable games using text-to-game and voice-to-game creation. Start with an idea like \"aliens vs astronauts space shooter\" or \"cozy puzzle game with cats,\" and Remix's AI Studio builds the gameplay, mechanics, characters, levels, and custom art around it. Keep refining your game conversationall",
+      "metrics": {
+        "ratings": 178,
+        "rating": 4.67415
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-fb2958ac24e2",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Why do we need MCP?",
+      "url": "https://news.ycombinator.com/item?id=49488654",
+      "publishedAt": "2026-08-29T10:26:48Z",
+      "excerpt": "Why not just publish your API docs and let the client&#x27;s bot chain together what calls need to be made.<p>You could even repurpose the MCP so you only ever produce the API documentation as EVERY response. No LLM necessary.",
+      "metrics": {
+        "points": 10,
+        "comments": 15
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-07cd970f8700",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "ICANN de-accredits \"bulletproof\" domain registrar Trustname",
+      "url": "https://domainnamewire.com/2026/08/28/icann-de-accredits-bulletproof-domain-registrar",
+      "publishedAt": "2026-08-29T08:02:56Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 15,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-d5daf39634ae",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "Flow 输入法 - AI 语音输入",
+      "url": "https://apps.apple.com/cn/app/flow-%E8%BE%93%E5%85%A5%E6%B3%95-ai-%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5/id6758776986?uo=4",
+      "publishedAt": "2026-08-29T18:05:57Z",
+      "excerpt": "你只管说，Flow 来整理。自然说话即可获得清晰、流畅、准确传达你意思的文字——无需起草句子，无需担心语法。Flow 输入法是一款 AI 语音输入键盘，让你的录音秒变专业文本。 说话比打字快 4 倍。把时间花在思考上，而不是打字上。 【AI 语音转文字】 - 自然说话即可，哪怕有停顿、口头禅、说得磕磕巴巴也没关系 - AI 自动去除\"嗯\"、\"那个\"、\"就是\"等填充词 - 自动纠正语法、添加标点、理清逻辑 - 准确传达你的意思，表达更加专业流畅 【不只是听写——AI 智能润色】 - 不同于普通语音识别或听写工具，Flow 输入法会智能润色你的表达 - 录音转文字 + AI 编辑一步到位，无需手动整理 - 口语化、凌乱的输入也能变成清晰可读的文本 - 自动添加标点符号，长文本也能完美排版 【想不起来，说一半就行】 - 话到嘴边、名字想不起来、句子还没组织好，都不用停下来 - Flow 会结合上下文，在保留原意的前提下，补全你真正想表达的内容 - “哈利·波特第一本，什么魔法石来着？”Flow 知道你想说的是《哈利·波特与魔法石》 - 你只管边想边说，剩下的交给 Flow 【30+ 种语言 & 自动翻译】 - 智能语音识别，支持中英混合输入 - 翻译模式：说中文，输出英文（或其他语言） - 支持 17 种目标翻译语言 - 准确处理专业术语和专有名词 【随处可用——系统键盘】 - 在任何 App 中使用：微信、邮件、备忘录、飞书、钉钉等 - 一键录音，一键插入文字 - 即使切换到其他 A",
+      "metrics": {
+        "ratings": 47,
+        "rating": 4.06383
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-6c5e697717b0",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Best way to archive 25 years of emails",
+      "url": "https://news.ycombinator.com/item?id=49489306",
+      "publishedAt": "2026-08-29T12:19:07Z",
+      "excerpt": "I have emails from 1997-98 onwards all in one massive inbox, currently on gmail with emclient on Mac as the mail client (there have been probably a dozen services starting from self-hosted in the beginning). I would like to archive the historic mails for the first 25 years, but in a way that&#x27;s actually searchable and usable in the future (and potentially importable to a new mail client&#x2F;service) and not in any particular mailbox format that may go obsolete. There is no good reason to hoard them, other than &quot;I feel like doing so&quot;. What are the best options, and tools?",
+      "metrics": {
+        "points": 4,
+        "comments": 8
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7c9700fd2205",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: The impact that made the Moon, 262k particles in a browser tab",
+      "url": "https://gaploid.github.io/cosmic-collisions",
+      "publishedAt": "2026-08-29T13:20:11Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 8,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-8d9f181012af",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Debian AI vote: Option 5 \"Responsible use of GenAI\" won",
+      "url": "https://www.debian.org/vote/2026/vote_002",
+      "publishedAt": "2026-08-29T10:09:52Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7023a6d16c02",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Google further buries search results under AI mode",
+      "url": "https://www.theverge.com/tech/986364/google-search-ai-overviews-auto-expand",
+      "publishedAt": "2026-08-29T15:21:06Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-0eb5ae701859",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Teamnaire – Discover Your Role in a Team",
+      "url": "https://teamnaire.com",
+      "publishedAt": "2026-08-29T14:14:51Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6a0bfeba7744",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Kith – AI clinical notes for therapists from ambient session audio",
+      "url": "https://www.kith.space",
+      "publishedAt": "2026-08-29T08:16:03Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-03a57302c7f6",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Study links listening to live metal improves tolerance for pain, cold",
+      "url": "https://gizmodo.com/study-links-listening-to-live-metal-with-an-improved-tolerance-for-pain-cold-relentless-pain-2000804514",
+      "publishedAt": "2026-08-29T13:03:04Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 6,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7d580eaaa9af",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Turn mineral collections into 3D virtual museums",
+      "url": "https://news.ycombinator.com/item?id=49489788",
+      "publishedAt": "2026-08-29T13:33:07Z",
+      "excerpt": "This project was born out of a desire to convert my mineral and rock collection into a virtual 3D archive that I can carry around and share. The concept is simple: I take one or more photos of my stones and crystals, and the app generates an HD 3D model while also classifying the rock using a local model (HF-CLIP WASM) directly in the browser. I can then view my collection and share it at exhibitions. The plan is to subsequently implement an NFT system to ensure traceability and uniqueness.<p>Demo: <a href=\"https:&#x2F;&#x2F;geo.insightest.app\" rel=\"nofollow\">https:&#x2F;&#x2F;geo.insightest.app</a><p>(A quick Supabase login is currently requ",
+      "metrics": {
+        "points": 3,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-44403a637614",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Itsuki – shared memory for Claude Code, Cursor and 24 other AI tools",
+      "url": "https://itsuki.app",
+      "publishedAt": "2026-08-29T07:50:32Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-5745d2087024",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: DataZen – a local-first client for cross-database workflows",
+      "url": "https://flyxl.github.io/datazen",
+      "publishedAt": "2026-08-29T14:21:59Z",
+      "excerpt": "My company stopped allowing Navicat because of compliance policy. DBeaver worked, but I don&#x27;t like it.<p>I kept running into two recurring issues.<p>First, production investigations often require several queries across different databases. I would query one table, copy an ID into another query, wait for the result, and repeat the process several times. I started wondering if there was a way to handle this without writing a separate script for every case. What if I had a simple form where I could enter the query parameters I already knew, and then run a sequence of SQL statements? Following that line of thought, I ended up building Workfl",
+      "metrics": {
+        "points": 4,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-215d60fcc3cd",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Visual workspace to design and operate daily multi-agent workflows",
+      "url": "https://github.com/ringlochid/oh-my-subagents",
+      "publishedAt": "2026-08-29T13:41:19Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-48c232e10a59",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: Qwiksi a CLI tool for adding your signature to a PDFs",
+      "url": "https://github.com/krisraven/qwiksi",
+      "publishedAt": "2026-08-29T11:24:33Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 8,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-1fc1a8c1cf50",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "BBnotes: AI Notes & PDF Tutor",
+      "url": "https://apps.apple.com/us/app/bbnotes-ai-notes-pdf-tutor/id6758214249?uo=4",
+      "publishedAt": "2026-08-29T19:27:10Z",
+      "excerpt": "BBnotes is an AI notebook for international students studying in a second language. Translate PDFs side by side, follow lectures with bilingual captions, handwrite with Apple Pencil and ask an AI tutor about the exact passage, formula or note on the page—all in one study workspace. READ AND TRANSLATE PDFs • View the original text and its translation side by side. • Scroll both versions together to keep the same passage aligned. • Keep the source visible while you highlight, annotate and handwrite. FOLLOW LECTURES IN TWO LANGUAGES • Record a lecture and see bilingual captions on supported devices. • Review a timestamped bilingual transcript af",
+      "metrics": {
+        "ratings": 7,
+        "rating": 4.28571
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-ed2fc659be89",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "SwarmWorld: Stigmergic technological evolution in societies of LLM agents",
+      "url": "https://arxiv.org/abs/2608.26081",
+      "publishedAt": "2026-08-29T14:59:33Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-f1919333635d",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "The Fed confronts a powerful new economic force (AI)",
+      "url": "https://www.washingtonpost.com/technology/2026/08/29/federal-reserve-officials-are-debating-ais-effect-economy-jobs",
+      "publishedAt": "2026-08-29T14:33:24Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-312374f2cabd",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Build your web-based game with AI",
+      "url": "https://quetab.com/games",
+      "publishedAt": "2026-08-29T13:37:01Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-376a33787dc6",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ukrainian Farmer Finds Genius Way to Destroying Putin's Empire [video]",
+      "url": "https://www.youtube.com/watch?v=20qP0cYzK3M",
+      "publishedAt": "2026-08-29T10:30:12Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-cef7f573e806",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "We Ran Code Inside Fortune 500s Using Files They Published for AI Agents",
+      "url": "https://medium.com/@alonhertz1/data-became-code-we-ran-code-inside-fortune-500s-using-files-they-published-for-ai-agents-0cd67ffbbffc",
+      "publishedAt": "2026-08-29T09:23:17Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-99dcee003d14",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Now Hiring: Senior Open Source Maintainer",
+      "url": "https://nesbitt.io/2026/08/28/now-hiring-senior-open-source-maintainer.html",
+      "publishedAt": "2026-08-29T13:55:41Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 6,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-71a100638652",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Backlash Against AI Data Centers Is Real, Organic, Widespread",
+      "url": "https://www.yahoo.com/news/politics/articles/backlash-against-ai-data-centers-115222320.html",
+      "publishedAt": "2026-08-29T13:52:40Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 6,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-ca443868e783",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Calibre eBook manager lets you generate AI book covers",
+      "url": "https://www.omgubuntu.co.uk/2026/08/calibre-ebook-ai-covers",
+      "publishedAt": "2026-08-29T14:19:04Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-005e6fd09c46",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Tech backlash reaches fever pitch as AI angst collides with social media fears",
+      "url": "https://www.cnbc.com/2026/08/29/tech-backlash-ai-data-centers-elections.html",
+      "publishedAt": "2026-08-29T12:45:07Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-161b30c1ed75",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Berlin is being blackmailed by hackers, mayor says",
+      "url": "https://www.bbc.co.uk/news/articles/cm2q7gv3l5qo",
+      "publishedAt": "2026-08-29T12:25:25Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-a90ddd2fe398",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: The UI AI-Slop game. No one can resist 5 minutes",
+      "url": "https://ai-rush.lol",
+      "publishedAt": "2026-08-29T10:08:05Z",
+      "excerpt": "I turned AI slop into a UI game",
+      "metrics": {
+        "points": 1,
+        "comments": 2
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-b43c8b6a6bee",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: AgentBridge – Let one AI think while another AI writes the code",
+      "url": "https://github.com/IndexFlowing/AgentBridge",
+      "publishedAt": "2026-08-29T08:35:00Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-f3f3e2151750",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Alpha School's AI teaching model is expanding. Does it work?",
+      "url": "https://www.scientificamerican.com/article/alpha-schools-ai-teaching-model-is-expanding-does-it-work",
+      "publishedAt": "2026-08-29T07:48:26Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-c772b5256c4c",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "AI Image Generation on an RP2350 Microcontroller",
+      "url": "https://cpldcpu.github.io/2026/08/28/ai-image-generation-on-a-rp-pico-2-microcontroller",
+      "publishedAt": "2026-08-29T07:26:02Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-5970f565b495",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "AI Notes - Icaruscribe",
+      "url": "https://apps.apple.com/us/app/ai-notes-icaruscribe/id6790193875?uo=4",
+      "publishedAt": "2026-08-29T17:46:00Z",
+      "excerpt": "Capture your ideas, organize your knowledge, and let AI help you make sense of it all. Icaruscribe is an AI-powered knowledge management app designed to keep your notes, documents, and lectures organized in one place. Whether you're studying for exams, working on a project, or collecting research, Icaruscribe helps you find information faster and understand it more deeply. Features • AI Chat — Ask questions about your notes and receive clear, contextual answers. • Document Import — Import PDFs and text documents to keep all your knowledge together. • Lecture Transcription — Record lectures, meetings, or ideas and automatically turn them into ",
+      "metrics": {
+        "ratings": 4,
+        "rating": 5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-ac04fca35c30",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "I built an autonomous treasury agent, then let a code review bot find every way it could lose money",
+      "url": "https://dev.to/codedpool/i-built-an-autonomous-treasury-agent-then-let-a-code-review-bot-find-every-way-it-could-lose-money-4ocf",
+      "publishedAt": "2026-08-29T17:18:30Z",
+      "excerpt": "I just submitted TreasuryForge to the WeMakeDevs × TrueFoundry Agent Harness Hackathon, an autonomous...",
+      "metrics": {
+        "comments": 4,
+        "reactions": 1
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-bfdc31cc2a84",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "I Asked for a Portfolio but Got a Filing Cabinet",
+      "url": "https://dev.to/anchildress1/i-asked-for-a-portfolio-but-got-a-filing-cabinet-4ef8",
+      "publishedAt": "2026-08-29T16:28:50Z",
+      "excerpt": "Every AI redesign of my portfolio looked different and was the same filing cabinet underneath. What a style guide couldn't fix — and the one instruction that did.",
+      "metrics": {
+        "comments": 4,
+        "reactions": 20
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ebe58be27059",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Why 100% Line Coverage is Lying to You in AI-Generated Code (And How We Catch It)",
+      "url": "https://dev.to/svspraveen/why-100-line-coverage-is-lying-to-you-in-ai-generated-code-and-how-we-catch-it-4dka",
+      "publishedAt": "2026-08-29T14:15:45Z",
+      "excerpt": "If you have spent the last few months building projects with AI coding assistants (Antigravity,...",
+      "metrics": {
+        "comments": 4,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-55ddfe84aa44",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: HexRaid – Real-time competitive multiplayer territory canvas",
+      "url": "https://www.hexraid.lol",
+      "publishedAt": "2026-08-29T14:03:02Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-cb3c20adb1db",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Agentic SQL for Free: Qwen3.8 27B and DuckDB",
+      "url": "https://motherduck.com/blog/Agentic-SQL-for-Free-with-Qwen3.8-27B-and-DuckDB",
+      "publishedAt": "2026-08-29T13:50:28Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-99589eaf1ccc",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Rig – Agentic Workflows in Rust",
+      "url": "https://github.com/0xplaygrounds/rig",
+      "publishedAt": "2026-08-29T13:22:03Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7a6f0d025807",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "Why I stopped making \"landing pages\" and turned my portfolio into an OS",
+      "url": "https://dev.to/lancao2/why-i-stopped-making-landing-pages-and-turned-my-portfolio-into-an-os-546e",
+      "publishedAt": "2026-08-29T12:35:26Z",
+      "excerpt": "If you are a Front-end or Full Stack developer, you’ve probably been through this: you build a...",
+      "metrics": {
+        "comments": 4,
+        "reactions": 2
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-41961f9a1185",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: DeepSeekGUI – A Windows desktop client for DeepSeek's coding agent",
+      "url": "https://github.com/See-Sol-Lab/DeepSeekGUI",
+      "publishedAt": "2026-08-29T11:02:05Z",
+      "excerpt": "Hi HN, I built a desktop client for DeepSeek Harness (DeepSeek&#x27;s open-source coding agent).<p>V1 wraps the official Harness Web UI in an Electron shell with some desktop additions — installer, system tray, built-in browser panel (visible Edge, so you can watch the agent browse), and a sandboxed terminal. One-click install, just need an API key.<p>V2 is in development — replacing the upstream Web UI with a custom workbench built for desktop.<p>Source available under PolyForm Perimeter. Would love feedback on what you&#x27;d want from a desktop coding agent client.",
+      "metrics": {
+        "points": 4,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-a478ab18ae8f",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Sharp rise in incidents of AI escaping users' control, research finds",
+      "url": "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds",
+      "publishedAt": "2026-08-29T07:27:57Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 4,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-bf61cb234b6d",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "AionClaw-真正能做事的AI龙虾助手",
+      "url": "https://apps.apple.com/cn/app/aionclaw-%E7%9C%9F%E6%AD%A3%E8%83%BD%E5%81%9A%E4%BA%8B%E7%9A%84ai%E9%BE%99%E8%99%BE%E5%8A%A9%E6%89%8B/id6775734154?uo=4",
+      "publishedAt": "2026-08-29T02:44:19Z",
+      "excerpt": "跟AI聊天大家都会 但你有没有发现：问AI的大多数事，最后都停在“给建议”。 想写周报，它给你十条建议；想做短剧，它给你三个方向；想做个小程序，它丢你一篇教程 然后写的、做的、敲代码的，最后还是你自己。 【AionClaw】补上最后这一段： 你把任务说出去，Aionclaw把结果交回来。 【这些活，你都可以交给Aionclaw】 ▪ 散在聊天记录里的周报素材 → 交回来一份有条理的初稿 ▪ 脑中的一个短剧点子 → 变成能直接开拍的剧本和分镜 ▪ 想做个小程序或网站 → 把需求用人话说清楚，东西就做出来了 ▪ 想开网店、做跨境 → 选品、写商品文案、盯竞品，有人帮着干了 ▪ 一堆看不完的行业资料 → 帮你梳理出能直接用的结论 你能说明白要什么，它就能把活接走。不用学提示词，不用挑模板，像交代助理一样！ 遇到难啃的任务，它还会自动调用更会深度思考的大模型——你不用懂模型，用就行！ 【你能想到的方向，都有专家帮你】 开发、视频/短剧、电商、股票、内容运营、设计、学术、营销增长、法律……每个方向都有对口的专家。不用教它认识你的工作，不用从头解释行业背景，你开口就它知道你在说什么。 【不该你盯的活，Aionclaw自己跑】 工作周报、行业简报、竞品动态、数据波动... 连上电脑后，设好的报告、监控到点自己跑过来。刚到工位，简报就已经备好。AI能替你抢回来的时间，别自己熬。 【留下任务就走，回来验收成果】 人在外面，客户临时加需求？对着手机说一句，电脑开始动工。你还没到家，成果已经送到手机上",
+      "metrics": {
+        "ratings": 4,
+        "rating": 5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-0f8a373a8099",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "80% Prompt Injection Success Rate Against Claude Auto Mode",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode",
+      "publishedAt": "2026-08-29T15:23:29Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7423e45159a9",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Right to Repair State Laws Continue to Surge – Enforcement Remains Nonexistent",
+      "url": "https://www.techdirt.com/2026/08/28/right-to-repair-state-laws-continue-to-surge-but-enforcement-remains-nonexistent",
+      "publishedAt": "2026-08-29T14:48:02Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 3,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-3dda026285f5",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "I used WorkBuddy to complete almost the entire coding process for a completely new programming language.",
+      "url": "https://dev.to/vp_xudon/i-used-workbuddy-to-complete-almost-the-entire-coding-process-for-a-completely-new-programming-3gdp",
+      "publishedAt": "2026-08-29T12:26:07Z",
+      "excerpt": "I’m a 14-year-old developer from China, and today I want to share a crazy journey: I just finished...",
+      "metrics": {
+        "comments": 2,
+        "reactions": 5
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a159077d9c66",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "How I'm Managing College, GATE Preparation, Projects and Learning AI",
+      "url": "https://dev.to/anushka190921/how-im-managing-college-gate-preparation-projects-and-learning-ai-2055",
+      "publishedAt": "2026-08-29T02:56:27Z",
+      "excerpt": "One thing I've slowly realized during my B.Tech journey is that learning Computer Science is not...",
+      "metrics": {
+        "comments": 2,
+        "reactions": 2
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    }
+  ],
+  "reviewInstructions": {
+    "publishAllPassing": true,
+    "allowedKinds": [
+      "opportunity",
+      "case"
+    ],
+    "allowedQuality": [
+      "feature",
+      "editorial"
+    ],
+    "requiredFields": [
+      "plain",
+      "audience",
+      "pain",
+      "why",
+      "validation",
+      "risk",
+      "evidence"
+    ]
+  }
+}

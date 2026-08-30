@@ -1,0 +1,1093 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-08-29",
+  "generatedAt": "2026-08-30T17:59:14.208950+08:00",
+  "status": "ready_for_review",
+  "counts": {
+    "fullCandidates": 150,
+    "queuedCandidates": 48,
+    "overflowCandidates": 102,
+    "sourceFailures": 5
+  },
+  "queueStrategy": {
+    "name": "source_diverse_ranked_v1",
+    "limit": 48,
+    "initialCaps": {
+      "GitHub": 20,
+      "Hacker News": 14,
+      "DEV.to": 8,
+      "App Store": 5,
+      "other": 1
+    },
+    "selectedByGroup": {
+      "GitHub": 21,
+      "Hacker News": 14,
+      "DEV.to": 8,
+      "App Store": 5,
+      "other": 0
+    },
+    "fullCandidatePath": "candidates/2026-08-29.json",
+    "note": "The full candidate archive is retained; this queue bounds unattended ChatGPT review time."
+  },
+  "sources": [
+    {
+      "source": "Hacker News",
+      "status": "ok",
+      "count": 105,
+      "detail": "observed=300; added_after_dedupe=105",
+      "sourceType": "public"
+    },
+    {
+      "source": "GitHub Issues",
+      "status": "ok",
+      "count": 199,
+      "detail": "observed=300; added_after_dedupe=199",
+      "sourceType": "public"
+    },
+    {
+      "source": "DEV.to",
+      "status": "ok",
+      "count": 77,
+      "detail": "observed=400; added_after_dedupe=77",
+      "sourceType": "public"
+    },
+    {
+      "source": "V2EX",
+      "status": "ok",
+      "count": 0,
+      "detail": "observed=39; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty",
+      "count": 0,
+      "detail": "observed=0; added_after_dedupe=0",
+      "sourceType": "public"
+    },
+    {
+      "source": "App Store Search",
+      "status": "ok",
+      "count": 19,
+      "detail": "observed=470; added_after_dedupe=19",
+      "sourceType": "runtime_visible_public_api"
+    },
+    {
+      "source": "Reddit",
+      "status": "rate_limited_or_blocked",
+      "count": 0,
+      "detail": "HTTP 403",
+      "sourceType": "public"
+    },
+    {
+      "source": "Product Hunt",
+      "status": "not_configured",
+      "count": 0,
+      "detail": "Official API credential is not configured; skipped.",
+      "sourceType": "credential_required"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "No stable credential-free date-bounded endpoint.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "微博",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "count": 0,
+      "detail": "Remote collector does not use browser sessions or cookies.",
+      "sourceType": "manual"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-d144952d50b4",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — safetrustcr/backend-SafeTrust",
+      "sourceType": "production_or_user_issue",
+      "title": "refactor(infra): optimize docker-compose.yml — env vars, cross-platform cache, and remove hardcoded secrets",
+      "url": "https://github.com/safetrustcr/backend-SafeTrust/issues/585",
+      "publishedAt": "2026-08-29T07:45:34Z",
+      "excerpt": "## Issue Summary `docker-compose.yml` has three categories of problems: a hardcoded admin secret, a broken cross-platform cache path, and missing environment variable coverage for service configuration. This issue fixes all three without changing container behavior, port mappings, or network topology. ## Type of Issue - [x] Bug — hardcoded secret - [x] Performance — cache path fix - [x] Other — Developer Experience ## Current Behavior ```yaml # Problem 1 — hardcoded admin secret (security) graphql-engine: environment: HASURA_GRAPHQL_ADMIN_SECRET: \"myadminsecretkey\" ← hardcoded # Problem 2 — absolute cache path (breaks macOS Docker Desktop) we",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-d9402a7a853e",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(failed-command): 2026-08-28t05-24-39-257z-01a046d3-c6d9-77cf-a073-1e3b7ea92940 — failed command walked past, never flagged",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1876",
+      "publishedAt": "2026-08-29T04:55:00Z",
+      "excerpt": "<!-- possible-duplicate-of: Nishfleet/fleet-ops#1757 score=0.61 --> Possible duplicate of Nishfleet/fleet-ops#1757 (score 0.61). Weekly Review: confirm or close as duplicate. The session-close lint (fleet-ops#535, standing rule: a failed command is ALWAYS flagged) found a Pi toolResult with a non-zero exit / isError / timeout and no later assistant text naming the failure. - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T05-24-39-257Z_01a046d3-c6d9-77cf-a073-1e3b7ea92940.jsonl` - snippet: Validation failed for tool \"structured_output\": - actionItems.0: must be string Received arguments: { \"headline\": \"machinery-gate landed o",
+      "metrics": {
+        "comments": 66,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-77cad6bf9187",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "commandcode deepseek/deepseek-v4-flash out of credits (insufficient credits)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1890",
+      "publishedAt": "2026-08-29T05:16:56Z",
+      "excerpt": "While running the fleet-eval admission bench for fleet-ops#742 (commandcode minimax/minimax-m3-free), the commandcode incumbent `deepseek/deepseek-v4-flash` failed a live `pi --print` tool-using packet with: \\`\\`\\` 400: {\"message\":\"You have insufficient credits to make this request. Please purchase more credits to continue using the service.\",\"type\":\"invalid_request_error\",\"code\":\"BAD_REQUEST\"} \\`\\`\\` PACKET-VERDICT tools=0 class=no-tools; rc=1. The candidate slug (minimax/minimax-m3-free) succeeded on the same packet (ANSWER=42, tools=1 class=worked, cost.total=0). This is a pre-existing fault found during #742's bench and is out of #742's s",
+      "metrics": {
+        "comments": 48,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-fd224dfcca68",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — phamhuubinh/infrastructure-agent",
+      "sourceType": "production_or_user_issue",
+      "title": "[Tools] Harden progressive-exposure recovery for Project knowledge retrieval",
+      "url": "https://github.com/phamhuubinh/infrastructure-agent/issues/111",
+      "publishedAt": "2026-08-29T13:58:51Z",
+      "excerpt": "## Problem Owner-only live smoke for #108 exposes a repeatable Project-knowledge failure that is not explained by Project scope storage itself. At commit `0d70e2d4577fa2b8703c54239b3b8c1ed55cb4a0` with `ORION_QA_REQUEST_TIMEOUT_SECONDS=180`: - `session-document` passes; - `project-shared-document` failed 3/3 isolated reruns: two `ScenarioFailure`, one `QARequestTimeout`; - diagnostic timeline for a `ScenarioFailure` showed: - model called `knowledge.read` before expansion -> error; - model then called `orion.tools.expand` once; - later `knowledge.read`, `knowledge.list_documents`, and `knowledge.search` all returned errors; - no knowledge sou",
+      "metrics": {
+        "comments": 36,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f02bd63641e1",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — xqliu/orbi",
+      "sourceType": "production_or_user_issue",
+      "title": "P0 Bug：第三方 provider 启动时 Pi settings/models 不一致且 API key 注入未闭环",
+      "url": "https://github.com/xqliu/orbi/issues/172",
+      "publishedAt": "2026-08-29T03:19:35Z",
+      "excerpt": "## Problem 第三方 provider 的端到端运行链路目前不可用。Runner 可以生成并传递 `--provider`/`--model`，但 Pi 启动阶段会卡在 `starting`，无法创建 session，也不会发出第一条模型请求。 ## Evidence - NVIDIA `nvidia-build / moonshotai/kimi-k3`：独立 `hello world` 请求成功，但通过 Runner 启动后卡在 `starting`。 - Groq `groq / qwen/qwen3.8-27b`：通过 Runner 启动后复现相同问题。 - 本地默认 Qwen：去掉 provider/model 参数后仍复现相同问题。 - 三次运行均没有创建 `.pi-session/*.jsonl`，没有产生 session activity。 - 三次运行均出现： ```text Warning: No models match pattern \"openai/gpt-5.6-sol\" Warning: No models match pattern \"openrouter/stealth/ox-alpha\" ``` Runner 为每次 run 物化了新的 `models.json`，但继续复用用户全局 `settings.json`。全局 settings 的 `defaultProvider`、`defaultModel` 和 `enabledMode",
+      "metrics": {
+        "comments": 31,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-2e3f93b89d73",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "Yore - AI 记事与智能提醒",
+      "url": "https://apps.apple.com/cn/app/yore-ai-%E8%AE%B0%E4%BA%8B%E4%B8%8E%E6%99%BA%E8%83%BD%E6%8F%90%E9%86%92/id6757142701?uo=4",
+      "publishedAt": "2026-08-29T19:29:52Z",
+      "excerpt": "Yore (优尔) 是一款用 AI 帮你记录、整理并提醒重要信息的 App。 把文字、截图或语音交给 Yore，它会理解内容、提取重点，自动生成笔记、待办、日程和账目；也能识别票券、取餐码与取件码，并在需要的时候提醒你。 你只需要记录一次，剩下的交给 Yore。 【核心功能】 • AI 笔记与待办 理解聊天记录、会议内容、学习计划和临时灵感，自动整理成清晰的笔记与待办事项。 • 智能日程、提醒与闹钟 识别日期、时间、地点和时间段，自动生成待办或日程，可同步到 iOS「提醒事项」与「日历」，重要事项还可以创建系统「闹钟」。 • 票券智能识别 识别机票、高铁票和电影票，自动提取时间、地点等重要信息，并通过「灵动岛」快速查看。 • 取餐码与取件码 自动识别取餐码和取件码，并持续显示在「灵动岛」。即使离开 App，也能快速查看，无需反复翻找聊天记录和短信。 • AI 记账 识别文字和截图中的金额与交易信息，自动生成账目，让日常记账更简单。 • 快捷记录 配合快捷指令，无需打开 App，也能快速记录文字、截图、语音和剪贴板内容。 Yore 不只是一个记事工具，也不只是回答问题的 AI。 它是你的个人 AI Agent：帮你理解信息、整理内容、创建事项，并在重要的时候提醒你。 把零散的信息交给 Yore，把注意力留给真正重要的生活。 隐私政策: https://c.team/PrivacyPolicy.html",
+      "metrics": {
+        "ratings": 59,
+        "rating": 4.83051
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-ffd40807301c",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t23-07-44-820z-01a04aa1-1134-7e4b-afdb-0e289761e55a — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1975",
+      "publishedAt": "2026-08-29T08:54:19Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T23-07-44-820Z_01a04aa1-1134-7e4b-afdb-0e289761e55a.jsonl` - attempts: 2 - snippet: ls: cannot access '/home/nish/workspaces/fleet-completion-canary/': No such file or directory --- /home/nish/workspaces/tooling/fleet-ops-deploy-clone/tests/fleet-completion-canary.test.sh /home/nish/ - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 23,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0fe4582a9892",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t19-17-26-389z-01a049ce-36f5-743f-8e63-1dead7aa0286 — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1879",
+      "publishedAt": "2026-08-29T04:55:23Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T19-17-26-389Z_01a049ce-36f5-743f-8e63-1dead7aa0286.jsonl` - attempts: 2 - snippet: ls: cannot access '/home/nish/workspaces/tooling/fleet-ops-deploy-clone/bin/fleet-rule-coverage*': No such file or directory /home/nish/workspaces/tooling/fleet-ops-deploy-clone/bin/fleet-escalation-c - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-61b984de2969",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "fix(debug-playbook): 2026-08-28t19-01-02-101z-01a049bf-3215-7faf-9901-c146c47dbb9d — multi-attempt debug with no playbook note",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1878",
+      "publishedAt": "2026-08-29T04:55:22Z",
+      "excerpt": "The session-close lint (fleet-ops#522, standing rule: debugging sessions end with a playbook note) found a Pi session with two or more real failed attempts and no four-heading vault playbook (SIGNATURE / ROOT CAUSE / FIX THAT WORKED / DEAD ENDS). - session: `/home/nish/.pi/agent/sessions/--home-nish--/2026-08-28T19-01-02-101Z_01a049bf-3215-7faf-9901-c146c47dbb9d.jsonl` - attempts: 4 - snippet: /bin/bash: -c: line 1: syntax error near unexpected token `2' /bin/bash: -c: line 1: `cd /home/nish/workspaces/tooling/fleet-ops-deploy-clone && for f in ~/.local/bin/sgscan ~/.local/bin/crgate 2>/dev - detector: bin/fleet-debug-playbook (heartbeat tier",
+      "metrics": {
+        "comments": 21,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-14336db4c313",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Matt17BR/openwrangler",
+      "sourceType": "production_or_user_issue",
+      "title": "Split extension-host acceptance and browser harness ownership",
+      "url": "https://github.com/Matt17BR/openwrangler/issues/900",
+      "publishedAt": "2026-08-29T20:11:50Z",
+      "excerpt": "## Problem The extension-host acceptance dispatcher is about 20,000 lines and the accessibility/browser harness is about 3,300 lines. Unrelated installed journeys and synthetic fixtures share setup, state, and failure handling, so a small contract change can invalidate a broad harness. ## Scope Separate real product journeys and browser fixture ownership at cohesive boundaries. Delete obsolete fixtures and shared setup that has no distinct failure owner. Non-goals: a new test framework, selector registry, duplicate installed journey, or weaker accessibility and artifact checks. ## Acceptance - Installed-editor, notebook, Native-R, grid, Code ",
+      "metrics": {
+        "comments": 19,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-49c4a68e5950",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — felipe-nomelini/vortek",
+      "sourceType": "production_or_user_issue",
+      "title": "[CRITICAL] Integração com problema",
+      "url": "https://github.com/felipe-nomelini/vortek/issues/231",
+      "publishedAt": "2026-08-29T05:32:16Z",
+      "excerpt": "## Integração com problema WAHA: SCAN_QR_CODE ## Contexto - Tipo: integration_status - Severidade: critical - Dedupe: integration_status:WAHA: SCAN_QR_CODE - Fingerprint: vortek-fingerprint:integration_status:integration_status:WAHA: SCAN_QR_CODE - Criado em: 2026-08-29T05:32:16.637Z ## Payload sanitizado ```json { \"ml\": { \"state\": \"ok\", \"blocked_until\": null, \"last_refresh_at\": \"2026-08-29T04:22:33.339+00:00\", \"last_refresh_error\": null, \"last_refresh_error_code\": null, \"conectado\": true, \"read_ok\": true, \"read_error\": null, \"has_access_token\": true, \"has_refresh_token\": true, \"token_expires_at\": \"2026-08-29T10:22:33.339+00:00\", \"token_expir",
+      "metrics": {
+        "comments": 1718,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7d30b7925869",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension",
+      "sourceType": "production_or_user_issue",
+      "title": "v0.1 Coordination / Live Checkpoints",
+      "url": "https://github.com/Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension/issues/1",
+      "publishedAt": "2026-08-29T11:54:04Z",
+      "excerpt": "# ChatGPT Autopilot Extension — v0.1 coordination This issue is the canonical GitHub checkpoint thread for the initial v0.1 build until a more specific coordination structure is created. ## Live repository Actual current repository name/URL as created on 2026-08-29: https://github.com/Oleksii-debug/ChatGPT-Autopilot-ExtensionChatGPT-Autopilot-Extension The older Drive/package target `Oleksii-debug/ChatGPT-Autopilot-Extension` currently does not resolve because the created repository name was duplicated. Do not treat that 404 as a missing-repository blocker. Do not rename/delete the repository without owner approval. Initial main SHA: `f7fd64e",
+      "metrics": {
+        "comments": 247,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9557b9dfff9d",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — chidionyema/idp",
+      "sourceType": "production_or_user_issue",
+      "title": "P0: Flux cannot reconcile Kustomization/hermes-agent.flux-system",
+      "url": "https://github.com/chidionyema/idp/issues/877",
+      "publishedAt": "2026-08-29T22:31:39Z",
+      "excerpt": "health check failed after 10m0.042119241s: timeout waiting for: [Deployment/hermes-agent/hermes-agent-gateway status: 'InProgress'] revision: main@sha1:d159f7dc72dcffc892163b1a3cb781f7b4b3d6ef run: https://github.com/chidionyema/idp/actions/runs/33278795359 The cluster is not running what main says. Until this closes, every check that reads the live estate is grading an older revision.",
+      "metrics": {
+        "comments": 122,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-7a781da3435b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Split sw-daemon.sh into scripts/lib/daemon-*.sh Modules Beyond Existing Extraction",
+      "url": "https://github.com/sethdford/shipwright/issues/3346",
+      "publishedAt": "2026-08-29T00:12:49Z",
+      "excerpt": "## Strategic Improvement `sw-loop.sh` (2713 lines) is already targeted by open issue #3240; the next-largest monolith is `sw-memory.sh` (2241 lines), which mixes pattern capture, cross-pipeline learning, and cost-tracking concerns in one file. Extract cost-tracking and cross-pipeline-discovery logic into `scripts/lib/memory-cost.sh` and `scripts/lib/memory-discovery.sh`, following the same lib/ decomposition pattern used elsewhere, to reduce the largest untouched monolith and move toward the AGI-readiness clean-architecture goal. ### Acceptance Criteria - - `sw-memory.sh` shrinks below 1500 lines with logic moved (not duplicated) into new lib",
+      "metrics": {
+        "comments": 94,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-193e9ef8a4ee",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — JoshCLWren/comic-pile",
+      "sourceType": "production_or_user_issue",
+      "title": "help and glossary are the same",
+      "url": "https://github.com/JoshCLWren/comic-pile/issues/2022",
+      "publishedAt": "2026-08-29T15:33:25Z",
+      "excerpt": "**Reported by:** Josh **Report type:** Bug report collapse these into one <details> <summary>Diagnostic Information</summary> **Timestamp:** 2026-08-29T15:33:08.293Z **URL:** https://comic-pile.vercel.app/help **User Agent:** Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0 **Screen:** 1920×1080 @1.0x **Viewport:** 1141×926 **Scroll:** (0, 0) **Performance:** DOMContentLoaded: 702ms, Load: 804ms **Console Errors (last 0):** None </details>",
+      "metrics": {
+        "comments": 63,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-43796782d73b",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — sethdford/shipwright",
+      "sourceType": "production_or_user_issue",
+      "title": "Distinguish transient/infra errors from code errors in build-loop failure classification",
+      "url": "https://github.com/sethdford/shipwright/issues/3458",
+      "publishedAt": "2026-08-29T08:06:28Z",
+      "excerpt": "## Strategic Improvement Today a rate-limit, network timeout, or auth failure during the build loop is classified the same as a genuine code/test failure, triggering the full re-plan/session-restart machinery instead of a cheap backoff-and-retry. Add a transient-error detector (regex/exit-code signatures for 429s, timeouts, connection resets) ahead of existing failure classification so infra failures short-circuit to backoff-retry and never consume a build-loop iteration or restart budget. ### Acceptance Criteria - - New classification tier \"transient_infra\" recognized in the build loop's error-classification path, checked before code-error c",
+      "metrics": {
+        "comments": 62,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-c255b484232d",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "siterep-public auto-merge-arm.yml still exits 1 on missing AUTO_REVERT_PAT (inish-site convergence for #1081)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1795",
+      "publishedAt": "2026-08-29T01:26:32Z",
+      "excerpt": "Follow-up to #1081. The fleet-ops reusable workflow was fixed (missing `AUTO_REVERT_PAT` → `::notice::` + `exit 0`), but Nishfleet/siterep-public ships the **portable inline** copy of the arm step — the sync source for product repos that cannot call a private Nishfleet reusable workflow (e.g. Nishfleet/inish-site, nish3451 personal repos). That inline copy still has the old `::error::` + `exit 1`: ```yaml - name: Arm auto-merge env: GH_TOKEN: ${{ secrets.AUTO_REVERT_PAT }} PR: ${{ github.event.pull_request.number }} run: | if [ -z \"$GH_TOKEN\" ]; then echo \"::error::AUTO_REVERT_PAT is not configured — auto-merge not armed; this PR waits for a ",
+      "metrics": {
+        "comments": 53,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-9d30e6b7427f",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Yeachan-Heo/clawhip",
+      "sourceType": "production_or_user_issue",
+      "title": "Make Clawhip the GJC-first event router with automatic native SDK binding",
+      "url": "https://github.com/Yeachan-Heo/clawhip/issues/349",
+      "publishedAt": "2026-08-29T07:18:17Z",
+      "excerpt": "## Incident A live GJC tmux process remained present after its provider turn failed with a credit/authorization error. Operator census treated process liveness as an active development lane for ~44 minutes. The authoritative SDK endpoint was live, but Clawhip emitted no alert because durable GJC lane reconciliation is not wired into the SDK control plane and the session creator does not enroll new SDK sessions. ## Required contract - Wire Clawhip's existing GJC SDK transport/control plane into the durable lane reconciler at daemon startup; remove the current dead registration seam. - Auto-enroll every session created by `skills/gjc-session/cr",
+      "metrics": {
+        "comments": 51,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-49dc5b38edf6",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "tests/pi-issue-run-mid-session-bench.test.sh fails on main: pick_seat empty after single bench (fixture has no second selectable seat)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1862",
+      "publishedAt": "2026-08-29T04:23:29Z",
+      "excerpt": "Pre-existing failure on origin/main (67cc8f0), not introduced by #1408. `bash tests/pi-issue-run-mid-session-bench.test.sh` exits 1 with: FAIL: pick_seat returned empty after benching devin/swe-1-7 (another seat should still be free) pick_seat: NO USABLE SEAT — every allowlisted seat is dead/capped/rate-limited. The fixture benches devin/swe-1-7 via mark_seat_spawn_fail (mid-session death path) then expects pick_seat to find another free seat. The only other provider in the fixture is cursor (cursor-grok-4.6-high, composer-2.5), but pick_seat returns NO USABLE SEAT — the cursor seats are not selectable under the fixture's privacy/cap/class fi",
+      "metrics": {
+        "comments": 48,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-0bbe6f1b75fc",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "Register tests/seat-failure-ceiling.test.sh in CI (worker cannot touch .github/workflows)",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1964",
+      "publishedAt": "2026-08-29T08:21:17Z",
+      "excerpt": "The regression test added in #1362 (`tests/seat-failure-ceiling.test.sh`) is not yet wired into `.github/workflows/ci.yml` because the nishfleet-worker App token has no Workflows permission, so a push touching `.github/workflows/**` is rejected at the platform layer. Add this line to the seat-test block in `.github/workflows/ci.yml` (after `tests/seat-lib-org-reserve.test.sh`): ```yaml # fleet-ops#1362: failure-count ceiling parks a seat past 60 # consecutive failures and emits one metric. bash tests/seat-failure-ceiling.test.sh ``` Requires Nish's scope (a repo admin / human push) to land the workflow edit. Relates to #1362",
+      "metrics": {
+        "comments": 44,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-3794be65ac59",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — Nishfleet/fleet-ops",
+      "sourceType": "production_or_user_issue",
+      "title": "Re-audition opencode muse-spark-1.2-contributor-free when provider HTTP 500 clears",
+      "url": "https://github.com/Nishfleet/fleet-ops/issues/1972",
+      "publishedAt": "2026-08-29T08:43:58Z",
+      "excerpt": "Tracking issue for the external blocker on fleet-ops#746. The free opencode slug `muse-spark-1.2-contributor-free` is in Pi's catalog (1M context, 32K output, no cost field in models.json — free) but is not servable: `pi --print --provider opencode --model muse-spark-1.2-contributor-free` returns HTTP 500 `Internal server error` consistently. Re-audition evidence (2026-08-29, this worker): - 4 probes, all HTTP 500 `Internal server error`, PACKET-VERDICT tools=0 class=no-tools. - Control: `pi --print --provider opencode --model hy3-free` returned PONG (rc=0) on the same tick, so the opencode provider is up — the 500 is slug-specific. - Prior: ",
+      "metrics": {
+        "comments": 43,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    },
+    {
+      "id": "candidate-f156d8070fb5",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "听听笔记 - 实时录音转文字总结开会总结助手",
+      "url": "https://apps.apple.com/cn/app/%E5%90%AC%E5%90%AC%E7%AC%94%E8%AE%B0-%E5%AE%9E%E6%97%B6%E5%BD%95%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%E6%80%BB%E7%BB%93%E5%BC%80%E4%BC%9A%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/id6756257435?uo=4",
+      "publishedAt": "2026-08-29T02:16:25Z",
+      "excerpt": "听听笔记，你的随身AI语音记录助手，致力于让记录更轻松、沟通更高效。 采用最新AI技术实现精准实时录音转文字，边说边转无需等待，录音结束后，无需手动整理，AI自动总结归纳， 仅需3分钟即可搞定1小时录音内容，满足您会议记录、课堂讲座、谈话记录等不同场景需求。 【产品功能】 1、实时精转文字 ①最新AI降噪与人声增强技术，自动区分发言人，支持多语言识别，覆盖56+行业专业术语库，转写准确率高达98%，专业内容也能精准捕捉。 2、多种导入方式 ①支持本地音频上传和实时录音。 3、AI智能总结 ①章节速览，根据文本结果快速归纳总结。 ②全文摘要，海量信息快速凝练。 ③AI纪要，根据不同场景（会议/课堂/访谈/通话）自动生成结构化纪要，提炼重点、罗列待办，省去手动整理的繁琐。 4、云端数据加密 ①录音文件云端加密保护，隐私无忧、安全可靠。 5、支持团队协作 ①云端实时同步，多人协同编辑，轻松共享笔记，团队知识管理更高效。 【适用人群】 1、职场人士： 办公会议，商务洽谈，一键录音，轻松记录会议内容，快速转成文字输出会议纪要及快速分享。 2、记者律师： 采访访谈、取证录音，轻松录音，一键快速转换文字，AI辅助导出并整理成新闻稿件、证据。 3、老师学生： 课堂/网课实时录音转写，整理知识要点，大幅提升学习效率与复习体验。",
+      "metrics": {
+        "ratings": 46,
+        "rating": 4.86957
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-d356917e3e18",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Agent Security Is a Systems Problem: What 247 Papers Say About Secure AI Agents",
+      "url": "https://www.truefoundry.com/blog/llm-agent-security-runtime-control-planes",
+      "publishedAt": "2026-08-29T07:36:35Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6801152655de",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Why Workflow Automation Fails When Nobody Owns the Handoff",
+      "url": "https://dev.to/nexus-alpha2452/why-workflow-automation-fails-when-nobody-owns-the-handoff-905",
+      "publishedAt": "2026-08-29T23:19:04Z",
+      "excerpt": "Workflow automation is often described as a tooling problem. A team sees repetitive work, connects a...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-a704b3e826fc",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "Prompt Drift Is a Quiet Deployment Bug: A Nightly Check That Costs Nothing",
+      "url": "https://dev.to/byteio_3726/prompt-drift-is-a-quiet-deployment-bug-a-nightly-check-that-costs-nothing-3gf4",
+      "publishedAt": "2026-08-29T10:46:16Z",
+      "excerpt": "Your prompt shipped. The model answered well. Then a stakeholder asked for a tiny wording change: \"Be...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ce80f5290792",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #programming",
+      "sourceType": "technical_article",
+      "title": "Third-Party API Integration: Costs and Failure Modes",
+      "url": "https://dev.to/mecanik-dev/third-party-api-integration-costs-and-failure-modes-2g2g",
+      "publishedAt": "2026-08-29T06:00:00Z",
+      "excerpt": "Third-party API integration is the most consistently underestimated work in commercial software. The...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "programming",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-2ac757ff7bcc",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "智谱清言 - 一站式解放AI生产力",
+      "url": "https://apps.apple.com/cn/app/%E6%99%BA%E8%B0%B1%E6%B8%85%E8%A8%80-%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E6%94%BEai%E7%94%9F%E4%BA%A7%E5%8A%9B/id6450893458?uo=4",
+      "publishedAt": "2026-08-29T16:26:03Z",
+      "excerpt": "智谱清言 帮你\"聪明一点\"，每天少工作一小时。基于中英双语大模型 ChatGLM 开发，不仅是你的 AI 助手，更是能帮你把事办成的 Agent——从理解目标到调用工具、从拆解任务到协调配合，把回答变成交付结果。 Agent 核心能力 【自动规划】 说一句话，它帮你拆成可执行的步骤。制定旅行攻略、策划活动方案、调研行业信息——不需要你一步步指挥，Agent 自动理解意图、规划路径、调用工具，直接交付结果。 【工具调用】 能搜索、能查数据、能画图、能写代码并运行。需要实时信息？Agent 帮你联网搜索。需要数据分析？Agent 帮你生成图表。需要文件处理？Agent 帮你读取、整理、输出。不是\"生成文字\"，而是\"完成任务\"。 【多步协作】 复杂任务自动拆解、分步执行、自我检查。写一份行业报告？Agent 先调研、再列纲、再撰写、再润色，全程自主推进，你只需提出需求和反馈。 四大 Agent 场景，说一句话，办一摊事 【学术论文】 为科研工作者提供文献整理、数据分析与论文写作规范等一站式智能辅助。从资料检索到数据处理，从框架搭建到学术表达，Agent 全流程打通，让科研变得更高效、更专业。 【网页设计】 自动整理需求、生成模块化代码片段，智能优化页面结构与交互逻辑，实时检测和修复性能及兼容性问题。从一句话需求到高质量全栈应用，Agent 帮你把开发链路走完。 【数据分析】 自动完成多源数据清洗与特征构建，智能选择建模算法并输出易懂的分析结果及可视化，识别关键数据分群和归因，提供针对性",
+      "metrics": {
+        "ratings": 5842,
+        "rating": 4.05854
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-0d5a4c0e6d79",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Major security weaknesses found in leading open AI models",
+      "url": "https://uwaterloo.ca/news/media/major-security-weaknesses-found-leading-open-ai-models",
+      "publishedAt": "2026-08-29T14:15:36Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 5,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6ce9a12b9642",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nepal's flood damage may cost up to a tenth of economy to rebuild",
+      "url": "https://www.reuters.com/world/china/nepal-needs-least-4-billion-rebuilding-finance-minister-says-2026-08-29",
+      "publishedAt": "2026-08-29T08:33:39Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 1
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-75d8cd802f6a",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search CN",
+      "sourceType": "app_market",
+      "title": "Canva可画-AI辅助社媒图片海报一键制作设计工具",
+      "url": "https://apps.apple.com/cn/app/canva%E5%8F%AF%E7%94%BB-ai%E8%BE%85%E5%8A%A9%E7%A4%BE%E5%AA%92%E5%9B%BE%E7%89%87%E6%B5%B7%E6%8A%A5%E4%B8%80%E9%94%AE%E5%88%B6%E4%BD%9C%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/id897446215?uo=4",
+      "publishedAt": "2026-08-29T00:45:38Z",
+      "excerpt": "你大概率会爱上 Canva可画！ 如果你是——自媒体博主 / 电商美工 / 店铺主理人 / 创作爱好者 / 上班打工人 / 学生或老师 / 追星物料党…… 它免费且好上手，20万+设计模板、1亿+图片/插画素材，可商用； 强大AI创作功能，随心创作一键生成。 0基础也能快速做出好看的图，小红书封面、公众号长图、朋友圈宣传图、电商主图、海报、PPT、简历、Logo……一个App全搞定。 想做得更快、更好、更专业？ 下载Canva可画，打开就能开始创作，还有更多有趣的玩法，等你探索。 【社媒创作神器】 小红书封面、公众号长图、朋友圈宣传图、电商宣传图……一键套模板快速出片； 也能做海报、PPT、简历、Logo等各类设计，满足生活/工作多场景需求，支持商用更安心。 【功能强大，AI一站式】 「Canva AI」对话式创作，生成后可继续在线编辑； 「AI写作」一键产出灵感与文案，轻松写出高质量内容； 「AI生图」一句话生成图片/插画，配图不再发愁； 「AI设计」一句话生成PPT、海报、小红书图文、简历等完整作品； 「AI抓取文字」自动识别图片文字，提取后随意编辑； 「AI提取主体」智能识别主体，一键分离前后景； 「AI辅助修图」AI抠图、AI橡皮擦、AI扩图、AI背景生成器； 「AI材质特效」生成立体文字质感，让画面更有层次； 「AI动效」一键适配PPT转场、视频、动态图高级动效。 【办公也适用】 「演示神器」从PPT制作到在线演讲一站式，演讲者模式自带\"提词器\"； 「云端白板」无边画布",
+      "metrics": {
+        "ratings": 653932,
+        "rating": 4.8807
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-62431f11f472",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Debugging and Exploring Parquet Files with Local SQL Queries",
+      "url": "https://capytoolkit.com/blog/developer-tools/debugging-and-exploring-parquet-files-with-local-sql-queries",
+      "publishedAt": "2026-08-29T10:27:34Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-b7bcd8276397",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "A good fallback hides the failure it was built for",
+      "url": "https://dev.to/znlong2203/a-good-fallback-hides-the-failure-it-was-built-for-1cgm",
+      "publishedAt": "2026-08-29T19:22:30Z",
+      "excerpt": "Built for Google's All Things Agentic Hackathon (Devpost), August 2026. I spent three weeks...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 0
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-ce645547f625",
+      "targetDate": "2026-08-29",
+      "source": "App Store Search US",
+      "sourceType": "app_market",
+      "title": "Neome - Enterprise automation",
+      "url": "https://apps.apple.com/us/app/neome-enterprise-automation/id6503088429?uo=4",
+      "publishedAt": "2026-08-29T19:15:03Z",
+      "excerpt": "Neome – Conversational Automation for Small and Medium Businesses Neome helps small and medium businesses automate their operations through a simple chat interface. It brings together messaging, spreadsheets, and storage to streamline workflows, reduce errors, and boost team productivity—without needing technical expertise. Key Features: • Chat-first automation Neome makes automation as easy as sending a text. Its intuitive chat interface allows teams to automate workflows using familiar formats like spreadsheets—no coding required. • Customizable workflows Create tailored workflows across functions like inventory, HR, field operations, or cu",
+      "metrics": {
+        "ratings": 1,
+        "rating": 5
+      },
+      "topics": [
+        "app-store",
+        "product-signal"
+      ],
+      "accessStatus": "public",
+      "boundary": "App metadata and ratings support product existence and reception, not paid conversion or retention."
+    },
+    {
+      "id": "candidate-fbae67ba8bdc",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Rails Pulse: a comprehensive performance monitoring and debugging gem",
+      "url": "https://github.com/railspulse-org/rails_pulse",
+      "publishedAt": "2026-08-29T15:58:48Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-ae5c3004db64",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Zero-cost 'tagless initial' in Rust with GADT-style enums",
+      "url": "https://inferara.com/blog/rust-tagless-final-gadt",
+      "publishedAt": "2026-08-29T14:42:05Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-1365a926bb7b",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #productivity",
+      "sourceType": "technical_article",
+      "title": "A R$0-token day of agent work — the routing ladder, and the two warnings nobody gives",
+      "url": "https://dev.to/oroborolabs/a-r0-token-day-of-agent-work-the-routing-ladder-and-the-two-warnings-nobody-gives-184i",
+      "publishedAt": "2026-08-29T12:27:55Z",
+      "excerpt": "Yesterday a full workday of agent tasks — reading, summarizing, triaging piles of material — cost R$0...",
+      "metrics": {
+        "comments": 1,
+        "reactions": 1
+      },
+      "topics": [
+        "productivity",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-3dfdcf9ea39d",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Automated researchers can reliably mitigate alignment failures",
+      "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "publishedAt": "2026-08-29T09:30:20Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-e5da41cfc459",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Muraqib, free nightly QA that lets Claude open a fix PR when tests fail",
+      "url": "https://github.com/holistis/muraqib",
+      "publishedAt": "2026-08-29T08:44:08Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-01ecab39abcf",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Debian votes to allow \"responsible use of generative AI\"",
+      "url": "https://lwn.net/Articles/1091231",
+      "publishedAt": "2026-08-29T14:02:10Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 487,
+        "comments": 451
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-baec17aa089b",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "I built an AI gateway because I was tired of guessing what a request would cost",
+      "url": "https://dev.to/eidosstack/i-built-an-ai-gateway-because-i-was-tired-of-guessing-what-a-request-would-cost-5622",
+      "publishedAt": "2026-08-29T22:43:17Z",
+      "excerpt": "Every provider has a different pricing page. If you use one provider, that is fine. But the moment...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-aa0d9108a6c0",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #ai",
+      "sourceType": "technical_article",
+      "title": "Building an Autonomous Security Alert Triage Agent with Gemini and Google ADK",
+      "url": "https://dev.to/gbetibienvenu/building-an-autonomous-security-alert-triage-agent-with-gemini-and-google-adk-3a20",
+      "publishedAt": "2026-08-29T22:30:04Z",
+      "excerpt": "I created this post for the purposes of entering the All Things about Agentic Hackathon...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "topics": [
+        "ai",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-c3dae5e1bb8e",
+      "targetDate": "2026-08-29",
+      "source": "DEV.to #webdev",
+      "sourceType": "technical_article",
+      "title": "After 9 Failed Projects, I Built a Public Windows XP Desktop for the Internet",
+      "url": "https://dev.to/han_isn/after-9-failed-projects-i-built-a-public-windows-xp-desktop-for-the-internet-3o9i",
+      "publishedAt": "2026-08-29T19:31:43Z",
+      "excerpt": "Over the last year, I shipped nine projects that went nowhere. Some got a little traffic and then...",
+      "metrics": {
+        "comments": 0,
+        "reactions": 1
+      },
+      "topics": [
+        "webdev",
+        "technical-case"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public article signal. Author claims and tutorials require result-level verification."
+    },
+    {
+      "id": "candidate-15d3f05a5f03",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Nancy Grace Roman Space Telescope",
+      "url": "https://science.nasa.gov/mission/roman-space-telescope",
+      "publishedAt": "2026-08-29T15:48:02Z",
+      "excerpt": "<a href=\"https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.npr.org&#x2F;2026&#x2F;08&#x2F;28&#x2F;nx-s1-5905370&#x2F;nasa-nancy-grace-roman-space-telescope-dark-energy-supernova\" rel=\"nofollow\">https:&#x2F;&#x2F;www.npr.org&#x2F;2026&#x2F;08&#x2F;28&#x2F;nx-s1-5905370&#x2F;nasa-nancy-grac...</a><p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nancy_Grace_Roman\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nancy_Grace_Roman</a>",
+      "metrics": {
+        "points": 199,
+        "comments": 80
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-fb2958ac24e2",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Why do we need MCP?",
+      "url": "https://news.ycombinator.com/item?id=49488654",
+      "publishedAt": "2026-08-29T10:26:48Z",
+      "excerpt": "Why not just publish your API docs and let the client&#x27;s bot chain together what calls need to be made.<p>You could even repurpose the MCP so you only ever produce the API documentation as EVERY response. No LLM necessary.",
+      "metrics": {
+        "points": 10,
+        "comments": 15
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-07cd970f8700",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "ICANN de-accredits \"bulletproof\" domain registrar Trustname",
+      "url": "https://domainnamewire.com/2026/08/28/icann-de-accredits-bulletproof-domain-registrar",
+      "publishedAt": "2026-08-29T08:02:56Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 15,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-6c5e697717b0",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Ask HN: Best way to archive 25 years of emails",
+      "url": "https://news.ycombinator.com/item?id=49489306",
+      "publishedAt": "2026-08-29T12:19:07Z",
+      "excerpt": "I have emails from 1997-98 onwards all in one massive inbox, currently on gmail with emclient on Mac as the mail client (there have been probably a dozen services starting from self-hosted in the beginning). I would like to archive the historic mails for the first 25 years, but in a way that&#x27;s actually searchable and usable in the future (and potentially importable to a new mail client&#x2F;service) and not in any particular mailbox format that may go obsolete. There is no good reason to hoard them, other than &quot;I feel like doing so&quot;. What are the best options, and tools?",
+      "metrics": {
+        "points": 4,
+        "comments": 8
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-7c9700fd2205",
+      "targetDate": "2026-08-29",
+      "source": "Hacker News",
+      "sourceType": "community_discussion",
+      "title": "Show HN: The impact that made the Moon, 262k particles in a browser tab",
+      "url": "https://gaploid.github.io/cosmic-collisions",
+      "publishedAt": "2026-08-29T13:20:11Z",
+      "excerpt": "",
+      "metrics": {
+        "points": 8,
+        "comments": 3
+      },
+      "topics": [
+        "public-web",
+        "developer-tools"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public source signal; requires editorial verification before publication."
+    },
+    {
+      "id": "candidate-26a6b52ce718",
+      "targetDate": "2026-08-29",
+      "source": "GitHub Issue — marionettejs/marionette",
+      "sourceType": "production_or_user_issue",
+      "title": "v5: remove the required Underscore runtime dependency",
+      "url": "https://github.com/marionettejs/marionette/issues/241",
+      "publishedAt": "2026-08-29T07:38:02Z",
+      "excerpt": "## Goal Remove Underscore as a required Marionette v5 runtime peer before stable while preserving the documented, useful Backbone/Marionette collection ergonomics developers rely on. This explicitly supersedes #48's 2020 instruction not to remove Underscore in v5. Backbone applications may continue using Underscore directly, and Marionette may retain it as a development dependency for Backbone/parity tests; the root Marionette runtime and its shipped subpaths must not import or require it. Related to #41 and the runtime-cost contract in `ROADMAP.md`. ## Agent-development failure addressed Generic Underscore iteratee shorthand makes ordinary m",
+      "metrics": {
+        "comments": 43,
+        "score": 1.0
+      },
+      "topics": [
+        "github",
+        "automation"
+      ],
+      "accessStatus": "public",
+      "boundary": "Public issue report. It can support a concrete case, not market-wide demand without corroboration."
+    }
+  ],
+  "reviewInstructions": {
+    "publishAllPassing": true,
+    "allowedKinds": [
+      "opportunity",
+      "case"
+    ],
+    "allowedQuality": [
+      "feature",
+      "editorial"
+    ],
+    "requiredFields": [
+      "plain",
+      "audience",
+      "pain",
+      "why",
+      "validation",
+      "risk",
+      "evidence"
+    ]
+  }
+}
